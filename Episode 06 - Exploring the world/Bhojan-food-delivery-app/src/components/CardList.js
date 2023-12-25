@@ -1,21 +1,25 @@
+import { useEffect, useState } from "react";
 import { Card } from "./Card";
-import { zomatoData } from "../utils/zomato-data";
-import { useState } from "react";
+import { CardShimmer } from "./CardShimmer";
 
-export const CardList = () => {
-  const [topRatedRestaurants, setTopRatedRestaurants] = useState(zomatoData);
+export const CardList = ({ restaurantList }) => {
+  const [topRatedRestaurants, setTopRatedRestaurants] = useState([]);
   const [isFiltered, setIsFiltered] = useState(false);
+
+  useEffect(() => {
+    if (restaurantList.length > 0) setTopRatedRestaurants(restaurantList);
+  }, [restaurantList]);
 
   const filterTopRatedRestaurants = () => {
     setIsFiltered((oldValue) => {
       if (oldValue === false) {
         const filteredData = topRatedRestaurants.filter((restaurants) => {
-          return Number(restaurants?.info?.rating?.aggregate_rating) > 4;
+          return Number(restaurants?.info?.avgRating) > 4.5;
         });
         setTopRatedRestaurants(filteredData);
         return true;
       }
-      setTopRatedRestaurants(zomatoData);
+      setTopRatedRestaurants(restaurantList);
       return false;
     });
   };
@@ -31,9 +35,18 @@ export const CardList = () => {
         </button>
       </div>
       <div className="card-list-container">
-        {topRatedRestaurants.map((cardData) => (
-          <Card key={cardData?.info?.resId} cardData={cardData} />
-        ))}
+        {restaurantList.length ? (
+          topRatedRestaurants.map((cardData) => (
+            <Card key={cardData?.info?.id} cardData={cardData} />
+          ))
+        ) : (
+          <>
+            <CardShimmer />
+            <CardShimmer />
+            <CardShimmer />
+            <CardShimmer />
+          </>
+        )}
       </div>
     </div>
   );
