@@ -1,10 +1,13 @@
+const IMAGE_BASE_URL =
+  "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
+
 export const Card = ({ cardData }) => {
   const { info } = cardData;
   return (
     <article className="card">
       <div className="card-thumbnail-wrapper">
         <img
-          src={info?.image?.url}
+          src={`${IMAGE_BASE_URL}${info?.cloudinaryImageId}`}
           alt={info?.image?.name}
           className="card-thumbnail"
         />
@@ -13,20 +16,12 @@ export const Card = ({ cardData }) => {
         <header className="card-header">
           <h2 className="card-title">{info?.name}</h2>
           <div className="card-featured">
-            <div className="card-stats">
-              {info?.cuisine
-                ?.map((cuisine) => {
-                  return cuisine.name;
-                })
-                .join(", ")}
-            </div>
+            <div className="card-stats">{info?.cuisines?.join(", ")}</div>
           </div>
         </header>
         <div className="card-body">
-          <p>{info?.costText?.text}</p>
-          <button className="card-action">
-            {info?.rating?.aggregate_rating}
-          </button>
+          <p>{info?.costForTwo}</p>
+          <button className="card-action">{info?.avgRating}</button>
         </div>
       </div>
     </article>
