@@ -17,6 +17,7 @@ export const Body = () => {
     } = swiggyData;
     const restaurantList =
       cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+    console.log(restaurantList);
     setRestaurantList(restaurantList);
     setFilteredList(restaurantList);
   };
