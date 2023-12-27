@@ -1,13 +1,17 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { Card } from "./Card";
 import { CardShimmer } from "./CardShimmer";
 
 export const CardList = ({ restaurantList }) => {
   const [topRatedRestaurants, setTopRatedRestaurants] = useState([]);
   const [isFiltered, setIsFiltered] = useState(false);
+  const [intersection, setIntersection] = useState(false);
+  const cardListRef = useRef(null);
 
   useEffect(() => {
-    if (restaurantList.length > 0) setTopRatedRestaurants(restaurantList);
+    if (restaurantList?.length > 0) {
+      setTopRatedRestaurants(restaurantList);
+    }
   }, [restaurantList]);
 
   const filterTopRatedRestaurants = () => {
@@ -35,8 +39,8 @@ export const CardList = ({ restaurantList }) => {
         </button>
       </div>
       <div className="card-list-container">
-        {restaurantList.length ? (
-          topRatedRestaurants.map((cardData) => (
+        {restaurantList?.length ? (
+          topRatedRestaurants?.map((cardData) => (
             <Card key={cardData?.info?.id} cardData={cardData} />
           ))
         ) : (
@@ -48,6 +52,7 @@ export const CardList = ({ restaurantList }) => {
           </>
         )}
       </div>
+      <div ref={cardListRef}></div>
     </div>
   );
 };

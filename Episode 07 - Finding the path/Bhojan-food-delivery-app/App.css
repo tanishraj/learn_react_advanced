@@ -43,6 +43,10 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+.app {
+  padding-top: 80px;
+}
+
 /* Header CSS */
 .navigation {
   display: flex;
@@ -73,7 +77,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 45%;
+  width: 30%;
   margin: auto 20px auto 0;
 }
 
@@ -94,7 +98,7 @@ body {
 }
 
 /* BODY CSS */
-.container {
+.body-container {
   margin: auto;
   max-width: 1440px;
   padding: 0 20px;
@@ -160,11 +164,10 @@ body {
 /*Card Container*/
 .card-list-container {
   margin: 30px 0;
-  display: flex;
-  align-items: stretch;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 30px;
+  display: grid;
+  align-items: start;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
 }
 
 /*Card CSS*/
@@ -180,6 +183,14 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.card a {
+  color: var(--text);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .card:hover {
@@ -328,4 +339,184 @@ body {
 
 .m-t-24 {
   margin-top: 24px;
+}
+
+/* PAGE NOT FOUND PAGE CSS*/
+#notfound {
+  position: relative;
+  height: 100vh;
+  background: #030005;
+}
+
+#notfound .notfound {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.notfound {
+  max-width: 767px;
+  width: 100%;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.notfound .notfound-404 {
+  position: relative;
+  height: 180px;
+  margin-bottom: 20px;
+  z-index: -1;
+}
+
+.notfound .notfound-404 h1 {
+  font-family: "Montserrat", sans-serif;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 224px;
+  font-weight: 900;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: -12px;
+  color: #030005;
+  text-transform: uppercase;
+  text-shadow: -1px -1px 0px var(--primary-50), 1px 1px 0px var(--grey-700);
+  letter-spacing: -20px;
+}
+
+.notfound .notfound-404 h2 {
+  font-family: "Montserrat", sans-serif;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 110px;
+  font-size: 42px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 0px 2px 0px var(--primary-50);
+  letter-spacing: 13px;
+  margin: 0;
+}
+
+.notfound a {
+  font-family: "Montserrat", sans-serif;
+  display: inline-block;
+  text-transform: uppercase;
+  color: var(--primary);
+  text-decoration: none;
+  border: 2px solid;
+  background: transparent;
+  padding: 10px 40px;
+  font-size: 14px;
+  font-weight: 700;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+.notfound a:hover {
+  color: var(--primary-50);
+}
+
+/* RESTAURANT DETAILS PAGE*/
+.res-details-container {
+  margin-top: 30px;
+  color: var(--grey-400);
+  font-size: var(--fs-50);
+  line-height: 1.5;
+}
+
+.res-details {
+}
+
+.res-name {
+  color: var(--grey-950);
+  font-size: var(--fs-200);
+}
+
+.res-cuisines {
+}
+
+.res-address {
+}
+
+.res-location {
+  padding: 20px 0;
+  border-bottom: 1px dashed var(--grey-400);
+  color: var(--grey-500);
+  font-weight: 700;
+}
+
+.delivery {
+  padding: 20px 0;
+  font-size: var(--fs-100);
+  color: var(--grey-700);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 64px;
+}
+
+.delivery-tile {
+}
+
+.average-price {
+}
+
+/* MENU LIST CONTAINER CSS*/
+.menu-container {
+  margin-top: 30px;
+}
+
+.menu-item-container {
+  line-height: 1.5;
+  padding: 30px 0;
+  border-bottom: 1px solid var(--grey-200);
+}
+
+.indicator {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--primary);
+  margin-bottom: 5px;
+}
+.indicator-circle {
+  height: 10px;
+  width: 10px;
+  background: var(--primary);
+  border-radius: 100%;
+}
+.indicator.veg {
+  border: 1px solid var(--primary);
+}
+.indicator.veg .indicator-circle {
+  background: var(--primary);
+}
+.indicator.non-veg {
+  border: 1px solid red;
+}
+.indicator.non-veg .indicator-circle {
+  background: red;
+}
+.dish-name {
+  font-size: var(--fs-100);
+  font-weight: 600;
+}
+.dish-price {
+  font-size: var(--fs-50);
+  font-weight: 500;
+}
+.dish-calorie-info {
+  font-size: var(--fs-50);
+  color: var(--grey-400);
 }
