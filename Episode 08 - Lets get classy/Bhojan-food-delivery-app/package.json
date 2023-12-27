@@ -1,0 +1,40 @@
+{
+  "name": "namaste-react",
+  "version": "1.0.0",
+  "description": "Learning React 18 with Akshay Saini",
+  "main": "app.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tanishraj/learn-react-18.git"
+  },
+  "keywords": [
+    "react",
+    "react",
+    "18",
+    "namaste",
+    "react"
+  ],
+  "author": "Akshay Saini",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tanishraj/learn-react-18/issues"
+  },
+  "homepage": "https://github.com/tanishraj/learn-react-18#readme",
+  "devDependencies": {
+    "parcel": "^2.10.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.1"
+  },
+  "browserlist": [
+    "last 2 versions"
+  ]
+}
