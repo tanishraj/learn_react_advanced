@@ -520,3 +520,108 @@ body {
   font-size: var(--fs-50);
   color: var(--grey-400);
 }
+
+/*ABOUT PAGE CSS*/
+.about-container {
+  margin-top: 30px;
+}
+.masthead {
+  padding: 15em 0;
+  background-image: url("https://i.imgur.com/D4rA84W.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-top: 1em solid var(--primary);
+}
+
+.masthead-heading {
+  font-size: 6em;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  text-shadow: 1.5px 3px 0px var(--primary);
+  color: var(--primary-50);
+  margin-top: -0.2em;
+}
+.masthead-intro {
+  font-size: 2em;
+  text-align: center;
+  color: var(--grey-950);
+  margin-bottom: 0.1em;
+}
+
+/*---------- section ----------- */
+.intro,
+.where-Im-from,
+.more-about-me {
+  /* max-width: 38em; */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  text-align: left;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.intro > p,
+.where-Im-from > p,
+.more-about-me > p {
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+}
+
+section > h1 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 50px;
+  padding-top: 30px;
+  color: var(--primary);
+}
+
+.more-about-me h2 {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: var(--grey-600);
+}
+
+.section-gap {
+  margin-bottom: 30px;
+}
+
+.section-gap h2 {
+  margin-bottom: 10px;
+}
+
+.counter-app h2 {
+  margin-bottom: 20px;
+}
+
+.counter-container {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.counter {
+  font-size: var(--fs-400);
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  border: 1px solid var(--primary);
+  background: none;
+  font-size: var(--fs-400);
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--primary-50);
+}
