@@ -1,7 +1,17 @@
 import React, { useState } from "react";
 
-export const Search = ({ filterRestaurants }) => {
-  const [searchText, setSerachText] = useState("");
+export const Search = ({ restaurantList, getSearchResults }) => {
+  const [searchKeyword, setSerachText] = useState("");
+
+  const findRestaurants = (searchKeyword) => {
+    if (searchKeyword === "") return getSearchResults();
+    const filteredList = restaurantList?.filter((restaurant) => {
+      return restaurant?.info?.name
+        ?.toLowerCase()
+        ?.includes(searchKeyword.toLowerCase());
+    });
+    getSearchResults(filteredList);
+  };
 
   return (
     <div className="search-cotnainer">
@@ -10,14 +20,14 @@ export const Search = ({ filterRestaurants }) => {
           type="text"
           className="search-input"
           placeholder="which restaurant you are looking for?"
-          value={searchText}
+          value={searchKeyword}
           onChange={(e) => setSerachText(e.target.value)}
         />
 
         <button
           className="search-button"
           onClick={() => {
-            filterRestaurants(searchText);
+            findRestaurants(searchKeyword);
           }}
         >
           search

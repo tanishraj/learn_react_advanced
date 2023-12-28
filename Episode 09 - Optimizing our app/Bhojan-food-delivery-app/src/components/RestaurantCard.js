@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { IMAGE_BASE_URL } from "../utils/constants";
 
-export const Card = ({ cardData }) => {
+export const RestaurantCard = ({ cardData }) => {
   const { info } = cardData;
   return (
     <article className="card">
