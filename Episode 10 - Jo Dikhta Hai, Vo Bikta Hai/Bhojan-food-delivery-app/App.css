@@ -1,0 +1,656 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --fs-700: 2.986rem;
+  --fs-600: 2.488rem;
+  --fs-500: 2.074rem;
+  --fs-400: 1.728rem;
+  --fs-300: 1.44rem;
+  --fs-200: 1.2rem;
+  --fs-100: 1rem;
+  --fs-50: 0.833rem;
+
+  --white: #ffffff;
+  --grey-50: #f8fafc;
+  --grey-100: #f1f5f9;
+  --grey-200: #e2e8f0;
+  --grey-300: #cbd5e1;
+  --grey-400: #94a3b8;
+  --grey-500: #64748b;
+  --grey-600: #475569;
+  --grey-700: #334155;
+  --grey-800: #1e293b;
+  --grey-900: #0f172a;
+  --grey-950: #020617;
+
+  --shadow: hsla(215, 16%, 47%, 10%);
+
+  --primary: hsl(162, 100%, 42%);
+  --primary-50: hsl(162, 100%, 56%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-width: 100%;
+  overflow-x: hidden;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.app {
+  padding-top: 80px;
+}
+
+/* Header CSS */
+.navigation-container {
+  background: #0f1423;
+  border-bottom: 2px solid #0c2d48;
+  box-shadow: 0px 0px 10px 0px #000;
+  top: 0;
+  position: fixed;
+  min-height: 80px;
+  min-width: 100%;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1440px;
+  width: 100%;
+  margin: auto;
+}
+
+.navigation .logo {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: 10px;
+}
+
+.navigation .logo h1 {
+  color: var(--primary);
+  font-size: 30px;
+  line-height: 38px;
+}
+
+.navigation .menu-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+  margin: auto 20px auto 0;
+}
+
+.navigation .menu-list li a {
+  color: var(--primary);
+  font-size: 1.25rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color ease-in-out 0.3s, border ease-in-out 0.3s;
+  text-decoration: none;
+}
+
+.navigation .menu-list li a:hover,
+.navigation .menu-list li a:active,
+.navigation .menu-list li a:focus {
+  color: var(--primary-50);
+}
+
+/* BODY CSS */
+.body-container {
+  margin: auto;
+  max-width: 1440px;
+  padding: 0 20px;
+}
+
+.search-cotnainer {
+  margin-top: 130px;
+  padding: 30px 0 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-box {
+  width: 50%;
+  position: relative;
+  display: flex;
+}
+
+.search-input {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--primary);
+  border-radius: 4px 0 0 4px;
+  border-right: none;
+  outline: none;
+  background: none;
+}
+
+.search-button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  text-align: center;
+  outline: none;
+  padding: 0 15px;
+  cursor: pointer;
+  border: 1px solid var(--primary);
+  border-radius: 0 4px 4px 0;
+  border-left: none;
+  color: var(--primary);
+  border-left: 1px solid var(--primary);
+  background: none;
+  transition: color ease-in-out 0.3s, background-color ease-in-out 0.3s;
+}
+
+.search-input:focus + .search-button,
+.search-input:active + .search-button,
+.search-input:hover + .search-button {
+  background-color: var(--primary);
+  color: black;
+}
+
+.search-button:hover,
+.search-button:active,
+.search-button:focus {
+  background-color: var(--primary);
+  color: black;
+}
+
+/*Card Container*/
+.card-list-container {
+  margin: 30px 0;
+  display: grid;
+  align-items: start;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+/*Card CSS*/
+.card {
+  max-width: 30ch;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 2rem var(--shadow);
+  overflow: hidden;
+  transform: scale(1);
+  transition: transform ease-in-out 0.3s;
+  background-color: var(--background-alt);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card a {
+  color: var(--text);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card:hover {
+  transform: scale(1.025);
+}
+
+.card-content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.card-thumbnail-wrapper {
+  max-height: 255px;
+  overflow: hidden;
+}
+
+.card-thumbnail {
+  transform: scale(1);
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  transition: transform ease-in-out 0.3s;
+}
+
+.card:hover .card-thumbnail {
+  transform: scale(1.05);
+}
+
+.card-title {
+  margin-top: unset;
+  margin-bottom: 0.35rem;
+  font-size: var(--fs-300);
+  color: var(--text-alt);
+}
+
+.card-featured {
+  margin-bottom: 1.5rem;
+  font-size: var(--fs-100);
+}
+
+.card-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: var(--fs-50);
+}
+
+.filter-container {
+  padding: 50px 0 10px 0;
+}
+
+/* Card button */
+.card-action,
+.filter-button {
+  margin-left: auto;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid var(--primary);
+  border-radius: 0.2rem;
+  cursor: pointer;
+  font-size: var(--fs-50);
+  color: var(--primary);
+  background-color: transparent;
+  transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
+}
+.filter-button {
+  padding: 0.5rem 1.2rem;
+  font-size: var(--fs-100);
+}
+
+.card-action:hover,
+.filter-button:hover,
+.card-action:active,
+.filter-button:active,
+.selected {
+  border-color: var(--primary-50);
+  color: var(--background-alt);
+  background-color: var(--primary-50);
+}
+
+/* SHIMMERS UI CSS*/
+.card {
+  position: relative;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 6px;
+  height: 500px;
+  overflow: hidden;
+  width: 350px;
+  margin: 40px auto;
+}
+.card .shimmerBG {
+  -webkit-animation-duration: 2.2s;
+  animation-duration: 2.2s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: shimmer;
+  animation-name: shimmer;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  background: #ddd;
+  background: linear-gradient(to right, #f6f6f6 8%, #f0f0f0 18%, #f6f6f6 33%);
+  background-size: 1200px 100%;
+}
+@-webkit-keyframes shimmer {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+@keyframes shimmer {
+  0% {
+    background-position: -1200px 0;
+  }
+  100% {
+    background-position: 1200px 0;
+  }
+}
+.card .media {
+  height: 200px;
+}
+.card .p-32 {
+  padding: 32px;
+}
+.card .title-line {
+  height: 24px;
+  width: 100%;
+  margin-bottom: 12px;
+  border-radius: 20px;
+}
+.card .content-line {
+  height: 8px;
+  width: 100%;
+  margin-bottom: 16px;
+  border-radius: 8px;
+}
+.card .end {
+  width: 40%;
+}
+
+.m-t-24 {
+  margin-top: 24px;
+}
+
+/* PAGE NOT FOUND PAGE CSS*/
+#notfound {
+  position: relative;
+  height: 100vh;
+  background: #030005;
+}
+
+#notfound .notfound {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.notfound {
+  max-width: 767px;
+  width: 100%;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.notfound .notfound-404 {
+  position: relative;
+  height: 180px;
+  margin-bottom: 20px;
+  z-index: -1;
+}
+
+.notfound .notfound-404 h1 {
+  font-family: "Montserrat", sans-serif;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 224px;
+  font-weight: 900;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: -12px;
+  color: #030005;
+  text-transform: uppercase;
+  text-shadow: -1px -1px 0px var(--primary-50), 1px 1px 0px var(--grey-700);
+  letter-spacing: -20px;
+}
+
+.notfound .notfound-404 h2 {
+  font-family: "Montserrat", sans-serif;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 110px;
+  font-size: 42px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 0px 2px 0px var(--primary-50);
+  letter-spacing: 13px;
+  margin: 0;
+}
+
+.notfound a {
+  font-family: "Montserrat", sans-serif;
+  display: inline-block;
+  text-transform: uppercase;
+  color: var(--primary);
+  text-decoration: none;
+  border: 2px solid;
+  background: transparent;
+  padding: 10px 40px;
+  font-size: 14px;
+  font-weight: 700;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+.notfound a:hover {
+  color: var(--primary-50);
+}
+
+/* RESTAURANT DETAILS PAGE*/
+.res-details-container {
+  margin-top: 30px;
+  color: var(--grey-400);
+  font-size: var(--fs-50);
+  line-height: 1.5;
+}
+
+.res-name {
+  color: var(--grey-950);
+  font-size: var(--fs-200);
+}
+
+.res-location {
+  padding: 20px 0;
+  border-bottom: 1px dashed var(--grey-400);
+  color: var(--grey-500);
+  font-weight: 700;
+}
+
+.delivery {
+  padding: 20px 0;
+  font-size: var(--fs-100);
+  color: var(--grey-700);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 64px;
+}
+
+/* MENU LIST CONTAINER CSS*/
+.menu-container {
+  margin-top: 30px;
+}
+
+.menu-item-container {
+  line-height: 1.5;
+  padding: 30px 0;
+  border-bottom: 1px solid var(--grey-200);
+}
+
+.indicator {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--primary);
+  margin-bottom: 5px;
+}
+.indicator-circle {
+  height: 10px;
+  width: 10px;
+  background: var(--primary);
+  border-radius: 100%;
+}
+.indicator.veg {
+  border: 1px solid var(--primary);
+}
+.indicator.veg .indicator-circle {
+  background: var(--primary);
+}
+.indicator.non-veg {
+  border: 1px solid red;
+}
+.indicator.non-veg .indicator-circle {
+  background: red;
+}
+.dish-name {
+  font-size: var(--fs-100);
+  font-weight: 600;
+}
+.dish-price {
+  font-size: var(--fs-50);
+  font-weight: 500;
+}
+.dish-calorie-info {
+  font-size: var(--fs-50);
+  color: var(--grey-400);
+}
+
+/*ABOUT PAGE CSS*/
+.about-container {
+  margin-top: 30px;
+}
+.masthead {
+  padding: 15em 0;
+  background-image: url("https://i.imgur.com/D4rA84W.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-top: 1em solid var(--primary);
+}
+
+.masthead-heading {
+  font-size: 6em;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  text-shadow: 1.5px 3px 0px var(--primary);
+  color: var(--primary-50);
+  margin-top: -0.2em;
+}
+.masthead-intro {
+  font-size: 2em;
+  text-align: center;
+  color: var(--grey-950);
+  margin-bottom: 0.1em;
+}
+
+/*---------- section ----------- */
+.intro,
+.where-Im-from,
+.more-about-me {
+  /* max-width: 38em; */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  text-align: left;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.intro > p,
+.where-Im-from > p,
+.more-about-me > p {
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+}
+
+section > h1 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 50px;
+  padding-top: 30px;
+  color: var(--primary);
+}
+
+.more-about-me h2 {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: var(--grey-600);
+}
+
+.section-gap {
+  margin-bottom: 30px;
+}
+
+.section-gap h2 {
+  margin-bottom: 10px;
+}
+
+.counter-app h2 {
+  margin-bottom: 20px;
+}
+
+.counter-container {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.counter {
+  font-size: var(--fs-400);
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  border: 1px solid var(--primary);
+  background: none;
+  font-size: var(--fs-400);
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--primary-50);
+}
+
+/* ONLINE / OFFLINE STATUS CSS*/
+.green {
+  background: var(--primary-50);
+}
+
+.red {
+  background: red;
+}
+
+.circle {
+  position: absolute;
+  right: 0;
+  top: -10px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 1px 1px #0000001a;
+}
+
+.pulse {
+  animation: pulse-animation 2s infinite;
+}
+
+@keyframes pulse-animation {
+  0% {
+    box-shadow: 0 0 0 0px var(--grey-100);
+  }
+  100% {
+    box-shadow: 0 0 0 8px rgba(0, 0, 0, 0);
+  }
+}
