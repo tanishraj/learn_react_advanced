@@ -48,22 +48,34 @@ body {
 }
 
 /* Header CSS */
-.navigation {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  min-height: 80px;
-  min-width: 100%;
-  z-index: 10;
+.navigation-container {
   background: #0f1423;
   border-bottom: 2px solid #0c2d48;
   box-shadow: 0px 0px 10px 0px #000;
   top: 0;
+  position: fixed;
+  min-height: 80px;
+  min-width: 100%;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1440px;
+  width: 100%;
+  margin: auto;
 }
 
 .navigation .logo {
   margin-left: 20px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: 10px;
 }
 
 .navigation .logo h1 {
@@ -432,18 +444,9 @@ body {
   line-height: 1.5;
 }
 
-.res-details {
-}
-
 .res-name {
   color: var(--grey-950);
   font-size: var(--fs-200);
-}
-
-.res-cuisines {
-}
-
-.res-address {
 }
 
 .res-location {
@@ -462,12 +465,6 @@ body {
   align-items: center;
   justify-content: flex-start;
   gap: 64px;
-}
-
-.delivery-tile {
-}
-
-.average-price {
 }
 
 /* MENU LIST CONTAINER CSS*/
@@ -624,4 +621,36 @@ section > h1 {
 
 .button:hover {
   background-color: var(--primary-50);
+}
+
+/* ONLINE / OFFLINE STATUS CSS*/
+.green {
+  background: var(--primary-50);
+}
+
+.red {
+  background: red;
+}
+
+.circle {
+  position: absolute;
+  right: 0;
+  top: -10px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 1px 1px #0000001a;
+}
+
+.pulse {
+  animation: pulse-animation 2s infinite;
+}
+
+@keyframes pulse-animation {
+  0% {
+    box-shadow: 0 0 0 0px var(--grey-100);
+  }
+  100% {
+    box-shadow: 0 0 0 8px rgba(0, 0, 0, 0);
+  }
 }

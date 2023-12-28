@@ -1,42 +1,32 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { Search } from "./Search";
 import { RestaurantList } from "./RestaurantList";
-import { RESTAURANT_LIST_API_URL } from "../utils/constants";
+import { useRestaurantList } from "../hooks/useRestaurantList";
+import { FilterRestaurant } from "./FilterRestaurant";
 
 export const Body = () => {
-  const [restaurantList, setRestaurantList] = useState([]);
-  const [filteredList, setFilteredList] = useState([]);
-
-  const fetchSwiggyData = async () => {
-    const apiResponse = await fetch(RESTAURANT_LIST_API_URL);
-    const swiggyData = await apiResponse.json();
-    const {
-      data: { cards },
-    } = swiggyData;
-
-    const restaurantList =
-      cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
-    setRestaurantList(restaurantList);
-    setFilteredList(restaurantList);
-  };
+  const { restaurantList } = useRestaurantList() ?? {};
+  const [finalRestaurantList, setFinalRestaurantList] = useState([]);
 
   useEffect(() => {
-    fetchSwiggyData();
-  }, []);
+    setFinalRestaurantList(restaurantList);
+  }, [restaurantList]);
 
-  const filterRestaurants = (searchText) => {
-    const filterList = restaurantList.filter((restaurant) => {
-      return restaurant?.info?.name
-        ?.toLowerCase()
-        ?.includes(searchText.toLowerCase());
-    });
-    setFilteredList(filterList);
+  const getFilteredRestaurants = (filteredRestauratns = restaurantList) => {
+    setFinalRestaurantList(filteredRestauratns);
   };
 
   return (
     <div className="container">
-      <Search filterRestaurants={filterRestaurants} />
-      <RestaurantList restaurantList={filteredList} />
+      <Search
+        restaurantList={restaurantList}
+        getSearchResults={getFilteredRestaurants}
+      />
+      <FilterRestaurant
+        restaurantList={restaurantList}
+        getTopRatedRestaurants={getFilteredRestaurants}
+      />
+      <RestaurantList restaurantList={finalRestaurantList} />
     </div>
   );
 };
