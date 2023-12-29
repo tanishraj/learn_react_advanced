@@ -3,22 +3,37 @@ import { OnlineStatus } from "./OnlineStatus";
 
 export const Header = () => {
   return (
-    <div className="navigation-container">
-      <nav className="navigation">
-        <div className="logo">
-          <h1>BHOJAN</h1>
+    <div className=" fixed top-0 bg-grey950 shadow-sm min-h-20 min-w-full z-10 flex items-center justify-between">
+      <nav className="flex items-center justify-between max-w-screen-xl w-full m-auto px-4">
+        <div className="flex items-center relative mt-2.5">
+          <h1 class="text-primary text-450 font-bold">BHOJAN</h1>
           <OnlineStatus />
         </div>
 
-        <ul className="menu-list">
+        <ul className="flex justify-between items-center text-primary gap-8 list-none">
           <li>
-            <Link to="/">Home</Link>
+            <Link
+              className="text-primary text-250 tracking-wider uppercase cursor-pointer transition-colors duration-300 transition-border hover:text-primary50 hover:border-blue-300 decoration-none"
+              to="/"
+            >
+              Home
+            </Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link
+              className="text-primary text-250 tracking-wider uppercase cursor-pointer transition-colors duration-300 transition-border hover:text-primary50 hover:border-blue-300 decoration-none"
+              to="/about"
+            >
+              About
+            </Link>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <Link
+              className="text-primary text-250 tracking-wider uppercase cursor-pointer transition-colors duration-300 transition-border hover:text-primary50 hover:border-blue-300 decoration-none"
+              to="/contact"
+            >
+              Contact
+            </Link>
           </li>
         </ul>
       </nav>

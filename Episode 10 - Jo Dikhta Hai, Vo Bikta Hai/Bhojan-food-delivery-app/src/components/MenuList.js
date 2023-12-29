@@ -6,7 +6,7 @@ export const MenuList = ({ menuList }) => {
       ?.itemCards ?? [];
 
   return (
-    <div className="menu-container">
+    <div className="menu-container mt-7">
       {menuItemList?.map((menuItem) => (
         <MenuItem key={menuItem?.card?.info?.id} menuItemInfo={menuItem} />
       ))}

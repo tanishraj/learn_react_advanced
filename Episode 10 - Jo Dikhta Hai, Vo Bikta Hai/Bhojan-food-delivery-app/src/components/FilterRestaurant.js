@@ -22,9 +22,11 @@ export const FilterRestaurant = ({
 
   return (
     <div className="filter-card-list-container">
-      <div className="filter-container">
+      <div className="filter-container pt-12 pb-2.5">
         <button
-          className={`filter-button ${isFiltered ? "selected" : ""}`}
+          className={`filter-button border border-primary rounded-md px-4 py-2 font-medium text-primary cursor-pointer transition-all duration-500 ease-in-out hover:bg-primary hover:text-white ${
+            isFiltered ? "bg-primary text-white" : ""
+          }`}
           onClick={() => setIsFiltered(!isFiltered)}
         >
           Top Rated Restaurants
