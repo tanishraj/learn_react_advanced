@@ -1,6 +1,6 @@
 import { RestaurantCard } from "./RestaurantCard";
 import { CardShimmer } from "./shimmer/CardShimmer";
-import { withOffer } from "./hoc/withOffer";
+import { withOffer } from "../hoc/withOffer";
 
 const shimmerSize = new Array(4).fill(1);
 
