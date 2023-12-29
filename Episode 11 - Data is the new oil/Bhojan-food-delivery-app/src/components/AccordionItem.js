@@ -1,8 +1,10 @@
-import { useState } from "react";
 import { MenuList } from "./MenuList";
 
-export const AccordionItem = ({ categoryItem }) => {
-  const [isAccordionOpen, useIsAccordionOpen] = useState(false);
+export const AccordionItem = ({
+  categoryItem,
+  isAccordionOpen,
+  setAccordionOpenIndex,
+}) => {
   const title = categoryItem?.card?.card?.title ?? "";
   const menuList = categoryItem?.card?.card?.itemCards ?? [];
 
@@ -11,7 +13,7 @@ export const AccordionItem = ({ categoryItem }) => {
       <div
         className="flex items-center justify-between hover:cursor-pointer"
         onClick={() => {
-          useIsAccordionOpen(!isAccordionOpen);
+          setAccordionOpenIndex();
         }}
       >
         <div className="font-bold tracking-wider text-100 text-grey800 ">

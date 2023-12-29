@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useState } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
@@ -7,17 +7,22 @@ import { Body } from "./components/Body";
 import { Contact } from "./components/Contact";
 import { PageNotFound } from "./components/PageNotFound";
 import { RestaurantDetails } from "./components/Restaurant";
+import { ThemeContext } from "./context/ThemeContext";
 
 const About = React.lazy(() => import("./components/About"));
 
 const App = () => {
+  const [theme, setTheme] = useState("light");
+
   return (
-    <div className="pt-20">
-      <Header />
-      <div className="max-w-screen-xl m-auto py-5 px-4">
-        <Outlet />
+    <ThemeContext.Provider value={{ theme, setTheme }}>
+      <div className={`pt-20 ${theme === "dark" ? "bg-purple" : ""}`}>
+        <Header />
+        <div className="max-w-screen-xl m-auto py-5 px-4">
+          <Outlet />
+        </div>
       </div>
-    </div>
+    </ThemeContext.Provider>
   );
 };
 

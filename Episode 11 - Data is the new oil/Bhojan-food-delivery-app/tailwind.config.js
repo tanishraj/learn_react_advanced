@@ -25,6 +25,7 @@ module.exports = {
       grey800: "#1e293b",
       grey900: "#0f172a",
       grey950: "#020617",
+      purple: "#00d69638",
     },
     fontFamily: {
       sans: ["Montserrat", "sans-serif"],
