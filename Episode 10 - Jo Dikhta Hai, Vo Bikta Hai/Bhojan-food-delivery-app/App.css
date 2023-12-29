@@ -197,7 +197,7 @@ body {
   justify-content: space-between;
 }
 
-.card a {
+.card a.link {
   color: var(--text);
   text-decoration: none;
   display: flex;

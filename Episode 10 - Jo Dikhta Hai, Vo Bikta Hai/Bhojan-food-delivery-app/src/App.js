@@ -12,9 +12,9 @@ const About = React.lazy(() => import("./components/About"));
 
 const App = () => {
   return (
-    <div className="app">
+    <div className="pt-20">
       <Header />
-      <div className="body-container">
+      <div className="max-w-screen-xl m-auto py-5">
         <Outlet />
       </div>
     </div>
