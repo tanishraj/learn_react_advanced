@@ -7,8 +7,7 @@
     "start": "parcel index.html",
     "build": "parcel build index.html",
     "test": "jest",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test:watch": "jest --watch"
   },
   "repository": {
     "type": "git",

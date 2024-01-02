@@ -44,4 +44,18 @@ describe("Testing Restaurant Details Component", () => {
     const closedMenuItem = screen.queryAllByTestId("menuItem");
     expect(closedMenuItem.length).toBe(0);
   });
+
+  test("should load the menu items when we click on categories", () => {
+    useRestaurantMenu.mockReturnValue({});
+
+    render(
+      <Provider store={AppStore}>
+        <BrowserRouter>
+          <RestaurantDetails />
+        </BrowserRouter>
+      </Provider>
+    );
+    const accordionItem = screen.queryAllByTestId("accordionItem");
+    expect(accordionItem.length).toBe(0);
+  });
 });
