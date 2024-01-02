@@ -29,7 +29,11 @@ export const MenuItem = ({ menuItemInfo }) => {
           </div>
         </div>
         <div className="flex justify-center relative w-1/12">
-          <Button label="+" onClick={() => clickHandler(menuItemInfo)} />
+          <Button
+            data-testid="menuButton"
+            label="+"
+            onClick={() => clickHandler(menuItemInfo)}
+          />
           <img
             className="block  max-w-full h-auto w-full"
             src={

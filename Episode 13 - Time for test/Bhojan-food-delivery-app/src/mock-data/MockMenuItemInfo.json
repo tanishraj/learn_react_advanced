@@ -1,0 +1,185 @@
+{
+  "card": {
+    "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+    "info": {
+      "id": "56462059",
+      "name": "Nandhana Special Andhra Veg Carrier Meal",
+      "category": "Legendary Andhra Meals",
+      "description": "Serves 0 | Enough to feed 3 people easily!  all the goodness of an andhra vegetarian meal, the meal box comes with sambar, pappu,white rice (loads of it!), a palya (dry vegetable), curd, rasam, payasam (sweet dish), papad, ghee, podi, pickle, and chutney. It's satisfying, and delicious. Choose banana leaf as an add on for a perfect experience!",
+      "imageId": "cx9rocivcrh76hvxqhdx",
+      "inStock": 1,
+      "isVeg": 1,
+      "price": 55000,
+      "variants": {},
+      "variantsV2": {},
+      "addons": [
+        {
+          "groupId": "128703365",
+          "groupName": "Meals Add Ons",
+          "choices": [
+            {
+              "id": "109670350",
+              "name": "Plain Rice",
+              "price": 9000,
+              "inStock": 1,
+              "isVeg": 1,
+              "isEnabled": 1
+            },
+            {
+              "id": "109670340",
+              "name": "Banana Leaf",
+              "price": 400,
+              "inStock": 1,
+              "isVeg": 1,
+              "isEnabled": 1
+            },
+            {
+              "id": "109670341",
+              "name": "Extra Sambar",
+              "price": 5500,
+              "inStock": 1,
+              "isVeg": 1,
+              "isEnabled": 1
+            },
+            {
+              "id": "109670342",
+              "name": "Extra Rasam",
+              "price": 5500,
+              "inStock": 1,
+              "isVeg": 1,
+              "isEnabled": 1
+            },
+            {
+              "id": "109670343",
+              "name": "Extra Pappu",
+              "price": 10500,
+              "inStock": 1,
+              "isVeg": 1,
+              "isEnabled": 1
+            },
+            {
+              "id": "109670344",
+              "name": "Extra Palya",
+              "price": 5500,
+              "inStock": 1,
+              "isVeg": 1,
+              "isEnabled": 1
+            }
+          ],
+          "maxAddons": 6,
+          "maxFreeAddons": -1
+        },
+        {
+          "groupId": "128703366",
+          "groupName": "Beverages Add Ons",
+          "choices": [
+            {
+              "id": "107894116",
+              "name": "7 Up",
+              "price": 5000,
+              "inStock": 1,
+              "isVeg": 1,
+              "isEnabled": 1
+            },
+            {
+              "id": "107894115",
+              "name": "Aquafina",
+              "price": 1000,
+              "inStock": 1,
+              "isVeg": 1,
+              "isEnabled": 1
+            },
+            {
+              "id": "107894114",
+              "name": "Butter Milk",
+              "price": 4000,
+              "inStock": 1,
+              "isVeg": 1,
+              "isEnabled": 1
+            },
+            {
+              "id": "107894113",
+              "name": "Pepsi",
+              "price": 5000,
+              "inStock": 1,
+              "isVeg": 1,
+              "isEnabled": 1
+            }
+          ],
+          "maxAddons": 4,
+          "maxFreeAddons": -1
+        },
+        {
+          "groupId": "128703367",
+          "groupName": "Add Ons (Dessert)",
+          "choices": [
+            {
+              "id": "107894126",
+              "name": "Double Ka Meetha",
+              "price": 9900,
+              "inStock": 1,
+              "isVeg": 1,
+              "isEnabled": 1
+            },
+            {
+              "id": "107894140",
+              "name": "Gulab Jamoon (4Pcs)",
+              "price": 9900,
+              "inStock": 1,
+              "isVeg": 1,
+              "isEnabled": 1
+            },
+            {
+              "id": "107894136",
+              "name": "Tender Coconut Pudding",
+              "price": 9900,
+              "inStock": 1,
+              "isVeg": 1,
+              "isEnabled": 1
+            },
+            {
+              "id": "107894139",
+              "name": "Crystal Roll (2 Pcs)",
+              "price": 7900,
+              "inStock": 1,
+              "isVeg": 1,
+              "isEnabled": 1
+            },
+            {
+              "id": "107894127",
+              "name": "Rasmalai Twist",
+              "price": 12000,
+              "isVeg": 1,
+              "isEnabled": 1
+            }
+          ],
+          "maxAddons": 5,
+          "maxFreeAddons": -1
+        }
+      ],
+      "itemAttribute": {
+        "vegClassifier": "VEG",
+        "portionSize": "Serves 0"
+      },
+      "ribbon": {
+        "text": "Bestseller",
+        "textColor": "#ffffff",
+        "topBackgroundColor": "#d53d4c",
+        "bottomBackgroundColor": "#b02331"
+      },
+      "showImage": true,
+      "itemBadge": {},
+      "badgesV2": {},
+      "isBestseller": true,
+      "ratings": {
+        "aggregatedRating": {
+          "rating": "4.4",
+          "ratingCount": "1191 ratings",
+          "ratingCountV2": "1191"
+        }
+      }
+    },
+    "analytics": {},
+    "hideRestaurantDetails": true
+  }
+}
