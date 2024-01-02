@@ -27,24 +27,25 @@ As you go forward in the course, you will find all the given tech stack coming y
 
 
 ## Clone the repo
-Step 1: Open your VS Code editor's terminal.
-Step 2: Clone the repo by running the command below on your VS Code terminal.
+- Step 1: Open your VS Code editor's terminal.
+- Step 2: Clone the repo by running the command below on your VS Code terminal.
 ```sh
 git clone https://github.com/tanishraj/learn-react-18.git
 cd learn-react-18
 ```
-Step 2: Now, you are at the root of the folder. Choose which episode's app you want to run.
-Step 3: Move into the folder. Lets say I want to run the app from `Episode 03 - Laying the foundation`
+- Step 2: Now, you are at the root of the folder. Choose which episode's app you want to run.
+- Step 3: Move into the folder. Lets say I want to run the app from `Episode 03 - Laying the foundation`
 ```sh
 cd Episode\ 03\ -\ Laying\ the\ foundation/
 ```
-Step 4: If that folder contains a `package.json` file. Run the below command to install the dependency packages.
+- Step 4: If that folder contains a `package.json` file. Run the below command to install the dependency packages.
 ```sh
 npm install
 ```
-Step 5: Run the app
+- Step 5: Run the app
 ```sh
 npm start
 ```
-Step 6: Open the browser, and paste this link [http://localhost:1234/](http://localhost:1234/).
-Step 7: You will be able to see the app running.
+- Step 6: Open the browser, and paste this link [http://localhost:1234/](http://localhost:1234/).
+- Step 7: You will be able to see the app running.
+
