@@ -1,12 +1,12 @@
 # Learn React with Akshay Saini 
-##### (Creator of [NamasteDev](https://namastedev.com/))
+### (Creator of [NamasteDev](https://namastedev.com/))
 
 This repository contains all the examples that were explained during the course and also contains a [README.md]() file where I will provide a link of an article for each concepts.
 
-#### Who can benefit from this repo?
+## Who can benefit from this repo?
 This repository will be useful for all the developers, who has taken up [NamasteDev]() course for react and want to refer the codebase which was discussed during the course and can also contribute to update the documentation and can also add some additional cool features to the current projects. You should also have basic knowledge of HTML, CSS and Javascript.
 
-#### Tools Required:
+## Tools Required:
 You need to install these two application on your machine before you start the course and also to run the app.
 - VS Code (Editor) - [Download](https://code.visualstudio.com/download)
 - Chrome (Browser) - [Download](https://www.google.com/chrome/)
@@ -14,7 +14,7 @@ You need to install these two application on your machine before you start the c
 - git - [Download](https://git-scm.com/)
 
 
-#### Tech Stack you will learn in this course:
+## Tech Stack you will learn in this course:
 As you go forward in the course, you will find all the given tech stack coming your way and at the end of the course you will end learning about all these teck stacks. So buckle up, its going to be a roller-coaster.
 - React V18 (UI Library)
 - Tailwind (CSS Library)
@@ -26,7 +26,7 @@ As you go forward in the course, you will find all the given tech stack coming y
 - React Testing Library (React Component Testing)
 
 
-#### Clone the repo
+## Clone the repo
 Step 1: Open your VS Code editor's terminal.
 Step 2: Clone the repo by running the command below on your VS Code terminal.
 ```sh
@@ -48,4 +48,3 @@ npm start
 ```
 Step 6: Open the browser, and paste this link [http://localhost:1234/](http://localhost:1234/).
 Step 7: You will be able to see the app running.
-
