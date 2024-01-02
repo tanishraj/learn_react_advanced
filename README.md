@@ -92,139 +92,139 @@ npm start
 ## Episode 03 - Laying the foundation
 | # | Questions |
 | --- | --- |
-| 1 JSX |
-| 2 React.createElement vs JSX |
-| 3 Benefits of JSX |
-| 4 Behind the Scenes of JSX |
-| 5 Babel & parcel role in JSX |
-| 6 Components |
-| 7 Functional Components |
-| 8 Composing Components |
-| 8 Superpowers of JSX |
-| 10 Role of type attribute in script tag? What options can I use there? |
-| 11 {TitleComponent} vs {<TitleComponent/>} vs {<TitleComponent></TitleComponent>} in JSX |
+| 1 | JSX |
+| 2 | React.createElement vs JSX |
+| 3 | Benefits of JSX |
+| 4 | Behind the Scenes of JSX |
+| 5 | Babel & parcel role in JSX |
+| 6 | Components |
+| 7 | Functional Components |
+| 8 | Composing Components |
+| 8 | Superpowers of JSX |
+| 10 | Role of type attribute in script tag? What options can I use there? |
+| 11 | {TitleComponent} vs {<TitleComponent/>} vs {<TitleComponent></TitleComponent>} in JSX |
 
 ====================================================================================
 
 ## Episode 04 - Talk is cheap, show me the code!
 | # | Questions |
 | --- | --- |
-| 1 Is JSX mandatory for React? |
-| 2 Is ES6 mandatory for React? |
-| 3 {TitleComponent} vs {} vs {} in JSX |
-| 4 How can I write comments in JSX? |
-| 5 What is `React.Fragment` and `<> </>`? |
-| 6 What is Virtual DOM? |
-| 7 What is Reconciliation in React? |
-| 8 What is React Fiber? |
-| 9 Why do we need keys in React? When do we need keys in React? |
-| 10 Can we use index as keys in React? |
-| 11 What are props in React? Ways to pass props|
-| 12 What is a Config Driven UI?|
+| 1 | Is JSX mandatory for React? |
+| 2 | Is ES6 mandatory for React? |
+| 3 | {TitleComponent} vs {} vs {} in JSX |
+| 4 | How can I write comments in JSX? |
+| 5 | What is `React.Fragment` and `<> </>`? |
+| 6 | What is Virtual DOM? |
+| 7 | What is Reconciliation in React? |
+| 8 | What is React Fiber? |
+| 9 | Why do we need keys in React? When do we need keys in React? |
+| 10 | Can we use index as keys in React? |
+| 11 | What are props in React? Ways to pass props|
+| 12 | What is a Config Driven UI?|
 
 ====================================================================================
 
 ## Episode 05 - Let's get Hooked!
 | # | Questions |
 | --- | --- |
-| 1 What is the difference between Named Export, Default export, and * as export? |
-| 2 What is the importance of config.js file? |
-| 3 What are React Hooks? |
-| 4 Why do we need a useState Hook? |
+| 1 | What is the difference between Named Export, Default export, and * as export? |
+| 2 | What is the importance of config.js file? |
+| 3 | What are React Hooks? |
+| 4 | Why do we need a useState Hook? |
 
 ====================================================================================
 
 ## Episode 06 - Exploring the world
 | # | Questions |
 | --- | --- |
-| 1 What is a Microservice? |
-| 2 What is Monolith architecture? |
-| 3 What is the difference between Monolith and Microservice? |
-| 4 Why do we need a useEffect Hook? |
-| 5 What is Optional Chaining? |
-| 6 What is Shimmer UI? |
-| 7 What is the difference between JS expression and JS statement |
-| 8 What is Conditional Rendering, explain with a code example |
-| 9 What is CORS? |
-| 10 What is async and await? |
-| 11 What is the use of `const json = await data.json();` in getRestaurants() |
+| 1 | What is a Microservice? |
+| 2 | What is Monolith architecture? |
+| 3 | What is the difference between Monolith and Microservice? |
+| 4 | Why do we need a useEffect Hook? |
+| 5 | What is Optional Chaining? |
+| 6 | What is Shimmer UI? |
+| 7 | What is the difference between JS expression and JS statement |
+| 8 | What is Conditional Rendering, explain with a code example |
+| 9 | What is CORS? |
+| 10 | What is async and await? |
+| 11 | What is the use of `const json = await data.json();` in getRestaurants() |
 
 ====================================================================================
 
 ## Episode 07 - Finding the Path
 | # | Questions |
 | --- | --- |
-| 1 What are various ways to add images into our App? Explain with code examples |
-| 2 What would happen if we do console.log(useState())? |
-| 3 How will useEffect behave if we don't add a dependency array? |
-| 4 What is SPA? |
-| 5 What is the difference between Client Side Routing and Server Side Routing? |
+| 1 | What are various ways to add images into our App? Explain with code examples |
+| 2 | What would happen if we do console.log(useState())? |
+| 3 | How will useEffect behave if we don't add a dependency array? |
+| 4 | What is SPA? |
+| 5 | What is the difference between Client Side Routing and Server Side Routing? |
 
 ====================================================================================
 
 ## Episode 08 - Let's get Classy
 | # | Questions |
 | --- | --- |
-| 1 How do you create Nested Routes in react-router-dom configuration? |
-| 2 Read about createHashRouter and createMemoryRouter from React Router docs. |
-| 3 What is the order of life cycle method calls in Class Based Components? |
-| 4 Why do we use componentDidMount? |
-| 5 Why do we use componentWillUnmount? Show with example |
-| 6 Why do we use super(props) in constructor? (Research) |
-| 7 Why can't we have the callback function of useEffect async? (Research) |
+| 1 | How do you create Nested Routes in react-router-dom configuration? |
+| 2 | Read about createHashRouter and createMemoryRouter from React Router docs. |
+| 3 | What is the order of life cycle method calls in Class Based Components? |
+| 4 | Why do we use componentDidMount? |
+| 5 | Why do we use componentWillUnmount? Show with example |
+| 6 | Why do we use super(props) in constructor? (Research) |
+| 7 | Why can't we have the callback function of useEffect async? (Research) |
 
 ====================================================================================
 
 ## Episode 09 - Optimizing our App
 | # | Questions |
 | --- | --- |
-| 1 When and why do we need lazy()? |
-| 2 What is suspense? |
-| 3 Why do we get this error: "A component suspended while responding to synchronous input. This will cause the UI to be replaced with a loading indicator. To fix, updates that suspend should be wrapped with startTransition"? How does suspense fix this error? |
-| 4 Advantages and disadvantages of using this code splitting pattern? |
-| 5 When do we need suspense and why? |
+| 1 | When and why do we need lazy()? |
+| 2 | What is suspense? |
+| 3 | Why do we get this error: "A component suspended while responding to synchronous input. This will cause the UI to be replaced with a loading indicator. To fix, updates that suspend should be wrapped with startTransition"? How does suspense fix this error? |
+| 4 | Advantages and disadvantages of using this code splitting pattern? |
+| 5 | When do we need suspense and why? |
 
 ====================================================================================
 
 ## Episode 10 - Jo dikhta hai vo bikta hai
 | # | Questions |
 | --- | --- |
-| 1 Explore all the ways of writing CSS. |
-| 2 How do we configure Tailwind? |
-| 3 In tailwind.config.js, what do all the keys mean (content, theme, extend, plugins)? |
-| 4 Why do we have a .postcssrc file? |
+| 1 | Explore all the ways of writing CSS. |
+| 2 | How do we configure Tailwind? |
+| 3 | In tailwind.config.js, what do all the keys mean (content, theme, extend, plugins)? |
+| 4 | Why do we have a .postcssrc file? |
 
 ====================================================================================
 
 ## Episode 11 - Data is the new Oil
 | # | Questions |
 | --- | --- |
-| 1 What is prop drilling? |
-| 2 What is lifting the state up? |
-| 3 What is Context Provider and Context Consumer? |
-| 4 If you don’t pass a value to the provider, does it take the default value? |
+| 1 | What is prop drilling? |
+| 2 | What is lifting the state up? |
+| 3 | What is Context Provider and Context Consumer? |
+| 4 | If you don’t pass a value to the provider, does it take the default value? |
 
 ====================================================================================
 
 ## Episode 12 - Let's Build our Store
 | # | Questions |
 | --- | --- |
-| 1 useContext vs Redux |
-| 2 Advantage of using Redux Toolkit over Redux |
-| 3 Explain Dispatcher |
-| 4 Explain Reducer |
-| 5 Explain slice |
-| 6 Explain selector |
-| 7 Explain createSlice and the configuration it takes |
+| 1 | useContext vs Redux |
+| 2 | Advantage of using Redux Toolkit over Redux |
+| 3 | Explain Dispatcher |
+| 4 | Explain Reducer |
+| 5 | Explain slice |
+| 6 | Explain selector |
+| 7 | Explain createSlice and the configuration it takes |
 
 ====================================================================================
 
 ## Episode 13 - Time for the test
 | # | Questions |
 | --- | --- |
-| 1 What are different types for testing? |
-| 2 What is Enzyme? |
-| 3 Enzyme vs React Testing Library |
-| 4 What is Jest and why do we use it? |
+| 1 | What are different types for testing? |
+| 2 | What is Enzyme? |
+| 3 | Enzyme vs React Testing Library |
+| 4 | What is Jest and why do we use it? |
 
 ====================================================================================
