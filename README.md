@@ -50,7 +50,7 @@ npm start
 - Step 7: You will be able to see the app running.
 
 
-===============================================================================================================
+====================================================================================
 
 ## Episode 01 - Inception
 | # | Questions |
@@ -63,6 +63,8 @@ npm start
 | 6 | [What is the difference between React and ReactDOM?]() |
 | 7 | [What is the difference between react.development.js and react.production.js files via CDN?]() |
 | 8 | [What is async and defer?)]() |
+
+====================================================================================
 
 ## Episode 02 - Igniting our app
 | # | Questions |
@@ -85,6 +87,8 @@ npm start
 | 16 | [Read about: ^ - caret and ~ - tilde]() |
 | 17 | [Read about Script types in HTML (MDN Docs)]() |
 
+====================================================================================
+
 ## Episode 03 - Laying the foundation
 | # | Questions |
 | --- | --- |
@@ -99,6 +103,8 @@ npm start
 | 8 | [Superpowers of JSX]() |
 | 10 | [Role of type attribute in script tag? What options can I use there?]() |
 | 11 | [{TitleComponent} vs {<TitleComponent/>} vs {<TitleComponent></TitleComponent>} in JSX]() |
+
+====================================================================================
 
 ## Episode 04 - Talk is cheap, show me the code!
 | # | Questions |
@@ -116,6 +122,8 @@ npm start
 | 11 | [What are props in React? Ways to pass props]()|
 | 12 | [What is a Config Driven UI?]()|
 
+====================================================================================
+
 ## Episode 05 - Let's get Hooked!
 | # | Questions |
 | --- | --- |
@@ -123,6 +131,8 @@ npm start
 | 2 | [What is the importance of config.js file?]() |
 | 3 | [What are React Hooks?]() |
 | 4 | [Why do we need a useState Hook?]() |
+
+====================================================================================
 
 ## Episode 06 - Exploring the world
 | # | Questions |
@@ -139,6 +149,8 @@ npm start
 | 10 | [What is async and await?]() |
 | 11 | [What is the use of `const json = await data.json();` in getRestaurants()]() |
 
+====================================================================================
+
 ## Episode 07 - Finding the Path
 | # | Questions |
 | --- | --- |
@@ -147,6 +159,8 @@ npm start
 | 3 | [How will useEffect behave if we don't add a dependency array?]() |
 | 4 | [What is SPA?]() |
 | 5 | [What is the difference between Client Side Routing and Server Side Routing?]() |
+
+====================================================================================
 
 ## Episode 08 - Let's get Classy
 | # | Questions |
@@ -159,6 +173,8 @@ npm start
 | 6 | [Why do we use super(props) in constructor? (Research)]() |
 | 7 | [Why can't we have the callback function of useEffect async? (Research)]() |
 
+====================================================================================
+
 ## Episode 09 - Optimizing our App
 | # | Questions |
 | --- | --- |
@@ -168,6 +184,8 @@ npm start
 | 4 | [Advantages and disadvantages of using this code splitting pattern?]() |
 | 5 | [When do we need suspense and why?]() |
 
+====================================================================================
+
 ## Episode 10 - Jo dikhta hai vo bikta hai
 | # | Questions |
 | --- | --- |
@@ -176,6 +194,8 @@ npm start
 | 3 | [In tailwind.config.js, what do all the keys mean (content, theme, extend, plugins)?]() |
 | 4 | [Why do we have a .postcssrc file?]() |
 
+====================================================================================
+
 ## Episode 11 - Data is the new Oil
 | # | Questions |
 | --- | --- |
@@ -183,6 +203,8 @@ npm start
 | 2 | [What is lifting the state up?]() |
 | 3 | [What is Context Provider and Context Consumer?]() |
 | 4 | [If you don’t pass a value to the provider, does it take the default value?]() |
+
+====================================================================================
 
 ## Episode 12 - Let's Build our Store
 | # | Questions |
@@ -195,6 +217,8 @@ npm start
 | 6 | [Explain selector]() |
 | 7 | [Explain createSlice and the configuration it takes]() |
 
+====================================================================================
+
 ## Episode 13 - Time for the test
 | # | Questions |
 | --- | --- |
@@ -202,3 +226,6 @@ npm start
 | 2 | [What is Enzyme?]() |
 | 3 | [Enzyme vs React Testing Library]() |
 | 4 | [What is Jest and why do we use it?]() |
+
+====================================================================================
+
