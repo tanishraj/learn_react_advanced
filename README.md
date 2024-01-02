@@ -4,7 +4,7 @@
 This repository contains all the examples that were explained during the course and also contains a [README.md]() file where I will provide a link of an article for each concepts.
 
 ## Who can benefit from this repo?
-This repository will be useful for all the developers, who has taken up [NamasteDev]() course for react and want to refer the codebase which was discussed during the course and can also contribute to update the documentation and can also add some additional cool features to the current projects. You should also have basic knowledge of HTML, CSS and Javascript.
+This repository will be useful for all the developers, who has ba has basic knowledge of HTML, CSS and Javascript and taken up [NamasteDev]() course for react and want to refer the codebase which was discussed during the course and can also contribute to update the documentation and can also add some additional cool features to the current projects. 
 
 ## Tools Required:
 You need to install these two application on your machine before you start the course and also to run the app.
@@ -26,7 +26,7 @@ As you go forward in the course, you will find all the given tech stack coming y
 - React Testing Library (React Component Testing)
 
 
-## Clone the repo
+## Steps to run the app
 - Step 1: Open your VS Code editor's terminal.
 - Step 2: Clone the repo by running the command below on your VS Code terminal.
 ```sh
@@ -228,4 +228,3 @@ npm start
 | 4 | [What is Jest and why do we use it?]() |
 
 ====================================================================================
-
