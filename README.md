@@ -391,5 +391,6 @@ test('adds 1 + 2 to equal 3', () => {
 });
 ```
 In this example, Jest's test function is used to define a test case, and expect is used to make assertions about the behavior of the sum function.
+
 **[⬆ Back to Top](#episode-13---time-for-the-test)**
 ====================================================================================
