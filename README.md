@@ -239,5 +239,37 @@ npm start
 | 3 | Enzyme vs React Testing Library |
 | 4 | What is Jest and why do we use it? |
 
+
+### 4. What is Enzyme?
+
+Enzyme is a JavaScript testing utility for React that makes it easier to assert, manipulate, and traverse React components' output. It provides a set of testing utilities to facilitate component testing, including shallow rendering, full DOM rendering, and a variety of component querying methods.
+
+Enzyme is often used in conjunction with testing libraries like Jest to create robust test suites for React applications.
+
+### Example
+
+Assuming you have a simple React component named `MyComponent`:
+
+```jsx
+import React from 'react';
+
+const MyComponent = ({ message }) => {
+  return <div>{message}</div>;
+};
+
+export default MyComponent;
+```
+You can use Enzyme to shallow render and test this component:
+```
+import { shallow } from 'enzyme';
+import MyComponent from './MyComponent';
+
+test('renders the message correctly', () => {
+  const wrapper = shallow(<MyComponent message="Hello, Enzyme!" />);
+  expect(wrapper.text()).toBe('Hello, Enzyme!');
+});
+```
+In this example, shallow from Enzyme is used to render only the current component, allowing you to make assertions about its output.
+
 **[⬆ Back to Top](#episode-13---time-for-the-test)**
 ====================================================================================
