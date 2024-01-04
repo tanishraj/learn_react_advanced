@@ -63,6 +63,7 @@ npm start
 | 6 | [What is the difference between React and ReactDOM?](https://medium.com/@tanish_rajput/react-and-reactdom-the-dynamic-duo-behind-stunning-user-interfaces-3e83ca3d1468) |
 | 7 | [What is the difference between react.development.js and react.production.js files via CDN?](https://medium.com/@tanish_rajput/react-development-vs-production-choosing-the-right-tools-for-the-job-75206915ba5e) |
 | 8 | [What is async and defer?)](https://medium.com/@tanish_rajput/loading-javascript-asynchronously-defer-vs-async-15a6c6471927) |
+
 ====================================================================================
 
 **[⬆ Back to Top](#episode-01---inception)**
@@ -89,6 +90,7 @@ npm start
 | 15 | Read about different bundlers: vite, webpack, parcel |
 | 16 | [Read about: ^ - caret and ~ - tilde](https://medium.com/@tanish_rajput/a73e02033bfc) |
 | 17 | Read about Script types in HTML (MDN Docs) |
+
 ====================================================================================
 
 **[⬆ Back to Top](#episode-02---igniting-our-app)**
@@ -109,6 +111,7 @@ npm start
 | 8 | Superpowers of JSX |
 | 10 | Role of type attribute in script tag? What options can I use there? |
 | 11 | {TitleComponent} vs {<TitleComponent/>} vs {<TitleComponent></TitleComponent>} in JSX |
+
 ====================================================================================
 
 **[⬆ Back to Top](#episode-03---laying-the-foundation)**
@@ -130,6 +133,7 @@ npm start
 | 10 | Can we use index as keys in React? |
 | 11 | What are props in React? Ways to pass props|
 | 12 | What is a Config Driven UI?|
+
 ====================================================================================
 
 **[⬆ Back to Top](#episode-04---talk-is-cheap-show-me-the-code)**
@@ -143,6 +147,7 @@ npm start
 | 2 | What is the importance of config.js file? |
 | 3 | What are React Hooks? |
 | 4 | Why do we need a useState Hook? |
+
 ====================================================================================
 
 **[⬆ Back to Top](#episode-05---lets-get-hooked)**
@@ -163,6 +168,7 @@ npm start
 | 9 | What is CORS? |
 | 10 | What is async and await? |
 | 11 | What is the use of `const json = await data.json();` in getRestaurants() |
+
 ====================================================================================
 
 **[⬆ Back to Top](#episode-06---exploring-the-world)**
@@ -177,6 +183,7 @@ npm start
 | 3 | How will useEffect behave if we don't add a dependency array? |
 | 4 | What is SPA? |
 | 5 | What is the difference between Client Side Routing and Server Side Routing? |
+
 ====================================================================================
 
 **[⬆ Back to Top](#episode-07---finding-the-path)**
@@ -193,6 +200,7 @@ npm start
 | 5 | Why do we use componentWillUnmount? Show with example |
 | 6 | Why do we use super(props) in constructor? (Research) |
 | 7 | Why can't we have the callback function of useEffect async? (Research) |
+
 ====================================================================================
 
 **[⬆ Back to Top](#episode-08---lets-get-classy)**
@@ -221,6 +229,7 @@ npm start
 | 2 | How do we configure Tailwind? |
 | 3 | In tailwind.config.js, what do all the keys mean (content, theme, extend, plugins)? |
 | 4 | Why do we have a .postcssrc file? |
+
 ====================================================================================
 
 **[⬆ Back to Top](#episode-10---jo-dikhta-hai-vo-bikta-hai)**
@@ -234,6 +243,7 @@ npm start
 | 2 | What is lifting the state up? |
 | 3 | What is Context Provider and Context Consumer? |
 | 4 | If you don’t pass a value to the provider, does it take the default value? |
+
 ====================================================================================
 
 **[⬆ Back to Top](#episode-11---data-is-the-new-oil)**
@@ -250,6 +260,7 @@ npm start
 | 5 | Explain slice |
 | 6 | Explain selector |
 | 7 | Explain createSlice and the configuration it takes |
+
 ====================================================================================
 
 **[⬆ Back to Top](#episode-12---lets-build-our-store)**
@@ -263,6 +274,7 @@ npm start
 | 2 | What is Enzyme? |
 | 3 | Enzyme vs React Testing Library |
 | 4 | What is Jest and why do we use it? |
+
 ====================================================================================
 
 ### 1. What are different types of testing?
