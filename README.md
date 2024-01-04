@@ -270,10 +270,10 @@ npm start
 ## Episode 13 - Time for the test
 | # | Questions |
 | --- | --- |
-| 1 | What are different types for testing? |
-| 2 | What is Enzyme? |
-| 3 | Enzyme vs React Testing Library |
-| 4 | What is Jest and why do we use it? |
+| 1 | [What are different types for testing?](#1-what-are-different-types-of-testing) |
+| 2 | [What is Enzyme?](#2-what-is-enzyme) |
+| 3 | [Enzyme vs React Testing Library](#3-enzyme-vs-react-testing-library) |
+| 4 | [What is Jest and why do we use it?](#4-what-is-jest-and-why-do-we-use-it) |
 
 ====================================================================================
 
