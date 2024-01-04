@@ -189,10 +189,10 @@ npm start
 ## Episode 11 - Data is the new Oil
 | # | Questions |
 | --- | --- |
-| 1 | What is prop drilling? |
-| 2 | What is lifting the state up? |
-| 3 | What is Context Provider and Context Consumer? |
-| 4 | If you don’t pass a value to the provider, does it take the default value? |
+| 1 | [What is prop drilling?](#1-what-is-prop-drilling) |
+| 2 | [What is lifting the state up?](#2-lifting-state-up) |
+| 3 | [What is Context Provider and Context Consumer?](#3-context-provider-and-context-consumer) |
+| 4 | [If you don’t pass a value to the provider, does it take the default value?](#4-default-value-in-context-provider) |
 
 
 ## Episode 12 - Let's Build our Store
