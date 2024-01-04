@@ -198,13 +198,13 @@ npm start
 ## Episode 12 - Let's Build our Store
 | # | Questions |
 | --- | --- |
-| 1 | useContext vs Redux |
-| 2 | Advantage of using Redux Toolkit over Redux |
-| 3 | Explain Dispatcher |
-| 4 | Explain Reducer |
-| 5 | Explain slice |
-| 6 | Explain selector |
-| 7 | Explain createSlice and the configuration it takes |
+| 1 | [useContext vs Redux](#1-usecontext-vs-redux) |
+| 2 | [Advantage of using Redux Toolkit over Redux](#2-advantage-of-using-redux-toolkit-over-redux) |
+| 3 | [Explain Dispatcher](#3-explain-dispatcher) |
+| 4 | [Explain Reducer](#4-explain-reducer) |
+| 5 | [Explain slice](#5-explain-slice) |
+| 6 | [Explain selector](#6-explain-selector) |
+| 7 | [Explain createSlice and the configuration it takes](#7-createslice-in-redux-toolkit) |
 
 
 ## Episode 13 - Time for the test
@@ -776,3 +776,173 @@ const CounterComponent = () => {
 ```
 
 `createSlice` in Redux Toolkit simplifies the process of defining a Redux slice by combining the initial state, reducers, and action creators into a single call. It reduces boilerplate, promotes a structured approach, and enhances the overall development experience.
+
+
+
+
+------------------------------------------------------------------------------------
+
+## Episode 13 - Time for the test (ANSWERS)
+
+------------------------------------------------------------------------------------
+
+### 1. What are different types of testing?
+
+There are various types of testing in software development, each serving a specific purpose in ensuring the quality and reliability of a software product.
+
+ #### 1. Unit Testing:
+
+**Definition:** Unit testing involves testing individual units or components of a system in isolation. It focuses on validating that each unit of the software performs as designed.
+
+**Example:**
+Assuming you have a function named `add`:
+
+```javascript
+function add(a, b) {
+  return a + b;
+}
+```
+A unit test for this function might look like:
+
+```javascript
+test('adds 1 + 2 to equal 3', () => {
+  expect(add(1, 2)).toBe(3);
+});
+```
+
+ #### 2. Integration Testing:
+
+**Definition:** Integration testing verifies that different components or modules of a system work together as intended. It ensures that the integrated components can exchange data correctly and function as a unified system.
+
+**Example:**
+Testing the interaction between a front-end React component and a back-end API.
+
+ #### 3. End-to-End (E2E) Testing:
+
+**Definition:** End-to-End testing assesses the entire software application from start to finish. It involves testing the complete user flow, simulating real user scenarios and interactions.
+
+**Example:**
+Using tools like Cypress or Selenium to automate interactions through a web application, including navigation, form submissions, and validations.
+
+------------------------------------------------------------------------------------
+
+### 2. What is Enzyme?
+
+Enzyme is a JavaScript testing utility for React that makes it easier to assert, manipulate, and traverse React components' output. It provides a set of testing utilities to facilitate component testing, including shallow rendering, full DOM rendering, and a variety of component querying methods.
+
+Enzyme is often used in conjunction with testing libraries like Jest to create robust test suites for React applications.
+
+### Example
+
+Assuming you have a simple React component named `MyComponent`:
+
+```jsx
+import React from 'react';
+
+const MyComponent = ({ message }) => {
+  return <div>{message}</div>;
+};
+
+export default MyComponent;
+```
+You can use Enzyme to shallow render and test this component:
+```jsx
+import { shallow } from 'enzyme';
+import MyComponent from './MyComponent';
+
+test('renders the message correctly', () => {
+  const wrapper = shallow(<MyComponent message="Hello, Enzyme!" />);
+  expect(wrapper.text()).toBe('Hello, Enzyme!');
+});
+```
+In this example, shallow from Enzyme is used to render only the current component, allowing you to make assertions about its output.
+
+------------------------------------------------------------------------------------
+
+### 3. Enzyme vs React Testing Library
+
+Enzyme and React Testing Library are both popular testing utilities in the React ecosystem, but they differ in their testing philosophies and approaches.
+
+#### Enzyme:
+
+Enzyme is a testing utility specifically designed for React. It provides a range of testing utilities, including shallow rendering, full DOM rendering, and various methods for querying and interacting with components. Enzyme allows you to isolate and test components in different ways, making it powerful for complex component structures.
+
+**Example:**
+
+Assuming you have a simple React component named `MyComponent`:
+
+```jsx
+import { shallow } from 'enzyme';
+import MyComponent from './MyComponent';
+
+test('renders the message correctly', () => {
+  const wrapper = shallow(<MyComponent message="Hello, Enzyme!" />);
+  expect(wrapper.text()).toBe('Hello, Enzyme!');
+});
+```
+
+### React Testing Library:
+React Testing Library, on the other hand, promotes testing the application from the user's perspective. It encourages testing components in a way that resembles how users interact with the application. This means focusing on testing the rendered output and user interactions rather than the internal implementation details of components.
+
+**Example:**
+
+Assuming you have the same `MyComponent`:
+
+```jsx
+import { render, screen } from '@testing-library/react';
+import MyComponent from './MyComponent';
+
+test('renders the message correctly', () => {
+  render(<MyComponent message="Hello, Enzyme!" />);
+  const messageElement = screen.getByText('Hello, Enzyme!');
+  expect(messageElement).toBeInTheDocument();
+});
+```
+In this example, render from React Testing Library is used to render the component, and getByText is used to query the rendered output from a user's perspective.
+
+------------------------------------------------------------------------------------
+
+### 4. What is Jest and why do we use it?
+
+[Jest](https://jestjs.io/) is a JavaScript testing framework that is widely used in the frontend development community, especially for testing React applications. It is developed by Facebook and provides a simple and effective way to write unit tests, integration tests, and even snapshot tests.
+
+#### Why do we use Jest?
+
+ 1. **Easy Setup:** Jest comes pre-configured for testing React applications. Setting up a testing environment is straightforward, allowing developers to focus more on writing tests and less on configuration.
+
+ 2. **Snapshot Testing:** Jest introduces the concept of snapshot testing, where it captures the rendered output of a component and compares it to a previously saved "snapshot." This helps identify unexpected changes in the UI.
+
+ 3. **Fast and Parallel Execution:** Jest is designed for speed and efficiency. It runs tests in parallel, making it faster than some other testing frameworks. The automatic parallelization feature optimizes test execution.
+
+ 4. **Mocking:** Jest provides built-in support for mocking, allowing developers to isolate parts of the codebase during testing. This is particularly useful when testing components that interact with external APIs or services.
+
+ 5. **Built-in Expectations:** Jest comes with a set of built-in expectations, making it easy to write assertions for common scenarios. This simplifies the process of writing test cases and improves code readability.
+
+ 6. **Code Coverage:** Jest provides code coverage reports, which help developers understand how much of their codebase is covered by tests. This information is valuable for ensuring comprehensive test coverage.
+
+#### Example:
+
+Assuming you have a simple function named `sum`:
+
+```javascript
+function sum(a, b) {
+  return a + b;
+}
+
+module.exports = sum;
+```
+You can write a Jest test for this function:
+```javascript
+const sum = require('./sum');
+
+test('adds 1 + 2 to equal 3', () => {
+  expect(sum(1, 2)).toBe(3);
+});
+```
+In this example, Jest's test function is used to define a test case, and expect is used to make assertions about the behavior of the sum function.
+
+------------------------------------------------------------------------------------
+
+**[⬆ Back to Top](#episode-13---time-for-the-test)**
+
+------------------------------------------------------------------------------------
