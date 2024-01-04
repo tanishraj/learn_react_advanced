@@ -63,8 +63,10 @@ npm start
 | 6 | [What is the difference between React and ReactDOM?](https://medium.com/@tanish_rajput/react-and-reactdom-the-dynamic-duo-behind-stunning-user-interfaces-3e83ca3d1468) |
 | 7 | [What is the difference between react.development.js and react.production.js files via CDN?](https://medium.com/@tanish_rajput/react-development-vs-production-choosing-the-right-tools-for-the-job-75206915ba5e) |
 | 8 | [What is async and defer?)](https://medium.com/@tanish_rajput/loading-javascript-asynchronously-defer-vs-async-15a6c6471927) |
+====================================================================================
 
 **[⬆ Back to Top](#episode-01---inception)**
+
 ====================================================================================
 
 ## Episode 02 - Igniting our app
@@ -87,8 +89,10 @@ npm start
 | 15 | Read about different bundlers: vite, webpack, parcel |
 | 16 | [Read about: ^ - caret and ~ - tilde](https://medium.com/@tanish_rajput/a73e02033bfc) |
 | 17 | Read about Script types in HTML (MDN Docs) |
+====================================================================================
 
 **[⬆ Back to Top](#episode-02---igniting-our-app)**
+
 ====================================================================================
 
 ## Episode 03 - Laying the foundation
@@ -105,8 +109,10 @@ npm start
 | 8 | Superpowers of JSX |
 | 10 | Role of type attribute in script tag? What options can I use there? |
 | 11 | {TitleComponent} vs {<TitleComponent/>} vs {<TitleComponent></TitleComponent>} in JSX |
+====================================================================================
 
 **[⬆ Back to Top](#episode-03---laying-the-foundation)**
+
 ====================================================================================
 
 ## Episode 04 - Talk is cheap, show me the code!
@@ -124,8 +130,10 @@ npm start
 | 10 | Can we use index as keys in React? |
 | 11 | What are props in React? Ways to pass props|
 | 12 | What is a Config Driven UI?|
+====================================================================================
 
 **[⬆ Back to Top](#episode-04---talk-is-cheap-show-me-the-code)**
+
 ====================================================================================
 
 ## Episode 05 - Let's get Hooked!
@@ -135,8 +143,10 @@ npm start
 | 2 | What is the importance of config.js file? |
 | 3 | What are React Hooks? |
 | 4 | Why do we need a useState Hook? |
+====================================================================================
 
 **[⬆ Back to Top](#episode-05---lets-get-hooked)**
+
 ====================================================================================
 
 ## Episode 06 - Exploring the world
@@ -153,8 +163,10 @@ npm start
 | 9 | What is CORS? |
 | 10 | What is async and await? |
 | 11 | What is the use of `const json = await data.json();` in getRestaurants() |
+====================================================================================
 
 **[⬆ Back to Top](#episode-06---exploring-the-world)**
+
 ====================================================================================
 
 ## Episode 07 - Finding the Path
@@ -165,8 +177,10 @@ npm start
 | 3 | How will useEffect behave if we don't add a dependency array? |
 | 4 | What is SPA? |
 | 5 | What is the difference between Client Side Routing and Server Side Routing? |
+====================================================================================
 
 **[⬆ Back to Top](#episode-07---finding-the-path)**
+
 ====================================================================================
 
 ## Episode 08 - Let's get Classy
@@ -179,8 +193,10 @@ npm start
 | 5 | Why do we use componentWillUnmount? Show with example |
 | 6 | Why do we use super(props) in constructor? (Research) |
 | 7 | Why can't we have the callback function of useEffect async? (Research) |
+====================================================================================
 
 **[⬆ Back to Top](#episode-08---lets-get-classy)**
+
 ====================================================================================
 
 ## Episode 09 - Optimizing our App
@@ -192,7 +208,10 @@ npm start
 | 4 | Advantages and disadvantages of using this code splitting pattern? |
 | 5 | When do we need suspense and why? |
 
+====================================================================================
+
 **[⬆ Back to Top](#episode-09---optimizing-our-app)**
+
 ====================================================================================
 
 ## Episode 10 - Jo dikhta hai vo bikta hai
@@ -202,8 +221,10 @@ npm start
 | 2 | How do we configure Tailwind? |
 | 3 | In tailwind.config.js, what do all the keys mean (content, theme, extend, plugins)? |
 | 4 | Why do we have a .postcssrc file? |
+====================================================================================
 
 **[⬆ Back to Top](#episode-10---jo-dikhta-hai-vo-bikta-hai)**
+
 ====================================================================================
 
 ## Episode 11 - Data is the new Oil
@@ -213,8 +234,10 @@ npm start
 | 2 | What is lifting the state up? |
 | 3 | What is Context Provider and Context Consumer? |
 | 4 | If you don’t pass a value to the provider, does it take the default value? |
+====================================================================================
 
 **[⬆ Back to Top](#episode-11---data-is-the-new-oil)**
+
 ====================================================================================
 
 ## Episode 12 - Let's Build our Store
@@ -227,8 +250,10 @@ npm start
 | 5 | Explain slice |
 | 6 | Explain selector |
 | 7 | Explain createSlice and the configuration it takes |
+====================================================================================
 
 **[⬆ Back to Top](#episode-12---lets-build-our-store)**
+
 ====================================================================================
 
 ## Episode 13 - Time for the test
@@ -238,12 +263,13 @@ npm start
 | 2 | What is Enzyme? |
 | 3 | Enzyme vs React Testing Library |
 | 4 | What is Jest and why do we use it? |
+====================================================================================
 
 ### 1. What are different types of testing?
 
 There are various types of testing in software development, each serving a specific purpose in ensuring the quality and reliability of a software product.
 
-#### 1. Unit Testing:
+ #### 1. Unit Testing:
 
 **Definition:** Unit testing involves testing individual units or components of a system in isolation. It focuses on validating that each unit of the software performs as designed.
 
@@ -263,14 +289,14 @@ test('adds 1 + 2 to equal 3', () => {
 });
 ```
 
-#### 2. Integration Testing:
+ #### 2. Integration Testing:
 
 **Definition:** Integration testing verifies that different components or modules of a system work together as intended. It ensures that the integrated components can exchange data correctly and function as a unified system.
 
 **Example:**
 Testing the interaction between a front-end React component and a back-end API.
 
-#### 3. End-to-End (E2E) Testing:
+ #### 3. End-to-End (E2E) Testing:
 
 **Definition:** End-to-End testing assesses the entire software application from start to finish. It involves testing the complete user flow, simulating real user scenarios and interactions.
 
@@ -393,6 +419,9 @@ test('adds 1 + 2 to equal 3', () => {
 });
 ```
 In this example, Jest's test function is used to define a test case, and expect is used to make assertions about the behavior of the sum function.
+
 ====================================================================================
+
 **[⬆ Back to Top](#episode-13---time-for-the-test)**
+
 ====================================================================================
