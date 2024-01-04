@@ -277,6 +277,7 @@ Testing the interaction between a front-end React component and a back-end API.
 **Example:**
 Using tools like Cypress or Selenium to automate interactions through a web application, including navigation, form submissions, and validations.
 
+====================================================================================
 
 ### 2. What is Enzyme?
 
@@ -309,6 +310,7 @@ test('renders the message correctly', () => {
 ```
 In this example, shallow from Enzyme is used to render only the current component, allowing you to make assertions about its output.
 
+====================================================================================
 
 ### 3. Enzyme vs React Testing Library
 
@@ -351,7 +353,7 @@ test('renders the message correctly', () => {
 ```
 In this example, render from React Testing Library is used to render the component, and getByText is used to query the rendered output from a user's perspective.
 
-
+====================================================================================
 
 ### 4. What is Jest and why do we use it?
 
@@ -359,17 +361,17 @@ In this example, render from React Testing Library is used to render the compone
 
 #### Why do we use Jest?
 
-1. **Easy Setup:** Jest comes pre-configured for testing React applications. Setting up a testing environment is straightforward, allowing developers to focus more on writing tests and less on configuration.
+ 1. **Easy Setup:** Jest comes pre-configured for testing React applications. Setting up a testing environment is straightforward, allowing developers to focus more on writing tests and less on configuration.
 
-2. **Snapshot Testing:** Jest introduces the concept of snapshot testing, where it captures the rendered output of a component and compares it to a previously saved "snapshot." This helps identify unexpected changes in the UI.
+ 2. **Snapshot Testing:** Jest introduces the concept of snapshot testing, where it captures the rendered output of a component and compares it to a previously saved "snapshot." This helps identify unexpected changes in the UI.
 
-3. **Fast and Parallel Execution:** Jest is designed for speed and efficiency. It runs tests in parallel, making it faster than some other testing frameworks. The automatic parallelization feature optimizes test execution.
+ 3. **Fast and Parallel Execution:** Jest is designed for speed and efficiency. It runs tests in parallel, making it faster than some other testing frameworks. The automatic parallelization feature optimizes test execution.
 
-4. **Mocking:** Jest provides built-in support for mocking, allowing developers to isolate parts of the codebase during testing. This is particularly useful when testing components that interact with external APIs or services.
+ 4. **Mocking:** Jest provides built-in support for mocking, allowing developers to isolate parts of the codebase during testing. This is particularly useful when testing components that interact with external APIs or services.
 
-5. **Built-in Expectations:** Jest comes with a set of built-in expectations, making it easy to write assertions for common scenarios. This simplifies the process of writing test cases and improves code readability.
+ 5. **Built-in Expectations:** Jest comes with a set of built-in expectations, making it easy to write assertions for common scenarios. This simplifies the process of writing test cases and improves code readability.
 
-6. **Code Coverage:** Jest provides code coverage reports, which help developers understand how much of their codebase is covered by tests. This information is valuable for ensuring comprehensive test coverage.
+ 6. **Code Coverage:** Jest provides code coverage reports, which help developers understand how much of their codebase is covered by tests. This information is valuable for ensuring comprehensive test coverage.
 
 #### Example:
 
@@ -391,6 +393,6 @@ test('adds 1 + 2 to equal 3', () => {
 });
 ```
 In this example, Jest's test function is used to define a test case, and expect is used to make assertions about the behavior of the sum function.
-
+====================================================================================
 **[⬆ Back to Top](#episode-13---time-for-the-test)**
 ====================================================================================
