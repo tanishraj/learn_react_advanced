@@ -217,6 +217,186 @@ npm start
 
 
 
+------------------------------------------------------------------------------------
+
+## Episode 05 - Let’s get Hooked! (ANSWERS)
+
+------------------------------------------------------------------------------------
+
+### 1. What is the difference between Named Export, Default export, and * as export?
+
+### Named Export, Default Export, and `* as` Export in JavaScript
+
+#### **Named Export:**
+Named exports allow you to export multiple values from a module, and each exported value has a specific name. These exports are explicitly imported using the same name.
+
+##### **Example:**
+
+```javascript
+// NamedExportModule.js
+export const variable1 = 'Value 1';
+export const variable2 = 'Value 2';
+```
+
+```javascript
+// Importing named exports
+import { variable1, variable2 } from './NamedExportModule';
+console.log(variable1, variable2); // Output: 'Value 1' 'Value 2'
+```
+
+#### **Default Export:**
+Default exports allow you to export a single value from a module. When importing, you can choose any name for the imported value.
+
+##### **Example:**
+
+```javascript
+// DefaultExportModule.js
+const defaultExportValue = 'Default Export Value';
+export default defaultExportValue;
+```
+
+
+```javascript
+// Importing default export
+import myValue from './DefaultExportModule';
+console.log(myValue); // Output: 'Default Export Value'
+```
+
+
+#### **`*` as Export:**
+The `* as` syntax allows you to import all exports from a module as a single object. It is particularly useful when a module has multiple named exports.
+
+##### **Example:**
+
+```javascript
+// StarAsExportModule.js
+export const var1 = 'Variable 1';
+export const var2 = 'Variable 2';
+```
+
+```javascript
+// StarAsExportModule.js
+// Importing all exports using `* as`
+import * as exportedValues from './StarAsExportModule';
+console.log(exportedValues.var1, exportedValues.var2); // Output: 'Variable 1' 'Variable 2'
+```
+
+------------------------------------------------------------------------------------
+
+### 2. What is the importance of config.js file?
+
+### Importance of `config.js` File
+
+#### **Description:**
+The `config.js` file is commonly used in web development to centralize and manage configuration settings and environment variables for an application. It serves as a single source of truth for configuration values, making it easier to update, maintain, and share settings across different parts of the codebase.
+
+#### **Why Use `config.js`:**
+- **Centralized Configuration:**
+  - **Description:** By using a `config.js` file, developers can store various configuration parameters, API keys, URLs, and environment-specific settings in one place. This promotes modularity and makes it simpler to adapt the application to different environments.
+
+#### **Example:**
+Consider a simple `config.js` file for a React application:
+
+```javascript
+// config.js
+
+const config = {
+  apiBaseUrl: process.env.REACT_APP_API_BASE_URL || 'https://api.example.com',
+  apiKey: process.env.REACT_APP_API_KEY || 'your_api_key_here',
+  maxItemsPerPage: 10,
+  // Other configuration settings...
+};
+
+export default config;
+```
+
+In this example, the `config.js` file contains configuration parameters such as `apiBaseUrl`, `apiKey`, and `maxItemsPerPage`. It also utilizes environment variables (prefixed with `REACT_APP_` for a React app) to allow for different values in different environments. This file can be imported and used throughout the application, providing a centralized and easily accessible location for configuration values.
+
+Having a dedicated `config.js` file becomes especially crucial when deploying an application to different environments (development, staging, production), as it allows for quick adjustments without modifying code in multiple places. Additionally, it aids in keeping sensitive information, like API keys, separate from the application's source code, enhancing security practices.
+
+
+
+------------------------------------------------------------------------------------
+
+### 3. What are React Hooks?
+
+### React Hooks
+
+#### **1. `useState`:**
+- **Description:** Used to add state variables to functional components. Returns an array with the current state value and a function to update it.
+
+#### **2. `useEffect`:**
+Enables performing side effects in functional components. It's often used for data fetching, subscriptions, or manually changing the DOM.
+
+#### **3. `useContext`:**
+Provides access to the value of a React context, allowing functional components to subscribe to context changes.
+
+#### **4. `useReducer`:**
+An alternative to `useState` for managing more complex state logic. It takes a reducer function and an initial state, returning the current state and a dispatch function.
+
+#### **5. `useCallback`:**
+Memoizes a callback function, preventing it from being recreated on each render. Useful for optimizing performance in child components.
+
+#### **6. `useMemo`:**
+Memoizes the result of a computation, preventing unnecessary recalculations on each render. Useful for optimizing expensive computations.
+
+#### **7. `useRef`:**
+Returns a mutable object (`{ current: ... }`) that persists across renders. It's often used to access or store mutable values without causing re-renders.
+
+#### **8. `useImperativeHandle`:**
+Customizes the instance value exposed when using `ref` with `forwardRef`. It allows a parent component to interact with the child's imperative API.
+
+#### **9. `useLayoutEffect`:**
+Similar to `useEffect`, but fires synchronously after all DOM mutations. It's useful when you need to measure or manipulate the DOM immediately after component updates.
+
+#### **10. `useDebugValue`:**
+Adds debug information to custom hooks when viewed with React DevTools. It's useful for displaying custom hook values in the DevTools inspector.
+
+These hooks cover various aspects of building functional components, managing state, handling side effects, and optimizing performance in React applications.
+
+
+
+
+------------------------------------------------------------------------------------
+
+### 4. Why do we need a useState Hook?
+
+### `useState` Hook in React
+
+The `useState` hook in React is essential for functional components to manage and update local state. Before the introduction of hooks, state management was primarily handled by class components. `useState` enables functional components to have state variables, making them more powerful and comparable to class components.
+
+#### **Why Use `useState`:**
+- **Functional Component State:**
+  `useState` allows functional components to declare and update state variables, enabling dynamic behavior, reactivity to user interactions, and UI updates.
+
+#### **Example:**
+Consider a simple example of a counter component that utilizes the `useState` hook to manage a count variable.
+
+```jsx
+import React, { useState } from 'react';
+
+const Counter = () => {
+  // Declaring a state variable 'count' with an initial value of 0
+  const [count, setCount] = useState(0);
+
+  // Event handler to increment the count when the button is clicked
+  const incrementCount = () => {
+    // Using the setCount function to update the 'count' state
+    setCount(count + 1);
+  };
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      {/* Button to trigger the incrementCount event handler */}
+      <button onClick={incrementCount}>Increment</button>
+    </div>
+  );
+};
+```
+
+In this example, useState(0) initializes the count state variable with an initial value of 0. The setCount function is then used to update the count state whenever the "Increment" button is clicked. This results in a re-render of the component with the updated state, reflecting the new count value in the UI. The useState hook simplifies state management in functional components, making them more versatile and expressive.
+
 
 ------------------------------------------------------------------------------------
 
