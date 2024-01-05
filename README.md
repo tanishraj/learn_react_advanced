@@ -148,11 +148,11 @@ npm start
 ## Episode 07 - Finding the Path
 | # | Questions |
 | --- | --- |
-| 1 | What are various ways to add images into our App? Explain with code examples |
-| 2 | What would happen if we do console.log(useState())? |
-| 3 | How will useEffect behave if we don't add a dependency array? |
-| 4 | What is SPA? |
-| 5 | What is the difference between Client Side Routing and Server Side Routing? |
+| 1 | [What are various ways to add images into our App? Explain with code examples](#1-what-are-various-ways-to-add-images-into-our-app-explain-with-code-examples) |
+| 2 | [What would happen if we do console.log(useState())?](#2-what-would-happen-if-we-do-consolelogusestate) |
+| 3 | [How will useEffect behave if we don't add a dependency array?](#3-how-will-useeffect-behave-if-we-dont-add-a-dependency-array) |
+| 4 | [What is SPA?](#4-what-is-spa) |
+| 5 | [What is the difference between Client Side Routing and Server Side Routing?](#5-what-is-the-difference-between-client-side-routing-and-server-side-routing) |
 
 
 ## Episode 08 - Let's get Classy
@@ -227,12 +227,11 @@ npm start
 
 ### Adding Images to Your React App
 
-#### **Description:**
 There are various ways to add images to a React app, and the choice depends on the specific use case and requirements of the application.
 
 #### **1. Importing Images in JavaScript/JSX:**
    
-   **Description:** You can import images directly into your JavaScript or JSX files using the `import` statement. This is useful for small images or icons.
+    You can import images directly into your JavaScript or JSX files using the `import` statement. This is useful for small images or icons.
 
    ```jsx
    import React from 'react';
@@ -248,7 +247,7 @@ There are various ways to add images to a React app, and the choice depends on t
 
 #### **2. Using Public Folder:**
   
-   **Description:** You can place your images in the `public` folder of your React app and reference them directly. This is suitable for larger images or assets.
+   You can place your images in the `public` folder of your React app and reference them directly. This is suitable for larger images or assets.
 
 ```jsx
 import React from 'react';
@@ -265,7 +264,7 @@ export default ImageComponent;
 
 #### **3. Image Components from External Libraries:**
   
-   **Description:** You can use third-party libraries to handle images, especially in scenarios where you need advanced features like lazy loading or image optimization.
+   You can use third-party libraries to handle images, especially in scenarios where you need advanced features like lazy loading or image optimization.
    
 ```jsx
 import React from 'react';
@@ -292,12 +291,12 @@ Choose the method that best fits your application's needs and structure.
 
 ### `console.log(useState())` in React
 
-#### **Description:**
+
 When you use `console.log(useState())` directly in a functional component, it can lead to unexpected behavior. The `useState()` function from React returns an array with two elements: the current state value and a function to update the state. Logging the result directly could expose the internal implementation details of React and potentially mislead developers.
 
 #### **Why Avoid `console.log(useState())`:**
 - **Logging Implementation Details:**
-  - **Description:** The logged value includes the current state and the updater function. However, relying on the exact structure of the logged value is discouraged, as React may change its internal implementation in future releases.
+  - The logged value includes the current state and the updater function. However, relying on the exact structure of the logged value is discouraged, as React may change its internal implementation in future releases.
 
 #### **Example:**
 Using `console.log(useState())` directly:
@@ -335,12 +334,11 @@ In this example, the `console.log(useState())` is used directly in the component
 
 ### `useEffect` without Dependency Array in React
 
-#### **Description:**
 When you use `useEffect` without a dependency array, the effect will run after every render of the component. This can lead to undesired behavior, such as unnecessary repetitive executions of the effect or potential performance issues.
 
 #### **Why Avoid an Empty Dependency Array:**
 - **Repeated Executions:**
-  - **Description:** Without a dependency array, the effect will run on every render, leading to repeated executions. This may not be efficient, especially for operations that don't need to be performed on every render.
+  - Without a dependency array, the effect will run on every render, leading to repeated executions. This may not be efficient, especially for operations that don't need to be performed on every render.
 
 #### **Example:**
 Using `useEffect` without a dependency array:
@@ -382,18 +380,18 @@ In this example, the `useEffect` is used without a dependency array. As a result
 
 ### Single Page Application (SPA)
 
-#### **Description:**
+
 A Single Page Application (SPA) is a web application or website that interacts with the user by dynamically rewriting the current page rather than loading entire new pages from the server. SPAs provide a smoother and more responsive user experience by loading only the necessary resources and updating the content dynamically, typically using JavaScript frameworks like React, Angular, or Vue.
 
 #### **Key Characteristics of SPAs:**
 - **Dynamic Content Loading:**
-  - **Description:** SPAs load content dynamically as users interact with the application. Instead of full page reloads, only the necessary data is fetched and rendered.
+  - SPAs load content dynamically as users interact with the application. Instead of full page reloads, only the necessary data is fetched and rendered.
 
 - **Smooth User Experience:**
-  - **Description:** SPAs provide a more seamless user experience by eliminating page reloads. Transitions between views are smoother, and the application feels more like a desktop application.
+  - SPAs provide a more seamless user experience by eliminating page reloads. Transitions between views are smoother, and the application feels more like a desktop application.
 
 - **Client-Side Routing:**
-  - **Description:** SPAs often use client-side routing to manage navigation within the application. The URL changes without triggering a full page reload.
+  - SPAs often use client-side routing to manage navigation within the application. The URL changes without triggering a full page reload.
 
 #### **Example:**
 A simple React SPA using `react-router-dom` for client-side routing:
@@ -432,14 +430,13 @@ In this example, the React application uses client-side routing to navigate betw
 
 #### Client-Side Routing vs. Server-Side Routing
 
-#### **Description:**
 Client-side routing and server-side routing are two approaches to managing navigation and handling requests in web applications. The key difference lies in where the routing logic is executed.
 
 #### **Client-Side Routing:**
-- **Description:** In client-side routing, the routing logic is handled on the client (browser) using JavaScript. The entire application is loaded initially, and subsequent navigation is managed without full page reloads. This results in a more seamless and responsive user experience.
+- In client-side routing, the routing logic is handled on the client (browser) using JavaScript. The entire application is loaded initially, and subsequent navigation is managed without full page reloads. This results in a more seamless and responsive user experience.
 
 #### **Server-Side Routing:**
-- **Description:** In server-side routing, the routing logic is handled on the server. Each navigation request triggers a server request, and the server responds by generating and sending a new HTML page. This approach can lead to full page reloads, and the server is responsible for rendering the entire page.
+- In server-side routing, the routing logic is handled on the server. Each navigation request triggers a server request, and the server responds by generating and sending a new HTML page. This approach can lead to full page reloads, and the server is responsible for rendering the entire page.
 
 #### **Key Differences:**
 - **Page Reloads:**
@@ -518,7 +515,6 @@ In the client-side routing example, React handles navigation without triggering 
 
 ### Creating Nested Routes with `react-router-dom`
 
-#### **Description:**
 Nested routes in `react-router-dom` allow you to structure your application's routes hierarchically. This is useful for organizing complex UIs, especially when dealing with layouts containing multiple sections. Nested routes are defined within the parent component's route configuration.
 
 #### **Example:**
@@ -606,7 +602,6 @@ In this example, `Layout` is the parent component with two nested routes (`Dashb
 
 ### Using `createHashRouter` and `createMemoryRouter` in React Router
 
-#### **Description:**
 `createHashRouter` and `createMemoryRouter` are utility functions provided by `react-router-dom` for creating routers with specific behaviors. `createHashRouter` is commonly used for client-side routing with hash fragments, while `createMemoryRouter` is useful for testing and scenarios where you don't need to synchronize the URL with the browser's address bar.
 
 #### **Example:**
@@ -679,41 +674,40 @@ In these examples, `createHashRouter` is used for client-side routing with hash 
 
 #### Lifecycle Methods Order in Class Based Components
 
-#### **Description:**
 In React class-based components, lifecycle methods are invoked at different stages of a component's existence. Here is the order in which these methods are called:
 
 #### **1. `constructor()`**
-   - **Description:** The `constructor` method is called when a component is being initialized. It's used for setting up initial state and binding methods.
+   - The `constructor` method is called when a component is being initialized. It's used for setting up initial state and binding methods.
 
 #### **2. `static getDerivedStateFromProps(props, state)`**
-   - **Description:** This static method is called before every render, allowing the component to update its state based on changes in props.
+   - This static method is called before every render, allowing the component to update its state based on changes in props.
 
 #### **3. `render()`**
-   - **Description:** The `render` method is responsible for returning the React elements that represent the component's UI.
+   - The `render` method is responsible for returning the React elements that represent the component's UI.
 
 #### **4. `componentDidMount()`**
-   - **Description:** This method is invoked after the component has been rendered to the DOM. It's often used for initiating network requests or modifying the DOM.
+   - This method is invoked after the component has been rendered to the DOM. It's often used for initiating network requests or modifying the DOM.
 
 #### **5. `shouldComponentUpdate(nextProps, nextState)`**
-   - **Description:** The `shouldComponentUpdate` method is called before rendering, allowing the component to decide whether to re-render based on changes in props or state. It can be used for performance optimization.
+   - The `shouldComponentUpdate` method is called before rendering, allowing the component to decide whether to re-render based on changes in props or state. It can be used for performance optimization.
 
 #### **6. `render()`**
-   - **Description:** The `render` method is called again if the component decided to update in the previous step.
+   - The `render` method is called again if the component decided to update in the previous step.
 
 #### **7. `getSnapshotBeforeUpdate(prevProps, prevState)`**
-   - **Description:** This method is called right before the most recently rendered output is committed to the DOM. It enables the component to capture information from the DOM, such as scroll position, before potential changes.
+   - This method is called right before the most recently rendered output is committed to the DOM. It enables the component to capture information from the DOM, such as scroll position, before potential changes.
 
 #### **8. `componentDidUpdate(prevProps, prevState, snapshot)`**
-   - **Description:** Invoked after the component's updates are flushed to the DOM. It's useful for performing side effects, such as making network requests based on changes.
+   - Invoked after the component's updates are flushed to the DOM. It's useful for performing side effects, such as making network requests based on changes.
 
 #### **9.`componentWillUnmount()`**
-   - **Description:** This method is called just before the component is removed from the DOM. It's used for cleanup operations, such as canceling network requests or clearing up subscriptions.
+   - This method is called just before the component is removed from the DOM. It's used for cleanup operations, such as canceling network requests or clearing up subscriptions.
 
 #### **10.`static getDerivedStateFromError(error)`**
-   - **Description:** This static method is called if there's an error during rendering. It allows the component to update its state based on the error.
+   - This static method is called if there's an error during rendering. It allows the component to update its state based on the error.
 
 #### **11.`componentDidCatch(error, info)`**
-   - **Description:** Invoked after an error has been thrown during rendering. It's used for logging errors or displaying a fallback UI.
+   - Invoked after an error has been thrown during rendering. It's used for logging errors or displaying a fallback UI.
 
 These lifecycle methods provide developers with hooks to manage the different phases of a component's lifecycle.
 
@@ -724,18 +718,17 @@ These lifecycle methods provide developers with hooks to manage the different ph
 
 #### Using `componentDidMount` in Class-Based Components
 
-#### **Description:**
 `componentDidMount` is a lifecycle method in React class-based components that is invoked after the component has been rendered to the DOM. It is commonly used for performing tasks that require interaction with the DOM or initiating asynchronous operations, such as data fetching.
 
 #### **Why Use `componentDidMount`:**
 - **DOM Manipulation:**
-  - **Description:** It's the ideal place to perform tasks that involve direct interaction with the DOM, as the component has been successfully rendered at this point.
+  - It's the ideal place to perform tasks that involve direct interaction with the DOM, as the component has been successfully rendered at this point.
 
 - **Data Fetching:**
-  - **Description:** It's often used for initiating network requests to fetch data needed for the component's functionality. This helps ensure that data is loaded after the component is mounted.
+  - It's often used for initiating network requests to fetch data needed for the component's functionality. This helps ensure that data is loaded after the component is mounted.
 
 - **Subscription Setup:**
-  - **Description:** If the component needs to subscribe to external data sources or events, `componentDidMount` is a suitable place to set up these subscriptions.
+  - If the component needs to subscribe to external data sources or events, `componentDidMount` is a suitable place to set up these subscriptions.
 
 #### **Example:**
 Assuming a class-based component that fetches data using `componentDidMount`:
@@ -791,18 +784,17 @@ In this example, the `componentDidMount` method is used to simulate a network re
 
 ### Using `componentWillUnmount` in Class-Based Components
 
-#### **Description:**
 `componentWillUnmount` is a lifecycle method in React class-based components that is invoked just before the component is removed from the DOM. It is commonly used for cleanup operations, such as canceling network requests, clearing up subscriptions, or disposing of resources to avoid memory leaks.
 
 #### **Why Use `componentWillUnmount`:**
 - **Cleanup Operations:**
-  - **Description:** It provides an opportunity to perform necessary cleanup before the component is unmounted, preventing potential memory leaks or issues related to lingering asynchronous operations.
+  - It provides an opportunity to perform necessary cleanup before the component is unmounted, preventing potential memory leaks or issues related to lingering asynchronous operations.
 
 - **Subscription Cleanup:**
-  - **Description:** If the component has subscribed to external data sources or events (e.g., through `addEventListener`), `componentWillUnmount` is an appropriate place to remove these subscriptions.
+  - If the component has subscribed to external data sources or events (e.g., through `addEventListener`), `componentWillUnmount` is an appropriate place to remove these subscriptions.
 
 - **Clearing Timers or Intervals:**
-  - **Description:** If the component set up any timers or intervals using `setTimeout` or `setInterval`, `componentWillUnmount` ensures they are cleared to avoid unexpected behavior.
+  - If the component set up any timers or intervals using `setTimeout` or `setInterval`, `componentWillUnmount` ensures they are cleared to avoid unexpected behavior.
 
 #### **Example:**
 Assuming a class-based component that sets up a timer and cleans it up in `componentWillUnmount`:
@@ -853,15 +845,14 @@ In this example, the `componentDidMount` method sets up a timer using `setInterv
 
 #### Using `super(props)` in Constructor
 
-#### **Description:**
 In class-based components in React, the `super(props)` call in the constructor is used to invoke the constructor of the parent class (`Component` in most cases). It is necessary to ensure that the component properly inherits from the `Component` class and initializes its state and other properties correctly.
 
 #### **Why Use `super(props)`:**
 - **Initializing Component State:**
-  - **Description:** It allows the component to properly initialize its state by calling the constructor of the parent class and ensuring that the state is set up correctly.
+  - It allows the component to properly initialize its state by calling the constructor of the parent class and ensuring that the state is set up correctly.
 
 - **Accessing `this.props`:**
-  - **Description:** It ensures that `this.props` is correctly set up, allowing the component to access and utilize the props passed to it.
+  - It ensures that `this.props` is correctly set up, allowing the component to access and utilize the props passed to it.
 
 #### **Example:**
 A basic example demonstrating the use of `super(props)` in a class-based component:
@@ -901,12 +892,11 @@ In this example, `super(props)` is called in the constructor of `MyComponent` be
 
 #### Asynchronous Callback Functions in `useEffect`
 
-#### **Description:**
 In React's `useEffect` hook, the callback function passed to it cannot be declared as `async` directly. This is because `useEffect` expects either a synchronous function or a cleanup function that returns nothing or a function that returns a cleanup function. An asynchronous function (one declared with `async`) returns a Promise, which is not compatible with the expected behavior of `useEffect`.
 
 #### **Why Can't `useEffect` Callback be Async:**
 - **Promise Return:**
-  - **Description:** An asynchronous function implicitly returns a Promise. `useEffect` does not handle Promises directly, and attempting to return a Promise from the callback can lead to unexpected behavior.
+  - An asynchronous function implicitly returns a Promise. `useEffect` does not handle Promises directly, and attempting to return a Promise from the callback can lead to unexpected behavior.
 
 #### **Example:**
 Attempting to use an async callback in `useEffect`:
@@ -967,7 +957,6 @@ In this example, `LazyComponent` will be loaded only when it's actually rendered
 
 ### 2. What is suspense?
 
-#### **Description:**
 React Suspense is a feature that enables components to suspend rendering while waiting for some asynchronous operation to complete, such as data fetching or lazy-loading components. It allows developers to create a better user experience by handling loading states more gracefully.
 
 #### **Key Points:**
@@ -1037,30 +1026,30 @@ In this example, the `startTransition` function is used to wrap the code that ma
 #### **Advantages:**
 
 1. **Improved Initial Loading Time:**
-   - **Description:** Code splitting helps reduce the initial bundle size by loading only the essential code required for the initial render. This results in faster loading times for users.
+   - Code splitting helps reduce the initial bundle size by loading only the essential code required for the initial render. This results in faster loading times for users.
 
 2. **Better Performance:**
-   - **Description:** Smaller bundles lead to improved performance as less JavaScript needs to be parsed, compiled, and executed by the browser. This can lead to faster page loads and better user experiences.
+   - Smaller bundles lead to improved performance as less JavaScript needs to be parsed, compiled, and executed by the browser. This can lead to faster page loads and better user experiences.
 
 3. **Efficient Resource Utilization:**
-   - **Description:** Components or features that are not immediately needed by the user are loaded asynchronously when requested, optimizing resource utilization and minimizing unnecessary downloads.
+   - Components or features that are not immediately needed by the user are loaded asynchronously when requested, optimizing resource utilization and minimizing unnecessary downloads.
 
 4. **Simplified Maintenance:**
-   - **Description:** Code splitting allows for more modular and maintainable code. Each feature or component can be developed and maintained independently, making the codebase easier to understand and update.
+   - Code splitting allows for more modular and maintainable code. Each feature or component can be developed and maintained independently, making the codebase easier to understand and update.
 
 #### **Disadvantages:**
 
 1. **Complexity in Setup:**
-   - **Description:** Implementing code splitting can introduce complexity to the project setup, especially for those not familiar with the process. This may require additional configuration and tooling.
+   - Implementing code splitting can introduce complexity to the project setup, especially for those not familiar with the process. This may require additional configuration and tooling.
 
 2. **Potential for Loading Delays:**
-   - **Description:** While code splitting aims to improve performance, it may introduce loading delays when a user navigates to a section of the application that requires code to be fetched and executed on-the-fly.
+   - While code splitting aims to improve performance, it may introduce loading delays when a user navigates to a section of the application that requires code to be fetched and executed on-the-fly.
 
 3. **Granularity Challenges:**
-   - **Description:** Deciding on the granularity of code splitting (i.e., how fine-grained the splitting should be) can be challenging. Too much splitting may result in many small files, each requiring separate requests, while too little splitting may not provide optimal performance benefits.
+   - Deciding on the granularity of code splitting (i.e., how fine-grained the splitting should be) can be challenging. Too much splitting may result in many small files, each requiring separate requests, while too little splitting may not provide optimal performance benefits.
 
 4. **Tooling Dependency:**
-   - **Description:** Code splitting often relies on build tools and bundlers, and the effectiveness depends on the support and features provided by these tools. Changes in the tooling landscape may impact the code splitting strategy.
+   - Code splitting often relies on build tools and bundlers, and the effectiveness depends on the support and features provided by these tools. Changes in the tooling landscape may impact the code splitting strategy.
 
 It's essential to carefully consider the trade-offs and project requirements when deciding whether to implement code splitting in a React application.
 
@@ -1072,23 +1061,23 @@ It's essential to carefully consider the trade-offs and project requirements whe
 
 #### **When to Use React Suspense:**
 - **Asynchronous Operations:**
-  - **Description:** React Suspense is particularly useful when dealing with asynchronous operations, such as data fetching or lazy-loading components. It allows components to suspend rendering until the asynchronous operation is completed.
+  - React Suspense is particularly useful when dealing with asynchronous operations, such as data fetching or lazy-loading components. It allows components to suspend rendering until the asynchronous operation is completed.
 
 - **Loading States:**
-  - **Description:** When you want to provide a better user experience by displaying loading states or fallback UIs during asynchronous operations, React Suspense can help manage and handle these loading scenarios more elegantly.
+  - When you want to provide a better user experience by displaying loading states or fallback UIs during asynchronous operations, React Suspense can help manage and handle these loading scenarios more elegantly.
 
 #### **Why Use React Suspense:**
 - **Improved User Experience:**
-  - **Description:** React Suspense significantly improves the user experience by preventing the UI from freezing or displaying unexpected loading indicators during asynchronous operations. It allows for a smoother transition between different states of your application.
+  - React Suspense significantly improves the user experience by preventing the UI from freezing or displaying unexpected loading indicators during asynchronous operations. It allows for a smoother transition between different states of your application.
 
 - **Simplified Code:**
-  - **Description:** Suspense simplifies code by centralizing the handling of loading states. Rather than scattering loading logic across multiple components, Suspense allows you to encapsulate and manage loading behaviors in a more organized and centralized manner.
+  - Suspense simplifies code by centralizing the handling of loading states. Rather than scattering loading logic across multiple components, Suspense allows you to encapsulate and manage loading behaviors in a more organized and centralized manner.
 
 - **Error Handling:**
-  - **Description:** React Suspense integrates well with error boundaries, allowing you to gracefully handle errors during asynchronous operations. This makes it easier to communicate errors to users and log relevant information for developers.
+  - React Suspense integrates well with error boundaries, allowing you to gracefully handle errors during asynchronous operations. This makes it easier to communicate errors to users and log relevant information for developers.
 
 - **Code Splitting:**
-  - **Description:** Suspense is often used in conjunction with code splitting to achieve optimal performance by loading components lazily. This combination allows for a more efficient use of resources, reducing the initial load time of the application.
+  - Suspense is often used in conjunction with code splitting to achieve optimal performance by loading components lazily. This combination allows for a more efficient use of resources, reducing the initial load time of the application.
 
 Using React Suspense is beneficial in scenarios where asynchronous operations are a fundamental part of the application, providing a cleaner and more responsive user interface.
 
@@ -1314,7 +1303,7 @@ These steps provide a basic setup for configuring and using Tailwind CSS in a pr
 The `tailwind.config.js` file is a configuration file for Tailwind CSS that allows you to customize various aspects of your styles. Here's a brief explanation of some key properties:
 
 #### 1. **`content`**
-   - **Description:** Specifies the content files that Tailwind should analyze to generate its utility classes.
+   - Specifies the content files that Tailwind should analyze to generate its utility classes.
    - **Example:**
      ```js
      content: [
@@ -1325,7 +1314,7 @@ The `tailwind.config.js` file is a configuration file for Tailwind CSS that allo
      ```
 
 #### 2. **`theme`**
-   - **Description:** Defines the default values and configuration options for various design elements, such as colors, fonts, spacing, and more.
+   - Defines the default values and configuration options for various design elements, such as colors, fonts, spacing, and more.
    - **Example:**
      ```js
      theme: {
@@ -1338,7 +1327,7 @@ The `tailwind.config.js` file is a configuration file for Tailwind CSS that allo
      ```
 
 #### 3. **`extend`**
-   - **Description:** Allows you to extend or override the default configuration provided by Tailwind. It's often used to add new utility classes or customize existing ones.
+   - Allows you to extend or override the default configuration provided by Tailwind. It's often used to add new utility classes or customize existing ones.
    - **Example:**
      ```js
      extend: {
@@ -1349,7 +1338,7 @@ The `tailwind.config.js` file is a configuration file for Tailwind CSS that allo
      ```
 
 #### 4. **`plugins`**
-   - **Description:** Provides a way to add plugins to Tailwind, enabling additional features or utility classes. Plugins can be custom or third-party.
+   - Provides a way to add plugins to Tailwind, enabling additional features or utility classes. Plugins can be custom or third-party.
    - **Example:**
      ```js
      plugins: [
@@ -1369,7 +1358,7 @@ These properties give you the flexibility to tailor Tailwind CSS to your project
 The `.postcssrc` file is a configuration file for PostCSS, a tool used in the build process to transform styles with JavaScript plugins. Here's a brief explanation of its purpose:
 
 #### **Purpose of `.postcssrc` File:**
-   - **Description:** The `.postcssrc` file allows you to specify configuration options for PostCSS plugins. It helps define how PostCSS processes and transforms your styles, including the order of plugins, custom settings, and more.
+   - The `.postcssrc` file allows you to specify configuration options for PostCSS plugins. It helps define how PostCSS processes and transforms your styles, including the order of plugins, custom settings, and more.
 
    - **Example:**
      ```json
