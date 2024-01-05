@@ -9,3 +9,31 @@ export const IMAGE_BASE_URL =
 
 export const ITEM_CATEGORY_TEXT =
   "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory";
+
+export const NAVIGATION_ITEMS = [
+  {
+    name: "Search",
+    path: "/about",
+    icon: "search",
+  },
+  {
+    name: "Offers",
+    path: "/about",
+    icon: "offers",
+  },
+  {
+    name: "Help",
+    path: "/about",
+    icon: "help",
+  },
+  {
+    name: "Sign In",
+    path: "/about",
+    icon: "signin",
+  },
+  {
+    name: "Cart",
+    path: "/cart",
+    icon: "cart",
+  },
+];

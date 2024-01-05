@@ -26,6 +26,10 @@ module.exports = {
       grey900: "#0f172a",
       grey950: "#020617",
       purple: "#00d69638",
+
+      //gradient Combo
+      gradient11: "#c94b4b",
+      gradient12: "#4b134f",
     },
     fontFamily: {
       sans: ["Montserrat", "sans-serif"],

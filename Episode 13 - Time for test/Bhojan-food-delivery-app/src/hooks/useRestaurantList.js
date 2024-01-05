@@ -11,7 +11,7 @@ export const useRestaurantList = () => {
       data: { cards },
     } = swiggyData;
     const restaurants =
-      cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+      cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
     setRestaurantList(restaurants);
   };
 
