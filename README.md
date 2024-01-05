@@ -180,10 +180,10 @@ npm start
 ## Episode 10 - Jo dikhta hai vo bikta hai
 | # | Questions |
 | --- | --- |
-| 1 | Explore all the ways of writing CSS. |
-| 2 | How do we configure Tailwind? |
-| 3 | In tailwind.config.js, what do all the keys mean (content, theme, extend, plugins)? |
-| 4 | Why do we have a .postcssrc file? |
+| 1 | [Explore all the ways of writing CSS.](#1-explore-all-the-ways-of-writing-css) |
+| 2 | [How do we configure Tailwind?](#2-how-do-we-configure-tailwind) |
+| 3 | [In tailwind.config.js, what do all the keys mean (content, theme, extend, plugins)?](#3-in-tailwindconfigjs-what-do-all-the-keys-mean-content-theme-extend-plugins) |
+| 4 | [Why do we have a .postcssrc file?](#4-why-do-we-have-a-postcssrc-file) |
 
 
 ## Episode 11 - Data is the new Oil
