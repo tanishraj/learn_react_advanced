@@ -216,6 +216,138 @@ npm start
 | 4 | [What is Jest and why do we use it?](#4-what-is-jest-and-why-do-we-use-it) |
 
 
+
+------------------------------------------------------------------------------------
+
+## Episode 10 - Jo dikhta hai vo bikta hai (ANSWERS)
+
+------------------------------------------------------------------------------------
+
+### Ways of Writing CSS
+
+#### 1. **Inline CSS:**
+   - **Syntax:** Applied directly within the HTML element using the `style` attribute.
+   - **Example:**
+
+```html
+<p style="color: blue; font-size: 16px;">Inline-styled paragraph.</p>
+```
+
+#### 2. **Internal/Embedded CSS:**
+   - **Syntax:** Defined within the `<style>` tag in the HTML document's head.
+   - **Example:**
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    p {
+      color: green;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+<p>Paragraph with internal styles.</p>
+
+</body>
+</html>
+```
+
+#### 3. **External CSS:**
+   - **Syntax:** Defined in a separate CSS file and linked to the HTML document.
+   - **Example:**
+
+```html
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+  <p class="external-style">Paragraph with external styles.</p>
+
+</body>
+</html>
+```
+
+```css
+/* styles.css */
+.external-style {
+  color: red;
+  font-size: 20px;
+}
+```
+
+#### 4. **CSS Preprocessors (e.g., Sass):**
+   - **Syntax:** Extends CSS with features like variables, nesting, and functions.
+   - **Example:**
+
+```scss
+// styles.scss
+$main-color: #3498db;
+
+body {
+  background-color: $main-color;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+```
+
+#### 5. **Utility-First CSS (e.g., Tailwind CSS):**
+   - **Syntax:** Utilizes pre-defined utility classes for styling..
+   - **Example (Tailwind CSS):**
+
+```html
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Include Tailwind CSS via CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+<body>
+
+  <p class="text-blue-500 text-xl">Paragraph with Tailwind CSS styling.</p>
+
+</body>
+</html>
+```
+
+#### 6. **CSS-in-JS (e.g., Styled Components):**
+   - **Syntax:** Styles are written directly within JavaScript files using tagged template literals.
+   - **Example (Styled Components):**
+
+
+```jsx
+// App.js
+import styled from 'styled-components';
+
+const StyledParagraph = styled.p`
+  color: purple;
+  font-size: 24px;
+`;
+
+const App = () => {
+  return (
+    <div>
+      <StyledParagraph>Styled using Styled Components.</StyledParagraph>
+    </div>
+  );
+};
+
+export default App;
+```
+
+
+
 ------------------------------------------------------------------------------------
 
 ## Episode 11 - Data is the new Oil (ANSWERS)
