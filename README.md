@@ -123,10 +123,10 @@ npm start
 ## Episode 05 - Let's get Hooked!
 | # | Questions |
 | --- | --- |
-| 1 | What is the difference between Named Export, Default export, and * as export? |
-| 2 | What is the importance of config.js file? |
-| 3 | What are React Hooks? |
-| 4 | Why do we need a useState Hook? |
+| 1 | [What is the difference between Named Export, Default export, and * as export?](#1-what-is-the-difference-between-named-export-default-export-and--as-export) |
+| 2 | [What is the importance of config.js file?](#2-what-is-the-importance-of-configjs-file) |
+| 3 | [What are React Hooks?](#3-what-are-react-hooks) |
+| 4 | [Why do we need a useState Hook?](#4-why-do-we-need-a-usestate-hook) |
 
 
 ## Episode 06 - Exploring the world
