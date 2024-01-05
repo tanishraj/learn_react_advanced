@@ -158,13 +158,13 @@ npm start
 ## Episode 08 - Let's get Classy
 | # | Questions |
 | --- | --- |
-| 1 | How do you create Nested Routes in react-router-dom configuration? |
-| 2 | Read about createHashRouter and createMemoryRouter from React Router docs. |
-| 3 | What is the order of life cycle method calls in Class Based Components? |
-| 4 | Why do we use componentDidMount? |
-| 5 | Why do we use componentWillUnmount? Show with example |
-| 6 | Why do we use super(props) in constructor? (Research) |
-| 7 | Why can't we have the callback function of useEffect async? (Research) |
+| 1 | [How do you create Nested Routes in react-router-dom configuration?](#1-how-do-you-create-nested-routes-in-react-router-dom-configuration) |
+| 2 | [Read about createHashRouter and createMemoryRouter from React Router docs.](#2-read-about-createhashrouter-and-creatememoryrouter-from-react-router-docs) |
+| 3 | [What is the order of life cycle method calls in Class Based Components?](#3-what-is-the-order-of-life-cycle-method-calls-in-class-based-components) |
+| 4 | [Why do we use componentDidMount?](#4-why-do-we-use-componentdidmount) |
+| 5 | [Why do we use componentWillUnmount? Show with example](#5-why-do-we-use-componentwillunmount-show-with-example) |
+| 6 | [Why do we use super(props) in constructor? (Research)](#6-why-do-we-use-superprops-in-constructor-research) |
+| 7 | [Why can't we have the callback function of useEffect async? (Research)](#7-why-cant-we-have-the-callback-function-of-useeffect-async-research) |
 
 
 ## Episode 09 - Optimizing our App
