@@ -170,11 +170,11 @@ npm start
 ## Episode 09 - Optimizing our App
 | # | Questions |
 | --- | --- |
-| 1 | When and why do we need lazy()? |
-| 2 | What is suspense? |
-| 3 | Why do we get this error: "A component suspended while responding to synchronous input. This will cause the UI to be replaced with a loading indicator. To fix, updates that suspend should be wrapped with startTransition"? How does suspense fix this error? |
-| 4 | Advantages and disadvantages of using this code splitting pattern? |
-| 5 | When do we need suspense and why? |
+| 1 | [When and why do we need lazy()?](#1-when-and-why-do-we-need-lazy) |
+| 2 | [What is suspense?](#2-what-is-suspense) |
+| 3 | [Why do we get this error: "A component suspended while responding to synchronous input. This will cause the UI to be replaced with a loading indicator. To fix, updates that suspend should be wrapped with startTransition"? How does suspense fix this error?](#3-why-do-we-get-this-error-a-component-suspended-while-responding-to-synchronous-input-this-will-cause-the-ui-to-be-replaced-with-a-loading-indicator-to-fix-updates-that-suspend-should-be-wrapped-with-starttransition-how-does-suspense-fix-this-error) |
+| 4 | [Advantages and disadvantages of using this code splitting pattern?](#4-advantages-and-disadvantages-of-using-this-code-splitting-pattern) |
+| 5 | [When do we need suspense and why?](#5-when-do-we-need-suspense-and-why) |
 
 
 ## Episode 10 - Jo dikhta hai vo bikta hai
