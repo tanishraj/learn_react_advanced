@@ -106,18 +106,18 @@ npm start
 ## Episode 04 - Talk is cheap, show me the code!
 | # | Questions |
 | --- | --- |
-| 1 | Is JSX mandatory for React? |
-| 2 | Is ES6 mandatory for React? |
-| 3 | {TitleComponent} vs {<TitleComponent/>} vs {<TitleComponent></TitleComponent>} in JSX |
-| 4 | How can I write comments in JSX? |
-| 5 | What is `React.Fragment` and `<> </>`? |
-| 6 | What is Virtual DOM? |
-| 7 | What is Reconciliation in React? |
-| 8 | What is React Fiber? |
-| 9 | Why do we need keys in React? When do we need keys in React? |
-| 10 | Can we use index as keys in React? |
-| 11 | What are props in React? Ways to pass props|
-| 12 | What is a Config Driven UI?|
+| 1 | [Is JSX mandatory for React?](#1-is-jsx-mandatory-for-react) |
+| 2 | [Is ES6 mandatory for React?](#2-is-es6-mandatory-for-react) |
+| 3 | [{TitleComponent} vs {<TitleComponent/>} vs {<TitleComponent></TitleComponent>} in JSX](#3-titlecomponent-vs--vs--in-jsx) |
+| 4 | [How can I write comments in JSX?](#4-how-can-i-write-comments-in-jsx) |
+| 5 | [What is `React.Fragment` and `<> </>`?](#5-what-is-reactfragment-and--) |
+| 6 | [What is Virtual DOM?](#6-what-is-virtual-dom) |
+| 7 | [What is Reconciliation in React?](#7-what-is-reconciliation-in-react) |
+| 8 | [What is React Fiber?](#8-what-is-react-fiber) |
+| 9 | [Why do we need keys in React? When do we need keys in React?](#9-why-do-we-need-keys-in-react-when-do-we-need-keys-in-react) |
+| 10 | [Can we use index as keys in React?](#10-can-we-use-index-as-keys-in-react) |
+| 11 | [What are props in React? Ways to pass props](#11-what-are-props-in-react-ways-to-pass-props)|
+| 12 | [What is a Config Driven UI?](#12-what-is-a-config-driven-ui)|
 
 
 ## Episode 05 - Let's get Hooked!
