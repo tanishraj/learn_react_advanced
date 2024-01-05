@@ -108,7 +108,7 @@ npm start
 | --- | --- |
 | 1 | [Is JSX mandatory for React?](#1-is-jsx-mandatory-for-react) |
 | 2 | [Is ES6 mandatory for React?](#2-is-es6-mandatory-for-react) |
-| 3 | [{TitleComponent} vs {<TitleComponent/>} vs {<TitleComponent></TitleComponent>} in JSX](#3-titlecomponent-vs--vs--in-jsx) |
+| 3 | [`{TitleComponent}` vs `{<TitleComponent/>}` vs `{<TitleComponent></TitleComponent>}` in JSX](#3-titlecomponent-vs--vs--in-jsx) |
 | 4 | [How can I write comments in JSX?](#4-how-can-i-write-comments-in-jsx) |
 | 5 | [What is `React.Fragment` and `<> </>`?](#5-what-is-reactfragment-and--) |
 | 6 | [What is Virtual DOM?](#6-what-is-virtual-dom) |
@@ -321,7 +321,7 @@ While it's technically possible to build React applications without using ES6 fe
 
 ------------------------------------------------------------------------------------
 
-### 3. {TitleComponent} vs {<TitleComponent/>} vs {<TitleComponent></TitleComponent>} in JSX
+### 3. `{TitleComponent}` vs `{<TitleComponent/>}` vs `{<TitleComponent></TitleComponent>}` in JSX
 
 In JSX (JavaScript XML), there are different ways to include React components. The three variations `{TitleComponent}`, `{<TitleComponent/>}`, and `{<TitleComponent></TitleComponent>}` all achieve the same result, but they have subtle differences in terms of syntax and usage.
 
