@@ -217,6 +217,541 @@ npm start
 
 
 
+
+------------------------------------------------------------------------------------
+
+## Episode 06 - Exploring the world (ANSWERS)
+
+------------------------------------------------------------------------------------
+
+### 1. What is a Microservice?
+
+### Microservices
+
+Microservices architecture is an approach to developing a software application as a collection of small, independent, and loosely coupled services. Each service, known as a microservice, is designed to perform a specific business function and can be developed, deployed, and scaled independently. Microservices communicate with each other through well-defined APIs, enabling flexibility, scalability, and easier maintenance.
+
+#### **Key Characteristics of Microservices:**
+- **Independence:**
+  Each microservice operates independently, allowing teams to develop, deploy, and scale services without affecting the entire application.
+
+- **Loose Coupling:**
+  Microservices are loosely coupled, meaning changes to one service do not impact others. This enables faster development and deployment cycles.
+
+- **Scalability:**
+  Services can be scaled independently based on demand, providing better resource utilization and performance optimization.
+
+- **Technology Diversity:**
+  Microservices can be developed using different technologies and programming languages suitable for the specific service's requirements.
+
+#### **Example:**
+A simple example of a microservices architecture using Node.js and Express:
+
+##### Microservice 1:
+node js code...
+```javascript
+// service1.js
+const express = require('express');
+const app = express();
+
+app.get('/api/service1', (req, res) => {
+  res.json({ message: 'Microservice 1 is working!' });
+});
+
+const PORT = 3001;
+app.listen(PORT, () => {
+  console.log(`Microservice 1 is running on port ${PORT}`);
+});
+```
+
+##### Microservice 2:
+node js code...
+
+```javascript
+// service2.js
+const express = require('express');
+const app = express();
+
+app.get('/api/service2', (req, res) => {
+  res.json({ message: 'Microservice 2 is working!' });
+});
+
+const PORT = 3002;
+app.listen(PORT, () => {
+  console.log(`Microservice 2 is running on port ${PORT}`);
+});
+```
+
+In this example, Microservice 1 and Microservice 2 are two independent Express applications, each serving a specific API endpoint. They can be deployed, scaled, and maintained independently, showcasing the fundamental principles of a microservices architecture.
+
+
+------------------------------------------------------------------------------------
+
+
+### 2. What is Monolith architecture?
+
+### Monolithic Architecture
+
+Monolithic architecture is an approach to designing software applications as a single, unified, and tightly integrated system. In a monolith, all components and modules of an application are interconnected and run within a single codebase and process. Monolithic applications are characterized by a single deployment unit, and changes to any part of the system typically require redeploying the entire application.
+
+#### **Key Characteristics of Monolithic Architecture:**
+- **Unified Codebase:**
+  All components and modules of the application share the same codebase and are tightly coupled.
+
+- **Single Deployment Unit:**
+  The entire application is deployed as a single unit, making deployment simpler but potentially slower.
+
+- **Centralized Database:**
+  Monoliths often use a centralized database where all data is stored and accessed.
+
+- **Scaling Challenges:**
+  Scaling the application involves scaling the entire monolith, which can be challenging for large applications.
+
+#### **Example:**
+A simple example of a monolithic web application using Node.js and Express:
+
+```javascript
+// monolith.js
+const express = require('express');
+const app = express();
+
+// Single route handling the entire application logic
+app.get('/', (req, res) => {
+  res.send('Hello, Monolith!');
+});
+
+const PORT = 3000;
+app.listen(PORT, () => {
+  console.log(`Monolithic application is running on port ${PORT}`);
+});
+```
+
+In this example, the entire application logic is handled within a single Express route. The components are tightly integrated within a single codebase, and changes to any part of the system would require redeploying the entire monolithic application.
+
+------------------------------------------------------------------------------------
+
+
+### 3. What is the difference between Monolith and Microservice?
+
+### Monolith vs. Microservices
+
+#### **Differences:**
+
+| **Aspect**           | **Monolith**                      | **Microservices**                           |
+| -------------------- | --------------------------------- | ------------------------------------------- |
+| **Codebase**         | Single, unified codebase          | Multiple, independent codebases            |
+| **Deployment**       | Deployed as a single unit         | Deployed independently, per service        |
+| **Scalability**      | Scaled as a whole application     | Scaled independently, per service          |
+| **Communication**    | Components tightly integrated     | Components communicate through APIs        |
+| **Flexibility**      | Limited technology diversity      | Supports diverse technologies per service |
+| **Development**      | Easier to develop initially       | Requires more planning and coordination    |
+| **Maintenance**      | Changes may impact entire system  | Changes isolated to specific services      |
+| **Resource Utilization** | May lead to underutilization or overutilization | Efficient resource utilization based on service demand |
+
+These differences highlight the distinct characteristics and considerations between monolithic and microservices architectures.
+
+
+------------------------------------------------------------------------------------
+
+
+### 4. Why do we need a useEffect Hook?
+
+### `useEffect` Hook in React
+
+The `useEffect` hook in React is used to perform side effects in functional components. Side effects may include data fetching, subscriptions, manual DOM manipulations, or any action that needs to be performed after the component is rendered. It helps manage lifecycle methods in functional components and ensures that certain actions are executed at the appropriate times during the component's life cycle.
+
+#### **Why Use `useEffect`:**
+- **Lifecycle Management:**
+  `useEffect` allows you to manage component lifecycle events such as component mounting, updating, and unmounting.
+
+- **Avoiding Race Conditions:**
+  It helps in avoiding race conditions that can occur when asynchronous actions complete after a component has been unmounted.
+
+- **Data Fetching and Side Effects:**
+  `useEffect` is commonly used for data fetching, subscriptions, and other side effects that need to be performed after the initial render.
+
+#### **Example:**
+A simple example demonstrating the use of `useEffect` for data fetching:
+
+```jsx
+import React, { useState, useEffect } from 'react';
+
+const DataFetchingComponent = () => {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulating a network request with setTimeout
+    const fetchData = async () => {
+      try {
+        const response = await fetch('https://api.example.com/data');
+        const result = await response.json();
+        setData(result);
+        setLoading(false);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []); // Empty dependency array ensures the effect runs only once after initial render
+
+  return (
+    <div>
+      {loading ? (
+        <p>Loading...</p>
+      ) : (
+        <div>
+          <p>Data: {data}</p>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default DataFetchingComponent;
+```
+
+In this example, useEffect is used to initiate a data-fetching operation after the initial render of the component. The empty dependency array [] ensures that the effect runs only once after the initial render.
+
+
+
+------------------------------------------------------------------------------------
+
+
+### 5. What is Optional Chaining?
+
+### Optional Chaining in JavaScript
+
+Optional Chaining is a feature in JavaScript that simplifies the process of accessing nested properties of an object when some of those properties may be undefined or null. It allows you to safely access nested properties without causing errors if an intermediate property is not defined.
+
+#### **Why Use Optional Chaining:**
+- **Avoiding Errors:**
+  Optional Chaining helps prevent errors that would occur when trying to access properties of an undefined or null value.
+
+#### **Example:**
+Consider an object with nested properties and using optional chaining:
+
+```javascript
+// Object with nested properties
+const user = {
+  name: 'John',
+  address: {
+    city: 'New York',
+    postalCode: '10001',
+  },
+};
+
+// Accessing nested properties without Optional Chaining
+const cityWithoutOptionalChaining = user.address && user.address.city;
+console.log(cityWithoutOptionalChaining); // Output: 'New York'
+
+// Accessing nested properties with Optional Chaining
+const cityWithOptionalChaining = user.address?.city;
+console.log(cityWithOptionalChaining); // Output: 'New York'
+
+// Trying to access a non-existent property with Optional Chaining
+const countryWithOptionalChaining = user.address?.country;
+console.log(countryWithOptionalChaining); // Output: undefined
+```
+
+In this example, `user.address?.city` uses optional chaining to access the `city` property even if `user.address` is undefined. It simplifies the code and prevents errors when accessing nested properties.
+
+
+
+------------------------------------------------------------------------------------
+
+
+### 6. What is Shimmer UI?
+
+### Shimmer UI
+
+#### **Description:**
+Shimmer UI is a visual loading effect used in user interfaces to indicate that content is being fetched or loaded. It typically involves displaying animated placeholder elements that mimic the structure of the expected content, creating a shimmering or shimmer effect. Shimmer UI provides users with a visual cue that something is happening in the background, improving the perceived performance of an application.
+
+#### **Why Use Shimmer UI:**
+- **User Experience:**
+  - **Description:** Shimmer UI improves user experience by providing a visual indication of ongoing loading processes, reducing the perception of delays.
+
+#### **Example:**
+A simple example of implementing a Shimmer UI effect using HTML and CSS:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .shimmer-container {
+      width: 200px;
+      height: 100px;
+      background-color: #f0f0f0;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .shimmer-line {
+      width: 100%;
+      height: 20px;
+      background: linear-gradient(to right, transparent 0%, #e0e0e0 50%, transparent 100%);
+      position: absolute;
+      animation: shimmer-animation 1.5s infinite;
+    }
+
+    @keyframes shimmer-animation {
+      0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(100%);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="shimmer-container">
+  <div class="shimmer-line"></div>
+</div>
+
+</body>
+</html>
+```
+
+In this example, a `shimmer-container` is created with a placeholder background color. The `shimmer-line` div represents the animated shimmer effect using a linear gradient and a CSS animation. This simple implementation can be adapted and styled according to the specific design and layout requirements of a particular application.
+
+------------------------------------------------------------------------------------
+
+
+### 7. What is the difference between JS expression and JS statement
+
+### JavaScript Expression vs. JavaScript Statement
+
+JavaScript expressions and statements are fundamental building blocks of JavaScript code, each serving a different purpose.
+
+#### **JavaScript Expression:**
+An expression in JavaScript is a piece of code that produces a value. It can be a combination of variables, literals, operators, and function calls that result in a single value.
+
+#### **Example:**
+```javascript
+// Expression example
+const sum = 2 + 3; // The expression '2 + 3' produces the value 5
+```
+
+#### **JavaScript Statement:**
+A statement in JavaScript is a larger unit of code that performs an action. It can consist of one or more expressions and is typically executed for its side effects (e.g., changing the state of a variable, control flow, etc.).
+
+```javascript
+// Statement example
+let result;
+if (sum > 5) {
+  result = 'Greater than 5';
+} else {
+  result = 'Less than or equal to 5';
+}
+```
+
+| **Aspect**           | **JavaScript Expression**                      | **JavaScript Statement**                           |
+| -------------------- | --------------------------------- | ------------------------------------------- |
+| **Produces a Value**         |Produces a single value	          | Performs an action and may not produce a value            |
+| **Examples**       | `2 + 3`, `variableName`, `functionCall()`        | `if`, `for`, `while`, `switch`, `try...catch`        |
+| **Side Effects**      | Typically has no side effects     | Often used for side effects and control flow          |
+| **Assignment**    | Can be assigned to a variable     | Assignments and declarations are common       |
+| **Usage in Code Blocks**      | Limited technology diversity      | Supports diverse technologies per service |
+| **Development**      | Can be used within code blocks       | Forms the structure of code blocks    |
+
+Understanding the distinction between expressions and statements is crucial for writing effective and readable JavaScript code.
+
+
+------------------------------------------------------------------------------------
+
+
+### 8. What is Conditional Rendering, explain with a code example
+
+### Conditional Rendering in React
+
+Conditional rendering in React refers to the ability to conditionally render components or elements based on certain conditions or state values. It allows developers to control the visibility and structure of UI elements dynamically.
+
+#### **Why Use Conditional Rendering:**
+- **Dynamic UI:**
+  Conditional rendering enables the display of different UI elements based on specific conditions or user interactions, creating a dynamic user interface.
+
+#### **Example:**
+A simple example demonstrating conditional rendering in a React component:
+
+```jsx
+import React, { useState } from 'react';
+
+const ConditionalRenderingExample = () => {
+  const [isLoggedIn, setLoggedIn] = useState(false);
+
+  return (
+    <div>
+      {isLoggedIn ? (
+        <p>Welcome, User!</p>
+      ) : (
+        <button onClick={() => setLoggedIn(true)}>Log In</button>
+      )}
+    </div>
+  );
+};
+
+export default ConditionalRenderingExample;
+```
+
+In this example, the content displayed in the component changes based on the value of the `isLoggedIn` state. If the user is logged in, a welcome message is shown; otherwise, a login button is displayed. The `onClick` event of the button updates the state, triggering a re-render with the updated content.
+
+
+------------------------------------------------------------------------------------
+
+
+### 9. What is CORS?
+
+### CORS (Cross-Origin Resource Sharing)
+
+CORS is a security feature implemented by web browsers to control how web pages in one domain can request and interact with resources hosted on another domain. It is a set of rules that determine whether a web browser allows a web application at one origin to request resources from a different origin.
+
+#### **Why Use CORS:**
+- **Security:**
+  CORS is implemented to prevent malicious websites from making unauthorized requests on behalf of a user to a different domain.
+
+#### **Example:**
+Consider a scenario where a frontend application (hosted on `https://frontend-app.com`) makes a request to a backend API (hosted on `https://api.backend.com`). If the backend does not explicitly allow requests from the frontend domain, CORS issues may arise.
+
+##### **Backend (Express.js) - Allow CORS:**
+```javascript
+const express = require('express');
+const cors = require('cors');
+const app = express();
+
+// Enable CORS for all routes
+app.use(cors());
+
+// Your API routes go here
+
+const PORT = 3000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
+```
+
+In this example, the Express.js backend uses the `cors` middleware to allow cross-origin requests from any domain. This is a permissive approach and may not be suitable for production environments, where more fine-grained control over allowed origins is often necessary.
+
+**Note:** CORS can be disabled using `CORS` chrome extension but this should be used only for the learning purpose.
+
+
+------------------------------------------------------------------------------------
+
+
+### 10. What is async and await?
+
+### `async` and `await` in JavaScript
+
+`async` and `await` are features in JavaScript used to work with asynchronous code, making it more readable and synchronous-looking. They were introduced in ECMAScript 2017 (ES8) and are built on top of the Promise API.
+
+#### **Why Use `async` and `await`:**
+- **Simplified Asynchronous Code:**
+  `async` functions allow the use of `await` to pause execution until a Promise is resolved or rejected, simplifying the handling of asynchronous operations.
+
+#### **Example:**
+Consider an asynchronous operation using Promises and how it can be simplified using `async` and `await`.
+
+##### **Without `async` and `await`:**
+```javascript
+function fetchData() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const data = 'Async data';
+      // Simulating a successful API call
+      resolve(data);
+    }, 1000);
+  });
+}
+
+// Consuming the Promise
+fetchData()
+  .then((result) => {
+    console.log(result); // Output: 'Async data'
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+```
+
+##### **With `async` and `await`:**
+
+```javascript
+// Async function using async/await
+async function fetchDataAsync() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const data = 'Async data';
+      // Simulating a successful API call
+      resolve(data);
+    }, 1000);
+  });
+}
+
+// Consuming the Promise using await
+async function fetchDataWrapper() {
+  try {
+    const result = await fetchDataAsync();
+    console.log(result); // Output: 'Async data'
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+// Calling the async function
+fetchDataWrapper();
+```
+
+------------------------------------------------------------------------------------
+
+
+### 11. What is the use of const json = await data.json(); in getRestaurants()
+
+### `await data.json()` in JavaScript
+
+`await data.json()` is a common usage pattern when working with asynchronous operations and fetching JSON data using the `fetch` API in JavaScript. It is used within an `async` function to pause execution until the JSON data is extracted from the response.
+
+#### **Purpose:**
+- **JSON Parsing:**
+  The `await data.json()` expression is used to wait for the resolution of the Promise returned by `data.json()`. It parses the JSON data from the response body, converting it into a JavaScript object.
+
+#### **Example:**
+Consider a typical scenario where you fetch JSON data from an API using the `fetch` API and then parse the response using `await data.json()`.
+
+```javascript
+// Async function to fetch and parse JSON data
+async function fetchData() {
+  try {
+    // Fetching JSON data from an API
+    const response = await fetch('https://api.example.com/data');
+    
+    // Checking if the request was successful (status code 200)
+    if (!response.ok) {
+      throw new Error(`Error: ${response.status}`);
+    }
+
+    // Parsing the JSON data from the response
+    const json = await response.json();
+
+    // Further processing with the parsed JSON data
+    console.log(json);
+  } catch (error) {
+    console.error('Error fetching data:', error);
+  }
+}
+
+// Calling the async function
+fetchData();
+```
+
+In this example, `await response.json()` is used to asynchronously wait for the JSON parsing of the response. Once resolved, the `json` variable contains the JavaScript object representation of the fetched JSON data, allowing for further processing or display in the application.
+
+
 ------------------------------------------------------------------------------------
 
 ## Episode 07 - Finding the Path (ANSWERS)
@@ -231,7 +766,7 @@ There are various ways to add images to a React app, and the choice depends on t
 
 #### **1. Importing Images in JavaScript/JSX:**
    
-    You can import images directly into your JavaScript or JSX files using the `import` statement. This is useful for small images or icons.
+  You can import images directly into your JavaScript or JSX files using the `import` statement. This is useful for small images or icons.
 
    ```jsx
    import React from 'react';
@@ -247,7 +782,7 @@ There are various ways to add images to a React app, and the choice depends on t
 
 #### **2. Using Public Folder:**
   
-   You can place your images in the `public` folder of your React app and reference them directly. This is suitable for larger images or assets.
+  You can place your images in the `public` folder of your React app and reference them directly. This is suitable for larger images or assets.
 
 ```jsx
 import React from 'react';
