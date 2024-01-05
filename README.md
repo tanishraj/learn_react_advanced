@@ -100,7 +100,6 @@ npm start
 | 8 | Composing Components |
 | 8 | Superpowers of JSX |
 | 10 | Role of type attribute in script tag? What options can I use there? |
-| 11 | {TitleComponent} vs {<TitleComponent/>} vs {<TitleComponent></TitleComponent>} in JSX |
 
 
 ## Episode 04 - Talk is cheap, show me the code!
@@ -214,6 +213,435 @@ npm start
 | 2 | [What is Enzyme?](#2-what-is-enzyme) |
 | 3 | [Enzyme vs React Testing Library](#3-enzyme-vs-react-testing-library) |
 | 4 | [What is Jest and why do we use it?](#4-what-is-jest-and-why-do-we-use-it) |
+
+
+
+------------------------------------------------------------------------------------
+
+## Episode 03 - Laying the foundation (ANSWERS)
+
+------------------------------------------------------------------------------------
+
+### 1. JSX
+
+### JSX (JavaScript XML)
+
+JSX, or JavaScript XML, is a syntax extension for JavaScript often used with React to describe the structure of UI components in a more declarative and readable manner. It allows developers to write HTML-like code directly within JavaScript files, making the creation and manipulation of UI elements more intuitive.
+
+#### **Key Characteristics:**
+1. **HTML-Like Syntax:**
+   - JSX resembles HTML, making it easier for developers to express UI components using familiar tags and attributes.
+
+2. **Declarative:**
+   - JSX enables a declarative style of UI development, where the code describes the desired outcome rather than the step-by-step imperative instructions.
+
+3. **Embedding Expressions:**
+   - JavaScript expressions can be embedded within JSX using curly braces `{}`.
+
+#### **Example:**
+Consider a simple React component written using JSX:
+
+```jsx
+// JSX Component
+import React from 'react';
+
+const JSXExampleComponent = () => {
+  const name = 'John Doe';
+  const greeting = <p>Hello, {name}!</p>;
+
+  return (
+    <div>
+      <h1>Greeting App</h1>
+      {greeting}
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+      </ul>
+    </div>
+  );
+};
+
+export default JSXExampleComponent;
+```
+
+In this example, the JSXExampleComponent uses JSX syntax to define a component that renders a heading, a dynamic greeting message, and an unordered list. JSX allows for the seamless integration of JavaScript expressions ({name}) and provides a concise and readable way to describe the UI structure. The JSX code is later transpiled into regular JavaScript by tools like Babel before being executed in the browser.
+
+
+
+------------------------------------------------------------------------------------
+
+
+### 2. React.createElement vs JSX
+
+
+| Feature                      | `React.createElement`                                  | JSX                                                 |
+| ---------------------------- | -------------------------------------------------------- | --------------------------------------------------- |
+| **Syntax**                    | Verbosely calls the `React.createElement` function.     | Provides a more concise and HTML-like syntax.       |
+| **Readability**               | Can become complex and less readable for nested elements.| Enhances code readability, making it more intuitive. |
+| **Example**                   | ```jsx const element = React.createElement('div', null, 'Hello, React!'); ``` | ```jsx const element = <div>Hello, React!</div>; ``` |
+| **Attributes/Props**          | Requires passing attributes as an object in the arguments. | Allows direct use of attributes within the JSX tags. |
+| **Nested Elements**           | Nested elements require additional `React.createElement` calls. | Nested elements can be expressed naturally within JSX. |
+| **Dynamic Elements**          | Can be created dynamically with JavaScript expressions. | Supports embedding JavaScript expressions directly. |
+| **Transpilation Output**      | Generally larger and less human-readable in transpiled code. | Transpiles to more concise and readable JavaScript code. |
+| **Integration with Libraries**| May be preferable when integrating with certain non-JSX libraries. | Most widely used with React and has better tooling support. |
+
+
+- Both `React.createElement` and JSX are ways to define React elements. JSX is a syntactic sugar over `React.createElement`, providing a more concise and readable syntax for expressing UI components.
+- JSX is widely adopted in the React community due to its simplicity and familiarity with HTML-like syntax, making it more accessible for developers.
+
+**When to Choose:**
+- For projects using React, JSX is the preferred choice for its readability and conciseness.
+- In situations where more control is needed or when integrating with non-JSX libraries, `React.createElement` might be chosen.
+
+**Example Usage:**
+```jsx
+// Using React.createElement
+const element1 = React.createElement('div', null, 'Hello, React!');
+
+// Using JSX
+const element2 = <div>Hello, React!</div>;
+```
+
+In general, JSX is the recommended approach for most React projects due to its readability and ease of use.
+
+------------------------------------------------------------------------------------
+
+
+### 3. Benefits of JSX
+
+JSX (JavaScript XML) is a syntax extension for JavaScript commonly used with React. It provides several benefits that contribute to the ease of development and maintainability of React applications.
+
+#### **Key Benefits:**
+
+1. **Readability:**
+   JSX resembles HTML, making the code more readable and intuitive. It allows developers to express UI components in a structure similar to how they would in traditional HTML.
+
+2. **Conciseness:**
+   JSX provides a concise and declarative syntax for defining UI elements, reducing the verbosity of code compared to using `React.createElement` calls directly.
+
+3. **Ease of Learning:**
+   Developers familiar with HTML find it easier to transition to React with JSX, as it leverages existing knowledge of HTML structure and attributes.
+
+4. **Embedded Expressions:**
+   JavaScript expressions can be easily embedded within JSX using curly braces `{}`, allowing dynamic content and values to be seamlessly integrated.
+
+5. **Integration with Components:**
+   JSX facilitates the use of React components directly within the markup, making the composition of complex UIs more straightforward.
+
+6. **Tooling Support:**
+   JSX has robust tooling support, including syntax highlighting, autocompletion, and error checking in modern IDEs and code editors, enhancing the development experience.
+
+7. **Consistency Across Files:**
+   The consistent JSX syntax across files promotes code consistency, making it easier for developers to understand and navigate different parts of the application.
+
+#### **Example Usage:**
+Consider a simple JSX example for rendering a React component:
+
+```jsx
+import React from 'react';
+
+const JSXExampleComponent = () => {
+  const name = 'John Doe';
+
+  return (
+    <div>
+      <h1>Greeting App</h1>
+      <p>Hello, {name}!</p>
+    </div>
+  );
+};
+
+export default JSXExampleComponent;
+```
+
+In this example, JSX contributes to the readability and conciseness of the code, making it more accessible and maintainable for developers working on React applications.
+
+
+------------------------------------------------------------------------------------
+
+
+### 4. Behind the Scenes of JSX
+
+While JSX appears to be similar to HTML, it is not directly understood by browsers. JSX code needs to be transformed into regular JavaScript code before it can be executed. This transformation is typically handled by tools like Babel, which converts JSX syntax into calls to `React.createElement`.
+
+#### **Key Steps:**
+
+1. **Babel Transformation:**
+   JSX code is processed by Babel, a JavaScript compiler, which transforms it into equivalent JavaScript code.
+
+2. **React.createElement:**
+   Babel translates JSX elements into calls to `React.createElement`. For example, `<div>Hello, React!</div>` becomes `React.createElement('div', null, 'Hello, React!')`.
+
+3. **Element Creation:**
+   The `React.createElement` function creates a React element object representing the UI component described by the JSX.
+
+4. **Virtual DOM Representation:**
+   React uses the created elements to build a Virtual DOM representation of the UI structure.
+
+5. **Reconciliation:**
+   During updates, React performs a process called reconciliation, where it compares the new Virtual DOM with the previous one to determine the minimal set of changes needed to update the actual DOM.
+
+#### **Example Transformation:**
+Consider a JSX example and its transformation using Babel:
+
+**JSX:**
+```jsx
+const element = <div>Hello, JSX!</div>;
+```
+
+#### **Babel-Transformed JavaScript:**
+
+```javascript
+const element = React.createElement('div', null, 'Hello, JSX!');
+```
+
+
+
+
+------------------------------------------------------------------------------------
+
+
+### 5. Babel & parcel role in JSX
+
+#### **Role in JSX Transformation:**
+
+1. **Development Workflow:**
+   During development, developers write React components using JSX syntax.
+
+2. **Babel Transformation:**
+   Babel transforms JSX code into JavaScript, making it compatible with browsers.
+
+3. **Parcel Bundling:**
+   Parcel, as a bundler, takes care of the overall project bundling process, including JSX files along with other assets.
+
+4. **Development Server:**
+   Parcel's development server, in conjunction with HMR, facilitates a smooth development experience by instantly reflecting changes in the browser.
+
+#### **Example:**
+Consider a minimal React component written in JSX and how Babel and Parcel work together:
+
+**JSX Component:**
+```jsx
+// src/App.jsx
+import React from 'react';
+
+const App = () => {
+  return <h1>Hello, JSX with Babel and Parcel!</h1>;
+};
+
+export default App;
+```
+
+```json
+// .babelrc
+{
+  "presets": ["@babel/preset-env", "@babel/preset-react"]
+}
+```
+
+```bash
+# Run the Parcel development server
+parcel src/index.html
+```
+
+In this example, Babel is configured to handle JSX transformation, and Parcel is used to bundle and serve the React application, including the JSX file.
+
+Understanding the roles of Babel and Parcel is essential for setting up a seamless development environment for React projects using JSX.
+
+
+------------------------------------------------------------------------------------
+
+
+### 6. Components
+
+Components are the building blocks of modern web applications, allowing developers to create reusable and modular pieces of user interface (UI). In React, components can be either class-based or functional, encapsulating UI logic and rendering. They promote code reusability, maintainability, and a declarative approach to building UIs.
+
+#### **Component Types:**
+
+1. **Class Components:**
+   Class-based components are ES6 classes that extend from `React.Component`. They have a `render` method and can maintain state.
+
+2. **Functional Components:**
+   Functional components are simpler and based on JavaScript functions. They are stateless and primarily used for presenting UI without handling state.
+
+
+------------------------------------------------------------------------------------
+
+
+### 7. Functional Components
+
+Functional components are a type of React component that is defined as a JavaScript function. They are primarily used for presenting UI elements and are stateless by default. With the introduction of React Hooks in newer React versions, functional components can also manage state and have access to lifecycle methods.
+
+#### **Key Characteristics:**
+
+1. **Simple Syntax:**
+   Functional components have a simpler syntax compared to class components, making them more concise and easier to read.
+
+2. **No Internal State:**
+   Initially, functional components were stateless and lacked lifecycle methods. However, with React Hooks, functional components can now manage state and have access to lifecycle features.
+
+3. **Reusability:**
+   Functional components are highly reusable, promoting a modular and composable approach to building UI elements.
+
+4. **Introduced Hooks:**
+   The introduction of hooks like `useState` and `useEffect` allows functional components to manage state and perform side effects, previously exclusive to class components.
+
+#### **Example:**
+```jsx
+// Simple Functional Component
+const Greeting = (props) => {
+  return <h1>Hello, {props.name}!</h1>;
+};
+
+// Functional Component with Hooks (useState)
+import React, { useState } from 'react';
+
+const Counter = () => {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+    </div>
+  );
+};
+```
+
+In this example, Greeting is a basic functional component, while Counter utilizes the useState hook to manage internal state. Functional components are a fundamental part of React development, offering a lightweight and expressive way to build UI elements.
+
+------------------------------------------------------------------------------------
+
+
+### 8. Composing Components
+
+Composing components in React involves building complex user interfaces by combining and nesting smaller, reusable components within larger ones. This approach promotes a modular and maintainable code structure, allowing developers to create scalable and easily understandable applications.
+
+#### **Key Concepts:**
+
+1. **Reusability:**
+   Composing components encourages the reuse of smaller, independent components across different parts of the application.
+
+2. **Modularity:**
+   Each component performs a specific function, and composing them allows developers to create complex UIs by combining simpler building blocks.
+
+3. **Hierarchy:**
+   Components can be organized in a hierarchical structure, with parent components containing and orchestrating the behavior of child components.
+
+4. **Props Passing:**
+   Components communicate and share data by passing props from parent to child components. This enables dynamic and configurable behavior.
+
+#### **Example:**
+Consider a simple example where a `UserProfile` component is composed of smaller components like `Avatar` and `UserInfo`:
+
+```jsx
+// Avatar Component
+const Avatar = ({ imageUrl }) => {
+  return <img src={imageUrl} alt="User Avatar" />;
+};
+
+// UserInfo Component
+const UserInfo = ({ username, email }) => {
+  return (
+    <div>
+      <p>Username: {username}</p>
+      <p>Email: {email}</p>
+    </div>
+  );
+};
+
+// UserProfile Component Composed of Avatar and UserInfo
+const UserProfile = ({ user }) => {
+  return (
+    <div>
+      <h2>User Profile</h2>
+      <Avatar imageUrl={user.avatarUrl} />
+      <UserInfo username={user.username} email={user.email} />
+    </div>
+  );
+};
+```
+
+In this example, `UserProfile` composes smaller components (`Avatar` and `UserInfo`) to create a cohesive and reusable user profile display. Composing components in this manner enhances code maintainability and facilitates the development of scalable applications.
+
+
+------------------------------------------------------------------------------------
+
+
+### 9. Superpowers of JSX
+
+JSX (JavaScript XML) is a syntax extension for JavaScript commonly used with React. It provides several benefits that contribute to the ease of development and maintainability of React applications.
+
+#### **Super Powers:**
+
+1. **Readability:**
+   JSX resembles HTML, making the code more readable and intuitive. It allows developers to express UI components in a structure similar to how they would in traditional HTML.
+
+2. **Conciseness:**
+   JSX provides a concise and declarative syntax for defining UI elements, reducing the verbosity of code compared to using `React.createElement` calls directly.
+
+3. **Ease of Learning:**
+   Developers familiar with HTML find it easier to transition to React with JSX, as it leverages existing knowledge of HTML structure and attributes.
+
+4. **Embedded Expressions:**
+   JavaScript expressions can be easily embedded within JSX using curly braces `{}`, allowing dynamic content and values to be seamlessly integrated.
+
+5. **Integration with Components:**
+   JSX facilitates the use of React components directly within the markup, making the composition of complex UIs more straightforward.
+
+6. **Tooling Support:**
+   JSX has robust tooling support, including syntax highlighting, autocompletion, and error checking in modern IDEs and code editors, enhancing the development experience.
+
+7. **Consistency Across Files:**
+   The consistent JSX syntax across files promotes code consistency, making it easier for developers to understand and navigate different parts of the application.
+
+------------------------------------------------------------------------------------
+
+
+### 10. Role of type attribute in script tag? What options can I use there?
+
+The `type` attribute in the `<script>` tag specifies the MIME type of the content within the script block. It informs the browser how to interpret and execute the script. While it was required in older HTML versions, in modern HTML, the `type` attribute is often omitted for JavaScript, as the default is assumed to be `text/javascript`.
+
+#### **Options:**
+
+1. **`text/javascript`:**
+   - Default MIME type for JavaScript. In modern HTML, this is assumed if `type` is not specified.
+
+2. **`module`:**
+   - Indicates that the script is a JavaScript module, introducing features like module scope and `import/export` statements.
+
+3. **`text/ecmascript`:**
+   - Older MIME type for JavaScript. Deprecated in favor of `text/javascript`.
+
+4. **`application/javascript`:**
+   - Alternative MIME type for JavaScript. Less common, as `text/javascript` is widely supported.
+
+5. **`application/ecmascript`:**
+   - Alternative MIME type for ECMAScript. Similar to `application/javascript`.
+
+#### **Example Usage:**
+```html
+<!-- Default (text/javascript) -->
+<script>
+  console.log('Hello, JavaScript!');
+</script>
+```
+
+```html
+<!-- Using type attribute for a module -->
+<script type="module">
+  import { exampleFunction } from './module.js';
+  exampleFunction();
+</script>
+```
+
+```html
+<!-- Explicitly specifying MIME type -->
+<script type="application/javascript">
+  console.log('Using alternative MIME type.');
+</script>
+```
 
 
 
