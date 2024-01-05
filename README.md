@@ -215,6 +215,8 @@ npm start
 | 4 | [What is Jest and why do we use it?](#4-what-is-jest-and-why-do-we-use-it) |
 
 
+**[⬆ Back to Top](#learn-react-with-akshay-saini-creator-of-namastedev)**
+
 
 ------------------------------------------------------------------------------------
 
@@ -267,7 +269,7 @@ export default JSXExampleComponent;
 
 In this example, the JSXExampleComponent uses JSX syntax to define a component that renders a heading, a dynamic greeting message, and an unordered list. JSX allows for the seamless integration of JavaScript expressions ({name}) and provides a concise and readable way to describe the UI structure. The JSX code is later transpiled into regular JavaScript by tools like Babel before being executed in the browser.
 
-
+**[⬆ Back to Top](#episode-03---laying-the-foundation)**
 
 ------------------------------------------------------------------------------------
 
@@ -304,6 +306,8 @@ const element2 = <div>Hello, React!</div>;
 ```
 
 In general, JSX is the recommended approach for most React projects due to its readability and ease of use.
+
+**[⬆ Back to Top](#episode-03---laying-the-foundation)**
 
 ------------------------------------------------------------------------------------
 
@@ -358,6 +362,8 @@ export default JSXExampleComponent;
 In this example, JSX contributes to the readability and conciseness of the code, making it more accessible and maintainable for developers working on React applications.
 
 
+**[⬆ Back to Top](#episode-03---laying-the-foundation)**
+
 ------------------------------------------------------------------------------------
 
 
@@ -397,7 +403,7 @@ const element = React.createElement('div', null, 'Hello, JSX!');
 ```
 
 
-
+**[⬆ Back to Top](#episode-03---laying-the-foundation)**
 
 ------------------------------------------------------------------------------------
 
@@ -449,6 +455,7 @@ In this example, Babel is configured to handle JSX transformation, and Parcel is
 
 Understanding the roles of Babel and Parcel is essential for setting up a seamless development environment for React projects using JSX.
 
+**[⬆ Back to Top](#episode-03---laying-the-foundation)**
 
 ------------------------------------------------------------------------------------
 
@@ -465,6 +472,8 @@ Components are the building blocks of modern web applications, allowing develope
 2. **Functional Components:**
    Functional components are simpler and based on JavaScript functions. They are stateless and primarily used for presenting UI without handling state.
 
+
+**[⬆ Back to Top](#episode-03---laying-the-foundation)**
 
 ------------------------------------------------------------------------------------
 
@@ -510,6 +519,8 @@ const Counter = () => {
 ```
 
 In this example, Greeting is a basic functional component, while Counter utilizes the useState hook to manage internal state. Functional components are a fundamental part of React development, offering a lightweight and expressive way to build UI elements.
+
+**[⬆ Back to Top](#episode-03---laying-the-foundation)**
 
 ------------------------------------------------------------------------------------
 
@@ -566,6 +577,8 @@ const UserProfile = ({ user }) => {
 In this example, `UserProfile` composes smaller components (`Avatar` and `UserInfo`) to create a cohesive and reusable user profile display. Composing components in this manner enhances code maintainability and facilitates the development of scalable applications.
 
 
+**[⬆ Back to Top](#episode-03---laying-the-foundation)**
+
 ------------------------------------------------------------------------------------
 
 
@@ -595,6 +608,9 @@ JSX (JavaScript XML) is a syntax extension for JavaScript commonly used with Rea
 
 7. **Consistency Across Files:**
    The consistent JSX syntax across files promotes code consistency, making it easier for developers to understand and navigate different parts of the application.
+
+**[⬆ Back to Top](#episode-03---laying-the-foundation)**
+
 
 ------------------------------------------------------------------------------------
 
@@ -643,7 +659,7 @@ The `type` attribute in the `<script>` tag specifies the MIME type of the conten
 </script>
 ```
 
-
+**[⬆ Back to Top](#episode-03---laying-the-foundation)**
 
 ------------------------------------------------------------------------------------
 
@@ -697,6 +713,8 @@ In the examples above, the `JSXComponent` and `WithoutJSXComponent` components a
 While JSX is not mandatory, it significantly improves the developer experience and is the preferred syntax in the React community. Most React projects leverage JSX for its readability and expressiveness.
 
 
+**[⬆ Back to Top](#episode-04---talk-is-cheap-show-me-the-code)**
+
 ------------------------------------------------------------------------------------
 
 ### 2. Is ES6 mandatory for React?
@@ -747,6 +765,8 @@ In this example, ES6 features such as `useState` for state management, arrow fun
 While it's technically possible to build React applications without using ES6 features, doing so may result in less readable and more verbose code. ES6 has become the de facto standard for JavaScript development, and adopting it is highly recommended for React projects to leverage its benefits and align with modern coding practices.
 
 
+**[⬆ Back to Top](#episode-04---talk-is-cheap-show-me-the-code)**
+
 ------------------------------------------------------------------------------------
 
 ### 3. `{TitleComponent}` vs `{<TitleComponent/>}` vs `{<TitleComponent></TitleComponent>}` in JSX
@@ -795,7 +815,7 @@ export default JSXUsage;
 In this example, all three variations result in the inclusion of the TitleComponent in the JSX structure. The choice between these variations is often a matter of personal preference, coding style, or specific use cases within a larger JSX expression. Most commonly, developers use the second variation `{<TitleComponent/>}` for its conciseness and clarity.
 
 
-
+**[⬆ Back to Top](#episode-04---talk-is-cheap-show-me-the-code)**
 
 ------------------------------------------------------------------------------------
 
@@ -838,6 +858,9 @@ export default CommentedComponent;
 ```
 
 In this example, comments are used to annotate different sections of the JSX structure, providing additional context or information for anyone reading the code. JSX comments do not appear in the rendered HTML and are purely for developer documentation.
+
+**[⬆ Back to Top](#episode-04---talk-is-cheap-show-me-the-code)**
+
 
 ------------------------------------------------------------------------------------
 
@@ -906,7 +929,7 @@ const FragmentExample = () => {
 
 In this example, both `React.Fragment` and the shorthand syntax `<>` `</>` are used to group multiple paragraphs without introducing an additional `<div>` in the rendered HTML. 
 
-
+**[⬆ Back to Top](#episode-04---talk-is-cheap-show-me-the-code)**
 
 ------------------------------------------------------------------------------------
 
@@ -955,6 +978,8 @@ const updatedVirtualDOM = (
 In this example, the initial and updated Virtual DOM representations reflect the UI structure. React's reconciliation process efficiently identifies the changes between these representations, allowing for optimized updates to the actual DOM.
 
 By using the Virtual DOM, React minimizes the direct manipulation of the real DOM, resulting in improved performance and a more responsive user interface.
+
+**[⬆ Back to Top](#episode-04---talk-is-cheap-show-me-the-code)**
 
 
 ------------------------------------------------------------------------------------
@@ -1008,6 +1033,9 @@ In this example, the reconciliation process identifies that `Item 1` and `Item 3
 
 Reconciliation is a crucial part of React's optimization strategy, ensuring that updates are performed in the most efficient way possible, resulting in a smoother user experience.
 
+
+**[⬆ Back to Top](#episode-04---talk-is-cheap-show-me-the-code)**
+
 ------------------------------------------------------------------------------------
 
 ### 8. What is React Fiber?
@@ -1052,7 +1080,7 @@ export default FiberExampleComponent;
 
 In this example, the React Fiber improvements are happening behind the scenes, making React more efficient and capable of handling complex applications with improved rendering and scheduling capabilities. Developers don't need to interact with React Fiber explicitly in their code; its benefits are automatically leveraged by React.
 
-
+**[⬆ Back to Top](#episode-04---talk-is-cheap-show-me-the-code)**
 
 ------------------------------------------------------------------------------------
 
@@ -1119,7 +1147,7 @@ In the second example (With Keys), each item is assigned a unique key based on i
 
 Using keys appropriately is crucial, especially when dealing with dynamic lists or when the order of elements may change over time. Keys should be unique within the list and remain consistent across renders.
 
-
+**[⬆ Back to Top](#episode-04---talk-is-cheap-show-me-the-code)**
 
 ------------------------------------------------------------------------------------
 
@@ -1159,6 +1187,8 @@ const IndexAsKeysExample = () => {
 In this example, the array index is used as keys. While this may work initially, issues can arise when the order of items changes. For instance, if 'Banana' is removed, the index of 'Orange' becomes 1, leading to potential problems during updates.
 
 It's recommended to use stable and unique identifiers as keys, such as item IDs, to ensure proper and efficient updates, especially in dynamic and changing lists.
+
+**[⬆ Back to Top](#episode-04---talk-is-cheap-show-me-the-code)**
 
 
 ------------------------------------------------------------------------------------
@@ -1235,7 +1265,7 @@ export default ChildComponent;
 
 In this example, ParentComponent is passing props to ChildComponent using three different methods: directly in JSX, using the spread operator, and in a functional component. The child component receives and displays the props accordingly.
 
-
+**[⬆ Back to Top](#episode-04---talk-is-cheap-show-me-the-code)**
 
 ------------------------------------------------------------------------------------
 
@@ -1303,6 +1333,8 @@ const App = () => {
 
 In this example, the `ConfigDrivenForm` component uses the `formConfig` object to dynamically render a form based on the configuration. This approach allows developers to modify the form structure, fields, or even add new features without touching the component's code, making the UI more adaptable and maintainable.
 
+**[⬆ Back to Top](#episode-04---talk-is-cheap-show-me-the-code)**
+
 
 ------------------------------------------------------------------------------------
 
@@ -1368,6 +1400,8 @@ import * as exportedValues from './StarAsExportModule';
 console.log(exportedValues.var1, exportedValues.var2); // Output: 'Variable 1' 'Variable 2'
 ```
 
+**[⬆ Back to Top](#episode-05---lets-get-hooked)**
+
 ------------------------------------------------------------------------------------
 
 ### 2. What is the importance of config.js file?
@@ -1401,7 +1435,7 @@ In this example, the `config.js` file contains configuration parameters such as 
 
 Having a dedicated `config.js` file becomes especially crucial when deploying an application to different environments (development, staging, production), as it allows for quick adjustments without modifying code in multiple places. Additionally, it aids in keeping sensitive information, like API keys, separate from the application's source code, enhancing security practices.
 
-
+**[⬆ Back to Top](#episode-05---lets-get-hooked)**
 
 ------------------------------------------------------------------------------------
 
@@ -1441,7 +1475,7 @@ Adds debug information to custom hooks when viewed with React DevTools. It's use
 
 These hooks cover various aspects of building functional components, managing state, handling side effects, and optimizing performance in React applications.
 
-
+**[⬆ Back to Top](#episode-05---lets-get-hooked)**
 
 
 ------------------------------------------------------------------------------------
@@ -1484,6 +1518,7 @@ const Counter = () => {
 
 In this example, useState(0) initializes the count state variable with an initial value of 0. The setCount function is then used to update the count state whenever the "Increment" button is clicked. This results in a re-render of the component with the updated state, reflecting the new count value in the UI. The useState hook simplifies state management in functional components, making them more versatile and expressive.
 
+**[⬆ Back to Top](#episode-05---lets-get-hooked)**
 
 ------------------------------------------------------------------------------------
 
@@ -1550,6 +1585,7 @@ app.listen(PORT, () => {
 
 In this example, Microservice 1 and Microservice 2 are two independent Express applications, each serving a specific API endpoint. They can be deployed, scaled, and maintained independently, showcasing the fundamental principles of a microservices architecture.
 
+**[⬆ Back to Top](#episode-06---exploring-the-world)**
 
 ------------------------------------------------------------------------------------
 
@@ -1594,6 +1630,8 @@ app.listen(PORT, () => {
 
 In this example, the entire application logic is handled within a single Express route. The components are tightly integrated within a single codebase, and changes to any part of the system would require redeploying the entire monolithic application.
 
+**[⬆ Back to Top](#episode-06---exploring-the-world)**
+
 ------------------------------------------------------------------------------------
 
 
@@ -1616,6 +1654,7 @@ In this example, the entire application logic is handled within a single Express
 
 These differences highlight the distinct characteristics and considerations between monolithic and microservices architectures.
 
+**[⬆ Back to Top](#episode-06---exploring-the-world)**
 
 ------------------------------------------------------------------------------------
 
@@ -1681,7 +1720,7 @@ export default DataFetchingComponent;
 
 In this example, useEffect is used to initiate a data-fetching operation after the initial render of the component. The empty dependency array [] ensures that the effect runs only once after the initial render.
 
-
+**[⬆ Back to Top](#episode-06---exploring-the-world)**
 
 ------------------------------------------------------------------------------------
 
@@ -1724,7 +1763,7 @@ console.log(countryWithOptionalChaining); // Output: undefined
 
 In this example, `user.address?.city` uses optional chaining to access the `city` property even if `user.address` is undefined. It simplifies the code and prevents errors when accessing nested properties.
 
-
+**[⬆ Back to Top](#episode-06---exploring-the-world)**
 
 ------------------------------------------------------------------------------------
 
@@ -1788,6 +1827,8 @@ A simple example of implementing a Shimmer UI effect using HTML and CSS:
 
 In this example, a `shimmer-container` is created with a placeholder background color. The `shimmer-line` div represents the animated shimmer effect using a linear gradient and a CSS animation. This simple implementation can be adapted and styled according to the specific design and layout requirements of a particular application.
 
+**[⬆ Back to Top](#episode-06---exploring-the-world)**
+
 ------------------------------------------------------------------------------------
 
 
@@ -1830,6 +1871,7 @@ if (sum > 5) {
 
 Understanding the distinction between expressions and statements is crucial for writing effective and readable JavaScript code.
 
+**[⬆ Back to Top](#episode-06---exploring-the-world)**
 
 ------------------------------------------------------------------------------------
 
@@ -1869,6 +1911,7 @@ export default ConditionalRenderingExample;
 
 In this example, the content displayed in the component changes based on the value of the `isLoggedIn` state. If the user is logged in, a welcome message is shown; otherwise, a login button is displayed. The `onClick` event of the button updates the state, triggering a re-render with the updated content.
 
+**[⬆ Back to Top](#episode-06---exploring-the-world)**
 
 ------------------------------------------------------------------------------------
 
@@ -1907,6 +1950,7 @@ In this example, the Express.js backend uses the `cors` middleware to allow cros
 
 **Note:** CORS can be disabled using `CORS` chrome extension but this should be used only for the learning purpose.
 
+**[⬆ Back to Top](#episode-06---exploring-the-world)**
 
 ------------------------------------------------------------------------------------
 
@@ -1974,6 +2018,8 @@ async function fetchDataWrapper() {
 fetchDataWrapper();
 ```
 
+**[⬆ Back to Top](#episode-06---exploring-the-world)**
+
 ------------------------------------------------------------------------------------
 
 
@@ -2018,6 +2064,7 @@ fetchData();
 
 In this example, `await response.json()` is used to asynchronously wait for the JSON parsing of the response. Once resolved, the `json` variable contains the JavaScript object representation of the fetched JSON data, allowing for further processing or display in the application.
 
+**[⬆ Back to Top](#episode-06---exploring-the-world)**
 
 ------------------------------------------------------------------------------------
 
@@ -2084,6 +2131,7 @@ export default ImageComponent;
 
 Choose the method that best fits your application's needs and structure.
 
+**[⬆ Back to Top](#episode-07---finding-the-path)**
 
 ------------------------------------------------------------------------------------
 
@@ -2128,6 +2176,7 @@ export default MyComponent;
 
 In this example, the `console.log(useState())` is used directly in the component. While it might log the initial state and updater function, relying on this for any logic is discouraged. Developers should use the returned array elements (`const [state, setState] = useState(initialState)`) to manage state in a reliable and supported manner.
 
+**[⬆ Back to Top](#episode-07---finding-the-path)**
 
 ------------------------------------------------------------------------------------
 
@@ -2173,7 +2222,7 @@ export default MyComponent;
 
 In this example, the `useEffect` is used without a dependency array. As a result, the effect will run after every render, even if the state or props haven't changed. It's generally recommended to include dependencies in the array to control when the effect should be executed.
 
-
+**[⬆ Back to Top](#episode-07---finding-the-path)**
 
 ------------------------------------------------------------------------------------
 
@@ -2223,7 +2272,7 @@ export default App;
 
 In this example, the React application uses client-side routing to navigate between different views (Home, About, Contact) without triggering full page reloads. This is a characteristic feature of SPAs.
 
-
+**[⬆ Back to Top](#episode-07---finding-the-path)**
 
 ------------------------------------------------------------------------------------
 
@@ -2304,7 +2353,7 @@ app.listen(PORT, () => {
 
 In the client-side routing example, React handles navigation without triggering full page reloads. In the server-side routing example, Express responds to each route with a full HTML page reload.
 
-
+**[⬆ Back to Top](#episode-07---finding-the-path)**
 
 
 ------------------------------------------------------------------------------------
@@ -2398,6 +2447,8 @@ export default Profile;
 
 In this example, `Layout` is the parent component with two nested routes (`Dashboard` and `Profile`). The parent route in `App.js` renders the `Layout` component. Accessing `/dashboard` or `/profile` will render the respective nested components within the `Layout`.
 
+**[⬆ Back to Top](#episode-08---lets-get-classy)**
+
 ------------------------------------------------------------------------------------
 
 ### 2. Read about createHashRouter and createMemoryRouter from React Router docs.
@@ -2469,6 +2520,7 @@ export default App;
 
 In these examples, `createHashRouter` is used for client-side routing with hash fragments, while `createMemoryRouter` is used for in-memory routing, often employed in testing scenarios.
 
+**[⬆ Back to Top](#episode-08---lets-get-classy)**
 
 ------------------------------------------------------------------------------------
 
@@ -2513,6 +2565,7 @@ In React class-based components, lifecycle methods are invoked at different stag
 
 These lifecycle methods provide developers with hooks to manage the different phases of a component's lifecycle.
 
+**[⬆ Back to Top](#episode-08---lets-get-classy)**
 
 ------------------------------------------------------------------------------------
 
@@ -2580,6 +2633,8 @@ export default DataFetchingComponent;
 
 In this example, the `componentDidMount` method is used to simulate a network request with a `setTimeout`. This is a common pattern for fetching data when the component is first mounted. Once the data is fetched, the component's state is updated, triggering a re-render with the updated data.
 
+**[⬆ Back to Top](#episode-08---lets-get-classy)**
+
 ------------------------------------------------------------------------------------
 
 ### 5. Why do we use componentWillUnmount? Show with example
@@ -2641,6 +2696,8 @@ export default TimerComponent;
 
 In this example, the `componentDidMount` method sets up a timer using `setInterval`, and the `componentWillUnmount` method ensures that the timer is cleared when the component is about to be unmounted. This prevents the timer from continuing to run after the component is no longer in the DOM.
 
+**[⬆ Back to Top](#episode-08---lets-get-classy)**
+
 ------------------------------------------------------------------------------------
 
 ### 6. Why do we use super(props) in constructor? (Research)
@@ -2687,6 +2744,8 @@ export default MyComponent;
 
 In this example, `super(props)` is called in the constructor of `MyComponent` before initializing its state. This ensures that the component correctly inherits from `Component` and allows proper access to the passed props via `this.props`. It's a necessary step in the construction of class-based components in React.
 
+**[⬆ Back to Top](#episode-08---lets-get-classy)**
+
 ------------------------------------------------------------------------------------
 
 ### 7. Why can’t we have the callback function of useEffect async? (Research)
@@ -2723,7 +2782,7 @@ export default MyComponent;
 
 In this example, using `async` directly in the `useEffect` callback is problematic because the Promise returned by the async function is not treated as a cleanup function. To handle asynchronous operations in `useEffect`, you can use a separate helper function or the `useEffect` cleanup mechanism itself.
 
-
+**[⬆ Back to Top](#episode-08---lets-get-classy)**
 
 ------------------------------------------------------------------------------------
 
@@ -2754,6 +2813,7 @@ export default App;
 
 In this example, `LazyComponent` will be loaded only when it's actually rendered in the application. The `fallback` prop in `Suspense` is optional but provides a UI during the loading process.
 
+**[⬆ Back to Top](#episode-09---optimizing-our-app)**
 
 ------------------------------------------------------------------------------------
 
@@ -2781,6 +2841,8 @@ React Suspense is a feature that enables components to suspend rendering while w
   ```
   
 In this example, the `<Suspense>` component is used to wrap the lazy-loaded `LazyComponent`. While `LazyComponent` is loading, the fallback UI (in this case, the text "Loading...") will be displayed.
+
+**[⬆ Back to Top](#episode-09---optimizing-our-app)**
 
 ------------------------------------------------------------------------------------
 
@@ -2818,6 +2880,7 @@ In this example, the `<Suspense>` component is used to wrap the lazy-loaded `Laz
   
 In this example, the `startTransition` function is used to wrap the code that may suspend (e.g., data fetching). It allows for smoother user experiences by indicating to React that the upcoming update is a transition, preventing the UI from being replaced with a loading indicator due to synchronous input.
 
+**[⬆ Back to Top](#episode-09---optimizing-our-app)**
 
 ------------------------------------------------------------------------------------
 
@@ -2855,6 +2918,8 @@ In this example, the `startTransition` function is used to wrap the code that ma
 
 It's essential to carefully consider the trade-offs and project requirements when deciding whether to implement code splitting in a React application.
 
+**[⬆ Back to Top](#episode-09---optimizing-our-app)**
+
 ------------------------------------------------------------------------------------
 
 ### 5. When do we need suspense and why?
@@ -2883,6 +2948,8 @@ It's essential to carefully consider the trade-offs and project requirements whe
 
 Using React Suspense is beneficial in scenarios where asynchronous operations are a fundamental part of the application, providing a cleaner and more responsive user interface.
 
+
+**[⬆ Back to Top](#episode-09---optimizing-our-app)**
 
 ------------------------------------------------------------------------------------
 
@@ -3013,6 +3080,8 @@ const App = () => {
 export default App;
 ```
 
+**[⬆ Back to Top](#episode-10---jo-dikhta-hai-vo-bikta-hai)**
+
 ------------------------------------------------------------------------------------
 
 ### 2. How do we configure Tailwind?
@@ -3096,6 +3165,8 @@ export const Button = ({ label, ...restProps }) => {
 
 These steps provide a basic setup for configuring and using Tailwind CSS in a project. Customize the configuration files and use the extensive set of utility classes Tailwind offers to style your project.
 
+**[⬆ Back to Top](#episode-10---jo-dikhta-hai-vo-bikta-hai)**
+
 ------------------------------------------------------------------------------------
 
 
@@ -3151,6 +3222,7 @@ The `tailwind.config.js` file is a configuration file for Tailwind CSS that allo
 
 These properties give you the flexibility to tailor Tailwind CSS to your project's specific needs and design preferences.
 
+**[⬆ Back to Top](#episode-10---jo-dikhta-hai-vo-bikta-hai)**
 
 ------------------------------------------------------------------------------------
 
@@ -3175,6 +3247,7 @@ The `.postcssrc` file is a configuration file for PostCSS, a tool used in the bu
 
 By having a `.postcssrc` file, you can centralize and manage PostCSS configurations for your project, making it easier to maintain and customize the styling pipeline during the build process.
 
+**[⬆ Back to Top](#episode-10---jo-dikhta-hai-vo-bikta-hai)**
 
 ------------------------------------------------------------------------------------
 
@@ -3246,6 +3319,9 @@ const UserProfile = ({ userData }) => {
 ```
 
 In this example, userData is prop-drilled from the top-level App component through the UserContainer component to the UserProfile component. Prop drilling is a straightforward but may become less scalable as the component hierarchy grows. Alternative state management solutions like Context API or Redux can be considered for more complex scenarios.
+
+**[⬆ Back to Top](#episode-11---data-is-the-new-oil)**
+
 
 ------------------------------------------------------------------------------------
 
@@ -3326,6 +3402,8 @@ export default Display;
 ```
 
 In this example, the count state is lifted up to the App component, which serves as the common ancestor for both Counter and Display. The count state and its updating functions are passed down as props to the child components, allowing them to share and display the same count value.
+
+**[⬆ Back to Top](#episode-11---data-is-the-new-oil)**
 
 ------------------------------------------------------------------------------------
 
@@ -3410,6 +3488,7 @@ In this example, the ThemeContext is created using createContext(), and a ThemeP
 
 The useTheme custom hook is used in the ThemedComponent to consume the theme context, allowing the component to access the current theme and the toggleTheme function.
 
+**[⬆ Back to Top](#episode-11---data-is-the-new-oil)**
 
 ------------------------------------------------------------------------------------
 
@@ -3481,7 +3560,7 @@ export default ExampleComponent;
 In this example, the ExampleContext is created with a default value of 'Default Value'. When ExampleProvider wraps the application in App.js without explicitly providing a value, the default value is used. The ExampleComponent then uses the context with the useExample hook to retrieve and display the value from the context.
 
 
-
+**[⬆ Back to Top](#episode-11---data-is-the-new-oil)**
 
 
 
@@ -3608,6 +3687,8 @@ const UserProfile = () => {
 ```
 In summary, useContext is suitable for simpler state management in smaller applications, while Redux is preferable for larger applications with complex state logic and a need for centralized state management.
 
+**[⬆ Back to Top](#episode-12---lets-build-our-store)**
+
 ------------------------------------------------------------------------------------
 
 ### 2. Advantage of using Redux Toolkit over Redux
@@ -3688,6 +3769,8 @@ export default counterSlice.reducer;
 
 Redux Toolkit simplifies the Redux development experience by reducing boilerplate, providing convenient utilities, and incorporating best practices, making it an advantageous choice over using Redux alone.
 
+**[⬆ Back to Top](#episode-12---lets-build-our-store)**
+
 ------------------------------------------------------------------------------------
 
 ### 3. Explain Dispatcher
@@ -3762,6 +3845,8 @@ In this example, the useDispatch hook is used to get access to the dispatch func
 The use of dispatchers generated by createSlice in Redux Toolkit reduces boilerplate and ensures a consistent and straightforward way to interact with your Redux store. It encapsulates the logic of creating actions and dispatching them, making your code more maintainable and readable.
 
 In summary, dispatchers in Redux Toolkit are the action creator functions automatically generated by createSlice, providing a convenient way to create and dispatch actions to modify the Redux store's state.
+
+**[⬆ Back to Top](#episode-12---lets-build-our-store)**
 
 ------------------------------------------------------------------------------------
 
@@ -3846,6 +3931,8 @@ In this example, asyncReducer handles asynchronous data fetching actions using R
 
 So, Reducers play a crucial role in managing the state of a Redux application by specifying how state changes in response to dispatched actions. They follow the principles of purity and immutability, providing a predictable and maintainable approach to state management.
 
+**[⬆ Back to Top](#episode-12---lets-build-our-store)**
+
 ------------------------------------------------------------------------------------
 
 ### 5. Explain Slice
@@ -3909,6 +3996,8 @@ Here, counterReducer is the reducer generated by the 'counter' slice. It is comb
 
 So, In Redux Toolkit, a slice provides a convenient and structured way to define a portion of the application state along with its actions and reducer. It promotes modularity, readability, and reduces the amount of boilerplate typically associated with Redux development.
 
+**[⬆ Back to Top](#episode-12---lets-build-our-store)**
+
 ------------------------------------------------------------------------------------
 
 ### 6. Explain Selector
@@ -3964,6 +4053,7 @@ Here, useSelector is used to access the value returned by the selectCounterValue
 
 So, Selectors in Redux Toolkit provide a convenient and efficient way to access specific pieces of the Redux state. They play a crucial role in managing state abstraction, reusability, and performance optimization in a Redux application.
 
+**[⬆ Back to Top](#episode-12---lets-build-our-store)**
 
 ------------------------------------------------------------------------------------
 
@@ -4048,7 +4138,7 @@ const CounterComponent = () => {
 
 `createSlice` in Redux Toolkit simplifies the process of defining a Redux slice by combining the initial state, reducers, and action creators into a single call. It reduces boilerplate, promotes a structured approach, and enhances the overall development experience.
 
-
+**[⬆ Back to Top](#episode-12---lets-build-our-store)**
 
 
 ------------------------------------------------------------------------------------
@@ -4095,6 +4185,8 @@ Testing the interaction between a front-end React component and a back-end API.
 **Example:**
 Using tools like Cypress or Selenium to automate interactions through a web application, including navigation, form submissions, and validations.
 
+**[⬆ Back to Top](#episode-13---time-for-the-test)**
+
 ------------------------------------------------------------------------------------
 
 ### 2. What is Enzyme?
@@ -4130,6 +4222,8 @@ test('renders the message correctly', () => {
 ```
 
 In this example, shallow from Enzyme is used to render only the current component, allowing you to make assertions about its output.
+
+**[⬆ Back to Top](#episode-13---time-for-the-test)**
 
 ------------------------------------------------------------------------------------
 
@@ -4173,6 +4267,8 @@ test('renders the message correctly', () => {
 });
 ```
 In this example, render from React Testing Library is used to render the component, and getByText is used to query the rendered output from a user's perspective.
+
+**[⬆ Back to Top](#episode-13---time-for-the-test)**
 
 ------------------------------------------------------------------------------------
 
@@ -4218,8 +4314,6 @@ test('adds 1 + 2 to equal 3', () => {
 
 In this example, Jest's test function is used to define a test case, and expect is used to make assertions about the behavior of the sum function.
 
-------------------------------------------------------------------------------------
-
-**[⬆ Back to Top](#learn-react-with-akshay-saini-creator-of-namastedev)**
+**[⬆ Back to Top](#episode-13---time-for-the-test)**
 
 ------------------------------------------------------------------------------------
