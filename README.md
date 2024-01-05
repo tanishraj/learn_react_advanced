@@ -227,10 +227,10 @@ npm start
 
 ### Adding Images to Your React App
 
-##### **Description:**
+#### **Description:**
 There are various ways to add images to a React app, and the choice depends on the specific use case and requirements of the application.
 
-##### **1. Importing Images in JavaScript/JSX:**
+#### **1. Importing Images in JavaScript/JSX:**
    
    **Description:** You can import images directly into your JavaScript or JSX files using the `import` statement. This is useful for small images or icons.
 
@@ -246,7 +246,7 @@ There are various ways to add images to a React app, and the choice depends on t
    ```
 
 
-##### **2. Using Public Folder:**
+#### **2. Using Public Folder:**
   
    **Description:** You can place your images in the `public` folder of your React app and reference them directly. This is suitable for larger images or assets.
 
@@ -263,7 +263,7 @@ export default ImageComponent;
  **Note:** Ensure that your images are placed in the public folder, and the paths are relative to the public folder.
 
 
-##### **3. Image Components from External Libraries:**
+#### **3. Image Components from External Libraries:**
   
    **Description:** You can use third-party libraries to handle images, especially in scenarios where you need advanced features like lazy loading or image optimization.
    
@@ -292,14 +292,14 @@ Choose the method that best fits your application's needs and structure.
 
 ### `console.log(useState())` in React
 
-##### **Description:**
+#### **Description:**
 When you use `console.log(useState())` directly in a functional component, it can lead to unexpected behavior. The `useState()` function from React returns an array with two elements: the current state value and a function to update the state. Logging the result directly could expose the internal implementation details of React and potentially mislead developers.
 
-##### **Why Avoid `console.log(useState())`:**
+#### **Why Avoid `console.log(useState())`:**
 - **Logging Implementation Details:**
   - **Description:** The logged value includes the current state and the updater function. However, relying on the exact structure of the logged value is discouraged, as React may change its internal implementation in future releases.
 
-##### **Example:**
+#### **Example:**
 Using `console.log(useState())` directly:
 
 ```jsx
@@ -335,14 +335,14 @@ In this example, the `console.log(useState())` is used directly in the component
 
 ### `useEffect` without Dependency Array in React
 
-##### **Description:**
+#### **Description:**
 When you use `useEffect` without a dependency array, the effect will run after every render of the component. This can lead to undesired behavior, such as unnecessary repetitive executions of the effect or potential performance issues.
 
-##### **Why Avoid an Empty Dependency Array:**
+#### **Why Avoid an Empty Dependency Array:**
 - **Repeated Executions:**
   - **Description:** Without a dependency array, the effect will run on every render, leading to repeated executions. This may not be efficient, especially for operations that don't need to be performed on every render.
 
-##### **Example:**
+#### **Example:**
 Using `useEffect` without a dependency array:
 
 ```jsx
@@ -382,10 +382,10 @@ In this example, the `useEffect` is used without a dependency array. As a result
 
 ### Single Page Application (SPA)
 
-##### **Description:**
+#### **Description:**
 A Single Page Application (SPA) is a web application or website that interacts with the user by dynamically rewriting the current page rather than loading entire new pages from the server. SPAs provide a smoother and more responsive user experience by loading only the necessary resources and updating the content dynamically, typically using JavaScript frameworks like React, Angular, or Vue.
 
-##### **Key Characteristics of SPAs:**
+#### **Key Characteristics of SPAs:**
 - **Dynamic Content Loading:**
   - **Description:** SPAs load content dynamically as users interact with the application. Instead of full page reloads, only the necessary data is fetched and rendered.
 
@@ -395,7 +395,7 @@ A Single Page Application (SPA) is a web application or website that interacts w
 - **Client-Side Routing:**
   - **Description:** SPAs often use client-side routing to manage navigation within the application. The URL changes without triggering a full page reload.
 
-##### **Example:**
+#### **Example:**
 A simple React SPA using `react-router-dom` for client-side routing:
 
 ```jsx
@@ -432,16 +432,16 @@ In this example, the React application uses client-side routing to navigate betw
 
 #### Client-Side Routing vs. Server-Side Routing
 
-##### **Description:**
+#### **Description:**
 Client-side routing and server-side routing are two approaches to managing navigation and handling requests in web applications. The key difference lies in where the routing logic is executed.
 
-##### **Client-Side Routing:**
+#### **Client-Side Routing:**
 - **Description:** In client-side routing, the routing logic is handled on the client (browser) using JavaScript. The entire application is loaded initially, and subsequent navigation is managed without full page reloads. This results in a more seamless and responsive user experience.
 
-##### **Server-Side Routing:**
+#### **Server-Side Routing:**
 - **Description:** In server-side routing, the routing logic is handled on the server. Each navigation request triggers a server request, and the server responds by generating and sending a new HTML page. This approach can lead to full page reloads, and the server is responsible for rendering the entire page.
 
-##### **Key Differences:**
+#### **Key Differences:**
 - **Page Reloads:**
   - **Client-Side Routing:** Does not trigger full page reloads after the initial load.
   - **Server-Side Routing:** Often involves full page reloads with each navigation.
@@ -450,11 +450,11 @@ Client-side routing and server-side routing are two approaches to managing navig
   - **Client-Side Routing:** Provides a more responsive and seamless user experience.
   - **Server-Side Routing:** May result in slower perceived responsiveness due to full page reloads.
 
-##### **Example:**
+#### **Example:**
 
 A simple comparison between client-side and server-side routing using React and Express:
 
-###### Client-Side Routing (React):
+##### Client-Side Routing (React):
 ```jsx
 // App.js
 import React from 'react';
@@ -478,7 +478,7 @@ const App = () => {
 export default App;
 ```
 
-###### Client-Side Routing (React):
+##### Client-Side Routing (React):
 
 ```jsx
 // server.js
@@ -679,40 +679,40 @@ In these examples, `createHashRouter` is used for client-side routing with hash 
 
 #### Lifecycle Methods Order in Class Based Components
 
-##### **Description:**
+#### **Description:**
 In React class-based components, lifecycle methods are invoked at different stages of a component's existence. Here is the order in which these methods are called:
 
-##### **1. `constructor()`**
+#### **1. `constructor()`**
    - **Description:** The `constructor` method is called when a component is being initialized. It's used for setting up initial state and binding methods.
 
-##### **2. `static getDerivedStateFromProps(props, state)`**
+#### **2. `static getDerivedStateFromProps(props, state)`**
    - **Description:** This static method is called before every render, allowing the component to update its state based on changes in props.
 
-##### **3. `render()`**
+#### **3. `render()`**
    - **Description:** The `render` method is responsible for returning the React elements that represent the component's UI.
 
-##### **4. `componentDidMount()`**
+#### **4. `componentDidMount()`**
    - **Description:** This method is invoked after the component has been rendered to the DOM. It's often used for initiating network requests or modifying the DOM.
 
-##### **5. `shouldComponentUpdate(nextProps, nextState)`**
+#### **5. `shouldComponentUpdate(nextProps, nextState)`**
    - **Description:** The `shouldComponentUpdate` method is called before rendering, allowing the component to decide whether to re-render based on changes in props or state. It can be used for performance optimization.
 
-##### **6. `render()`**
+#### **6. `render()`**
    - **Description:** The `render` method is called again if the component decided to update in the previous step.
 
-##### **7. `getSnapshotBeforeUpdate(prevProps, prevState)`**
+#### **7. `getSnapshotBeforeUpdate(prevProps, prevState)`**
    - **Description:** This method is called right before the most recently rendered output is committed to the DOM. It enables the component to capture information from the DOM, such as scroll position, before potential changes.
 
-##### **8. `componentDidUpdate(prevProps, prevState, snapshot)`**
+#### **8. `componentDidUpdate(prevProps, prevState, snapshot)`**
    - **Description:** Invoked after the component's updates are flushed to the DOM. It's useful for performing side effects, such as making network requests based on changes.
 
-##### **9.`componentWillUnmount()`**
+#### **9.`componentWillUnmount()`**
    - **Description:** This method is called just before the component is removed from the DOM. It's used for cleanup operations, such as canceling network requests or clearing up subscriptions.
 
-##### **10.`static getDerivedStateFromError(error)`**
+#### **10.`static getDerivedStateFromError(error)`**
    - **Description:** This static method is called if there's an error during rendering. It allows the component to update its state based on the error.
 
-##### **11.`componentDidCatch(error, info)`**
+#### **11.`componentDidCatch(error, info)`**
    - **Description:** Invoked after an error has been thrown during rendering. It's used for logging errors or displaying a fallback UI.
 
 These lifecycle methods provide developers with hooks to manage the different phases of a component's lifecycle.
@@ -724,10 +724,10 @@ These lifecycle methods provide developers with hooks to manage the different ph
 
 #### Using `componentDidMount` in Class-Based Components
 
-##### **Description:**
+#### **Description:**
 `componentDidMount` is a lifecycle method in React class-based components that is invoked after the component has been rendered to the DOM. It is commonly used for performing tasks that require interaction with the DOM or initiating asynchronous operations, such as data fetching.
 
-##### **Why Use `componentDidMount`:**
+#### **Why Use `componentDidMount`:**
 - **DOM Manipulation:**
   - **Description:** It's the ideal place to perform tasks that involve direct interaction with the DOM, as the component has been successfully rendered at this point.
 
@@ -737,7 +737,7 @@ These lifecycle methods provide developers with hooks to manage the different ph
 - **Subscription Setup:**
   - **Description:** If the component needs to subscribe to external data sources or events, `componentDidMount` is a suitable place to set up these subscriptions.
 
-##### **Example:**
+#### **Example:**
 Assuming a class-based component that fetches data using `componentDidMount`:
 
 ```jsx
@@ -791,10 +791,10 @@ In this example, the `componentDidMount` method is used to simulate a network re
 
 ### Using `componentWillUnmount` in Class-Based Components
 
-##### **Description:**
+#### **Description:**
 `componentWillUnmount` is a lifecycle method in React class-based components that is invoked just before the component is removed from the DOM. It is commonly used for cleanup operations, such as canceling network requests, clearing up subscriptions, or disposing of resources to avoid memory leaks.
 
-##### **Why Use `componentWillUnmount`:**
+#### **Why Use `componentWillUnmount`:**
 - **Cleanup Operations:**
   - **Description:** It provides an opportunity to perform necessary cleanup before the component is unmounted, preventing potential memory leaks or issues related to lingering asynchronous operations.
 
@@ -804,7 +804,7 @@ In this example, the `componentDidMount` method is used to simulate a network re
 - **Clearing Timers or Intervals:**
   - **Description:** If the component set up any timers or intervals using `setTimeout` or `setInterval`, `componentWillUnmount` ensures they are cleared to avoid unexpected behavior.
 
-##### **Example:**
+#### **Example:**
 Assuming a class-based component that sets up a timer and cleans it up in `componentWillUnmount`:
 
 ```jsx
@@ -853,17 +853,17 @@ In this example, the `componentDidMount` method sets up a timer using `setInterv
 
 #### Using `super(props)` in Constructor
 
-##### **Description:**
+#### **Description:**
 In class-based components in React, the `super(props)` call in the constructor is used to invoke the constructor of the parent class (`Component` in most cases). It is necessary to ensure that the component properly inherits from the `Component` class and initializes its state and other properties correctly.
 
-##### **Why Use `super(props)`:**
+#### **Why Use `super(props)`:**
 - **Initializing Component State:**
   - **Description:** It allows the component to properly initialize its state by calling the constructor of the parent class and ensuring that the state is set up correctly.
 
 - **Accessing `this.props`:**
   - **Description:** It ensures that `this.props` is correctly set up, allowing the component to access and utilize the props passed to it.
 
-##### **Example:**
+#### **Example:**
 A basic example demonstrating the use of `super(props)` in a class-based component:
 
 ```jsx
@@ -901,14 +901,14 @@ In this example, `super(props)` is called in the constructor of `MyComponent` be
 
 #### Asynchronous Callback Functions in `useEffect`
 
-##### **Description:**
+#### **Description:**
 In React's `useEffect` hook, the callback function passed to it cannot be declared as `async` directly. This is because `useEffect` expects either a synchronous function or a cleanup function that returns nothing or a function that returns a cleanup function. An asynchronous function (one declared with `async`) returns a Promise, which is not compatible with the expected behavior of `useEffect`.
 
-##### **Why Can't `useEffect` Callback be Async:**
+#### **Why Can't `useEffect` Callback be Async:**
 - **Promise Return:**
   - **Description:** An asynchronous function implicitly returns a Promise. `useEffect` does not handle Promises directly, and attempting to return a Promise from the callback can lead to unexpected behavior.
 
-##### **Example:**
+#### **Example:**
 Attempting to use an async callback in `useEffect`:
 
 ```jsx
@@ -941,11 +941,11 @@ In this example, using `async` directly in the `useEffect` callback is problemat
 
 ### 1. When and why do we need lazy()?
 
-##### **When to Use `lazy()`:**
+#### **When to Use `lazy()`:**
 - **Scenario:** The `lazy()` function in React is used for code-splitting, specifically to load components lazily, i.e., only when they are needed.
 - **Why:** It helps improve the initial loading time of your application by splitting the JavaScript bundle into smaller chunks. Components wrapped with `lazy()` are loaded asynchronously, reducing the amount of code a user needs to download initially.
   
-##### **Example:**
+#### **Example:**
 ```jsx
 import React, { lazy, Suspense } from 'react';
 
@@ -967,10 +967,10 @@ In this example, `LazyComponent` will be loaded only when it's actually rendered
 
 ### 2. What is suspense?
 
-##### **Description:**
+#### **Description:**
 React Suspense is a feature that enables components to suspend rendering while waiting for some asynchronous operation to complete, such as data fetching or lazy-loading components. It allows developers to create a better user experience by handling loading states more gracefully.
 
-##### **Key Points:**
+#### **Key Points:**
 - **Usage:** Implemented using the `<Suspense>` component.
 - **Fallback:** Provides a fallback UI to be displayed while the suspended component is loading.
 - **Error Boundary:** Can be combined with error boundaries to gracefully handle errors during asynchronous operations.
@@ -998,11 +998,11 @@ In this example, the `<Suspense>` component is used to wrap the lazy-loaded `Laz
 
 
 
-##### **Error Scenario:**
+#### **Error Scenario:**
 - **Error Message:** "A component suspended while responding to synchronous input. This will cause the UI to be replaced with a loading indicator."
 - **Cause:** This error occurs when a component attempts to suspend (e.g., during data fetching or lazy-loading) while it's in the middle of rendering a synchronous update. This can result in a loading state being displayed to the user unexpectedly.
 
-##### **How Suspense Fixes This Error:**
+#### **How Suspense Fixes This Error:**
 - **Usage of `startTransition()`:** The error suggests wrapping updates that suspend with the `startTransition` function. This function is part of the `useTransition` hook in React and allows you to mark certain updates as transitions, preventing the error scenario described above.
 - **Example:**
   ```jsx
@@ -1034,7 +1034,7 @@ In this example, the `startTransition` function is used to wrap the code that ma
 
 #### Code Splitting in React: Advantages and Disadvantages
 
-##### **Advantages:**
+#### **Advantages:**
 
 1. **Improved Initial Loading Time:**
    - **Description:** Code splitting helps reduce the initial bundle size by loading only the essential code required for the initial render. This results in faster loading times for users.
@@ -1048,7 +1048,7 @@ In this example, the `startTransition` function is used to wrap the code that ma
 4. **Simplified Maintenance:**
    - **Description:** Code splitting allows for more modular and maintainable code. Each feature or component can be developed and maintained independently, making the codebase easier to understand and update.
 
-##### **Disadvantages:**
+#### **Disadvantages:**
 
 1. **Complexity in Setup:**
    - **Description:** Implementing code splitting can introduce complexity to the project setup, especially for those not familiar with the process. This may require additional configuration and tooling.
@@ -1070,14 +1070,14 @@ It's essential to carefully consider the trade-offs and project requirements whe
 
 #### Using React Suspense: When and Why
 
-##### **When to Use React Suspense:**
+#### **When to Use React Suspense:**
 - **Asynchronous Operations:**
   - **Description:** React Suspense is particularly useful when dealing with asynchronous operations, such as data fetching or lazy-loading components. It allows components to suspend rendering until the asynchronous operation is completed.
 
 - **Loading States:**
   - **Description:** When you want to provide a better user experience by displaying loading states or fallback UIs during asynchronous operations, React Suspense can help manage and handle these loading scenarios more elegantly.
 
-##### **Why Use React Suspense:**
+#### **Why Use React Suspense:**
 - **Improved User Experience:**
   - **Description:** React Suspense significantly improves the user experience by preventing the UI from freezing or displaying unexpected loading indicators during asynchronous operations. It allows for a smoother transition between different states of your application.
 
@@ -1101,7 +1101,7 @@ Using React Suspense is beneficial in scenarios where asynchronous operations ar
 
 ### 1. Explore all the ways of writing CSS.
 
-##### 1. **Inline CSS:**
+#### 1. **Inline CSS:**
    - **Syntax:** Applied directly within the HTML element using the `style` attribute.
    - **Example:**
 
@@ -1109,7 +1109,7 @@ Using React Suspense is beneficial in scenarios where asynchronous operations ar
 <p style="color: blue; font-size: 16px;">Inline-styled paragraph.</p>
 ```
 
-##### 2. **Internal/Embedded CSS:**
+#### 2. **Internal/Embedded CSS:**
    - **Syntax:** Defined within the `<style>` tag in the HTML document's head.
    - **Example:**
 
@@ -1132,7 +1132,7 @@ Using React Suspense is beneficial in scenarios where asynchronous operations ar
 </html>
 ```
 
-##### 3. **External CSS:**
+#### 3. **External CSS:**
    - **Syntax:** Defined in a separate CSS file and linked to the HTML document.
    - **Example:**
 
@@ -1159,7 +1159,7 @@ Using React Suspense is beneficial in scenarios where asynchronous operations ar
 }
 ```
 
-##### 4. **CSS Preprocessors (e.g., Sass):**
+#### 4. **CSS Preprocessors (e.g., Sass):**
    - **Syntax:** Extends CSS with features like variables, nesting, and functions.
    - **Example:**
 
@@ -1177,7 +1177,7 @@ body {
 }
 ```
 
-##### 5. **Utility-First CSS (e.g., Tailwind CSS):**
+#### 5. **Utility-First CSS (e.g., Tailwind CSS):**
    - **Syntax:** Utilizes pre-defined utility classes for styling..
    - **Example (Tailwind CSS):**
 
@@ -1197,7 +1197,7 @@ body {
 </html>
 ```
 
-##### 6. **CSS-in-JS (e.g., Styled Components):**
+#### 6. **CSS-in-JS (e.g., Styled Components):**
    - **Syntax:** Styles are written directly within JavaScript files using tagged template literals.
    - **Example (Styled Components):**
 
@@ -1226,7 +1226,7 @@ export default App;
 
 ### 2. How do we configure Tailwind?
 
-##### **Step 1: Install Tailwind CSS**
+#### **Step 1: Install Tailwind CSS**
 Install Tailwind CSS and its dependencies using npm or yarn.
 
 ```bash
@@ -1234,7 +1234,7 @@ Install Tailwind CSS and its dependencies using npm or yarn.
 npm install tailwindcss postcss autoprefixer
 ```
 
-##### **Step 2: Create Configuration Files**
+#### **Step 2: Create Configuration Files**
 Generate the configuration files for Tailwind CSS using the following command:
 
 ```bash
@@ -1244,7 +1244,7 @@ npx tailwindcss init -p
 
 This command creates `tailwind.config.js` and `postcss.config.js` in your project's root.
 
-##### **Step 3: Configure `tailwind.config.js`**
+#### **Step 3: Configure `tailwind.config.js`**
 Open the generated tailwind.config.js file and customize it according to your project's needs. This file contains various configuration options, such as colors, fonts, breakpoints, and more.
 Here is a simplified example:
 
@@ -1259,7 +1259,7 @@ module.exports = {
 };
 ```
 
-##### **Step 4: Configure `postcss.config.js`**
+#### **Step 4: Configure `postcss.config.js`**
 
 Open the generated `postcss.config.js` file and configure it to use Autoprefixer and Tailwind CSS:
 
@@ -1273,7 +1273,7 @@ module.exports = {
 };
 ```
 
-##### **Step 5: Include Tailwind CSS in Your Stylesheets**
+#### **Step 5: Include Tailwind CSS in Your Stylesheets**
 
 Include Tailwind CSS in your main stylesheet. This can be done by importing the `tailwindcss` package and using the `@import` directive.
 
@@ -1286,7 +1286,7 @@ Include Tailwind CSS in your main stylesheet. This can be done by importing the 
 /* Your custom styles go here */
 ```
 
-##### **Step 6: Use Tailwind Classes in your react app**
+#### **Step 6: Use Tailwind Classes in your react app**
 
 Now you can use Tailwind CSS utility classes in your react components.
 
@@ -1313,7 +1313,7 @@ These steps provide a basic setup for configuring and using Tailwind CSS in a pr
 
 The `tailwind.config.js` file is a configuration file for Tailwind CSS that allows you to customize various aspects of your styles. Here's a brief explanation of some key properties:
 
-##### 1. **`content`**
+#### 1. **`content`**
    - **Description:** Specifies the content files that Tailwind should analyze to generate its utility classes.
    - **Example:**
      ```js
@@ -1324,7 +1324,7 @@ The `tailwind.config.js` file is a configuration file for Tailwind CSS that allo
      ],
      ```
 
-##### 2. **`theme`**
+#### 2. **`theme`**
    - **Description:** Defines the default values and configuration options for various design elements, such as colors, fonts, spacing, and more.
    - **Example:**
      ```js
@@ -1337,7 +1337,7 @@ The `tailwind.config.js` file is a configuration file for Tailwind CSS that allo
      },
      ```
 
-##### 3. **`extend`**
+#### 3. **`extend`**
    - **Description:** Allows you to extend or override the default configuration provided by Tailwind. It's often used to add new utility classes or customize existing ones.
    - **Example:**
      ```js
@@ -1348,7 +1348,7 @@ The `tailwind.config.js` file is a configuration file for Tailwind CSS that allo
      },
      ```
 
-##### 4. **`plugins`**
+#### 4. **`plugins`**
    - **Description:** Provides a way to add plugins to Tailwind, enabling additional features or utility classes. Plugins can be custom or third-party.
    - **Example:**
      ```js
@@ -1368,7 +1368,7 @@ These properties give you the flexibility to tailor Tailwind CSS to your project
 
 The `.postcssrc` file is a configuration file for PostCSS, a tool used in the build process to transform styles with JavaScript plugins. Here's a brief explanation of its purpose:
 
-##### **Purpose of `.postcssrc` File:**
+#### **Purpose of `.postcssrc` File:**
    - **Description:** The `.postcssrc` file allows you to specify configuration options for PostCSS plugins. It helps define how PostCSS processes and transforms your styles, including the order of plugins, custom settings, and more.
 
    - **Example:**
@@ -1395,7 +1395,7 @@ By having a `.postcssrc` file, you can centralize and manage PostCSS configurati
 
 **Prop drilling** is the process of passing data from a parent component down through multiple levels of nested child components to reach a specific component that needs the data. It involves passing props through intermediary components, even if those components do not directly use the data.
 
-##### **Example:**
+#### **Example:**
 
 Consider a React application where user data fetched in the top-level `App` component needs to be passed down to a deeply nested `UserProfile` component.
 
@@ -1463,7 +1463,7 @@ In this example, userData is prop-drilled from the top-level App component throu
 
 **Lifting state up** is a React pattern where the state that is shared by multiple components is moved to a common ancestor, typically a parent component. This promotes data sharing and avoids prop drilling by lifting the state to a higher level in the component tree.
 
-##### **Example:**
+#### **Example:**
 
 Consider a scenario where two sibling components, `Counter` and `Display`, need to share and display the same count value.
 
@@ -1543,7 +1543,7 @@ In this example, the count state is lifted up to the App component, which serves
 
 **Context Provider** and **Context Consumer** are components provided by React's Context API for managing and sharing state across multiple components without the need for prop drilling.
 
-##### **Example:**
+#### **Example:**
 
 Consider a scenario where a theme (light or dark) needs to be shared across various components in a React application.
 
@@ -1627,7 +1627,7 @@ The useTheme custom hook is used in the ThemedComponent to consume the theme con
 
 If you don't pass a value to the Context Provider, it takes the default value specified during the creation of the context using `createContext(defaultValue)`.
 
-##### **Example:**
+#### **Example:**
 
 ```jsx
 // ExampleContext.js
@@ -1704,7 +1704,7 @@ In this example, the ExampleContext is created with a default value of 'Default 
 
 When it comes to state management in React applications, developers often encounter the choice between using the built-in `useContext` hook and a dedicated state management library like Redux. Let's explore the key differences and use cases for each:
 
-##### `useContext`:
+#### `useContext`:
 
 **Definition:** `useContext` is a React hook that allows functional components to consume values from the React context API. It provides a way to share state between components without having to pass props through every level of the component tree.
 
@@ -1759,7 +1759,7 @@ const UserProfile = () => {
 };
 ```
 
-##### `Redux`:
+#### `Redux`:
 
 **Definition:** `Redux` is a state management library for JavaScript applications, especially popular with React. It provides a predictable state container and enforces a unidirectional data flow, making it suitable for managing complex state logic in large-scale applications.
 
@@ -1823,7 +1823,7 @@ In summary, useContext is suitable for simpler state management in smaller appli
 
 [Redux Toolkit](https://redux-toolkit.js.org/) is a set of utilities and conventions that simplifies the process of working with Redux. It is designed to address some of the common challenges and boilerplate associated with setting up a Redux store. Here are some advantages of using Redux Toolkit over the traditional approach of using Redux alone:
 
-##### 1. **Boilerplate Reduction:**
+#### 1. **Boilerplate Reduction:**
 
 **Redux:**
 Setting up a Redux store typically involves creating multiple files for actions, action types, and reducers, resulting in boilerplate code.
@@ -1831,7 +1831,7 @@ Setting up a Redux store typically involves creating multiple files for actions,
 **Redux Toolkit:**
 Redux Toolkit provides a set of utilities, such as `createSlice`, which significantly reduces the amount of boilerplate code needed. With `createSlice`, you can define actions and reducers in a single file.
 
-##### 2. **Simplified Syntax:**
+#### 2. **Simplified Syntax:**
 
 **Redux:**
 Redux requires defining actions, action types, and switch statements in reducers, which can lead to verbose and repetitive code.
@@ -1839,7 +1839,7 @@ Redux requires defining actions, action types, and switch statements in reducers
 **Redux Toolkit:**
 With `createSlice`, you can define actions and reducers using a more concise syntax, making the code easier to read and maintain.
 
-##### 3. **Immutability Helpers:**
+#### 3. **Immutability Helpers:**
 
 **Redux:**
 Maintaining immutability in reducer logic often requires manual handling, which can be error-prone.
@@ -1847,7 +1847,7 @@ Maintaining immutability in reducer logic often requires manual handling, which 
 **Redux Toolkit:**
 Redux Toolkit includes utilities like `immer` under the hood, allowing developers to write more intuitive mutable code while ensuring the immutability of the state.
 
-##### 4. **Async Action Handling:**
+#### 4. **Async Action Handling:**
 
 **Redux:**
 Handling asynchronous logic in Redux typically involves middleware like Thunk or Saga, adding complexity to the setup.
@@ -1855,7 +1855,7 @@ Handling asynchronous logic in Redux typically involves middleware like Thunk or
 **Redux Toolkit:**
 Redux Toolkit includes `createAsyncThunk` to simplify the process of handling asynchronous actions, making it more straightforward to deal with side effects.
 
-##### 5. **Built-in DevTools Integration:**
+#### 5. **Built-in DevTools Integration:**
 
 **Redux:**
 Integrating the Redux DevTools for debugging requires additional configuration.
@@ -1863,7 +1863,7 @@ Integrating the Redux DevTools for debugging requires additional configuration.
 **Redux Toolkit:**
 DevTools integration is built into Redux Toolkit by default, making it easier to debug and trace the state changes in your application.
 
-##### 6. **Opinionated Defaults:**
+#### 6. **Opinionated Defaults:**
 
 **Redux:**
 In Redux, developers need to make choices regarding the structure of actions, action types, and reducers, leading to different patterns across projects.
@@ -1871,7 +1871,7 @@ In Redux, developers need to make choices regarding the structure of actions, ac
 **Redux Toolkit:**
 Redux Toolkit provides opinionated defaults that encourage best practices, reducing decision fatigue and ensuring a consistent structure.
 
-##### Example:
+#### Example:
 
 Using `createSlice` with Redux Toolkit:
 
@@ -1903,7 +1903,7 @@ Redux Toolkit simplifies the Redux development experience by reducing boilerplat
 
 In the context of Redux Toolkit, the term "dispatcher" typically refers to the action creator functions generated by the `createSlice` utility. The dispatcher is responsible for creating actions that can be dispatched to the Redux store, initiating state changes. Let's delve into how dispatchers work in Redux Toolkit:
 
-##### **1. Creating Actions with Dispatchers:**
+#### **1. Creating Actions with Dispatchers:**
 
 When you use `createSlice` in Redux Toolkit to define a slice of your Redux state, it automatically generates action creators for each reducer function. These generated action creators are known as dispatchers. Dispatchers are functions that, when called, create and dispatch the corresponding action to the Redux store.
 
@@ -1933,7 +1933,7 @@ export default counterSlice.reducer;
 
 Here, increment and decrement are the dispatchers. When you call increment(), it creates an action of type "increment" and dispatches it to the Redux store.
 
-##### **2. Dispatching Actions:**
+#### **2. Dispatching Actions:**
 
 Once a dispatcher is invoked, it triggers the corresponding reducer logic defined in your slice. This results in a state change, and the updated state is then stored in the Redux store.
 
@@ -1966,7 +1966,7 @@ const CounterComponent = () => {
 
 In this example, the useDispatch hook is used to get access to the dispatch function, and the increment and decrement dispatchers are called when the corresponding buttons are clicked.
 
-##### **3. Benefit of Dispatchers::**
+#### **3. Benefit of Dispatchers::**
 
 The use of dispatchers generated by createSlice in Redux Toolkit reduces boilerplate and ensures a consistent and straightforward way to interact with your Redux store. It encapsulates the logic of creating actions and dispatching them, making your code more maintainable and readable.
 
@@ -1978,13 +1978,13 @@ In summary, dispatchers in Redux Toolkit are the action creator functions automa
 
 In Redux, a reducer is a pure function responsible for specifying how the application's state changes in response to dispatched actions. Reducers take the current state and an action as arguments and return the new state. The term "reducer" comes from the idea that it reduces a set of actions and their corresponding states into a single state.
 
-##### **1. Characteristics of a Reducer:**
+#### **1. Characteristics of a Reducer:**
 
 - **Pure Function:** A reducer must be a pure function, meaning it produces the same output for the same input and has no side effects. This property ensures predictability and testability.
 
 - **State Immutability:** Reducers should not directly modify the existing state. Instead, they create a new copy or representation of the state, incorporating the changes specified by the action.
 
-##### **2. Anatomy of a Reducer:**
+#### **2. Anatomy of a Reducer:**
 
 A typical reducer function takes two parameters:
 
@@ -2010,7 +2010,7 @@ const counterReducer = (state = { count: 0 }, action) => {
 
 In this example, the counterReducer takes the current state, checks the action type, and returns a new state based on the action.
 
-##### **3. Using Reducers in Redux:**
+#### **3. Using Reducers in Redux:**
 
 Reducers are combined to form the root reducer, which manages the entire state of the application. In Redux, this is typically done using the combineReducers utility. The root reducer is then used to create the Redux store.
 
@@ -2029,7 +2029,7 @@ const store = createStore(rootReducer);
 
 Here, counterReducer is combined with other reducers to create the root reducer, which is then used to create the Redux store.
 
-##### **4. Handling Complex State Changes:**
+#### **4. Handling Complex State Changes:**
 
 Reducers can handle more complex state changes by employing conditional logic based on action types. Additionally, Redux middleware can be used within reducers to handle asynchronous actions or side effects.
 
@@ -2061,7 +2061,7 @@ So, Reducers play a crucial role in managing the state of a Redux application by
 
 In Redux Toolkit, a "slice" refers to a portion of the Redux state along with its associated actions and reducer. It is created using the `createSlice` utility, which encapsulates the logic of defining the state, actions, and reducer in a more concise and structured manner.
 
-##### **1. Anatomy of a Slice:**
+#### **1. Anatomy of a Slice:**
 
 A slice consists of the following components:
 
@@ -2073,7 +2073,7 @@ A slice consists of the following components:
 
 - **Actions:** Automatically generated action creators based on the reducers. These action creators are functions that create actions with the appropriate type and payload.
 
-##### **2. Creating a Slice:**
+#### **2. Creating a Slice:**
 
 ```javascript
 import { createSlice } from '@reduxjs/toolkit';
@@ -2097,7 +2097,7 @@ export default counterSlice.reducer;
 
 In this example, createSlice is used to define a slice named 'counter' with an initial state and two reducers (increment and decrement). The generated action creators (increment and decrement) and the reducer are exported.
 
-##### **3. Using a Slice:**
+#### **3. Using a Slice:**
 
 Once a slice is created, it can be used in combination with other slices to create the root reducer for the Redux store. This helps in organizing the state and actions in a modular way.
 
@@ -2124,7 +2124,7 @@ So, In Redux Toolkit, a slice provides a convenient and structured way to define
 
 In the context of Redux and Redux Toolkit, a "selector" is a function that takes the Redux state as an argument and returns a specific piece of that state. Selectors are used to encapsulate the logic for extracting values from the Redux store, providing a clean and efficient way to access specific parts of the state.
 
-##### **1. Purpose of Selectors:**
+#### **1. Purpose of Selectors:**
 
 Selectors serve several purposes in a Redux application:
 
@@ -2134,7 +2134,7 @@ Selectors serve several purposes in a Redux application:
 
 - **Memoization:** Selectors can be memoized using libraries like Reselect, which caches the results based on the input arguments. This improves performance by preventing unnecessary recomputations.
 
-##### **2. Creating a Selector:**
+#### **2. Creating a Selector:**
 
 ```javascript
 import { createSelector } from '@reduxjs/toolkit';
@@ -2150,7 +2150,7 @@ export const selectCounterValue = createSelector(
 
 In this example, selectCounter is a base selector that retrieves the 'counter' slice from the state. The createSelector function from Redux Toolkit is then used to create a more specific selector, selectCounterValue, which extracts the 'value' property from the 'counter' slice.
 
-##### **3. Using Selectors in Components:**
+#### **3. Using Selectors in Components:**
 
 Selectors are typically used in React components with the help of the useSelector hook provided by the react-redux library.
 
@@ -2181,13 +2181,13 @@ So, Selectors in Redux Toolkit provide a convenient and efficient way to access 
 
 In Redux Toolkit, `createSlice` is a utility function that helps streamline the process of defining a slice of the Redux state. A slice includes the initial state, reducer functions, and automatically generated action creators. It promotes a more modular and concise way of managing state and actions.
 
-##### **1. Purpose of `createSlice`:**
+#### **1. Purpose of `createSlice`:**
 
 - **Boilerplate Reduction:** `createSlice` significantly reduces the boilerplate code traditionally associated with setting up a Redux slice, including action types, action creators, and reducer functions.
 
 - **Structured Definition:** It provides a structured way to define the initial state, reducer logic, and action creators all in one place.
 
-##### **2. Configuration of `createSlice`:**
+#### **2. Configuration of `createSlice`:**
 
 The `createSlice` function takes an object as its argument, and this object includes various configuration options:
 
@@ -2226,7 +2226,7 @@ In this example:
  - The name is 'counter,' and the initialState is an object with a value property.
  - Two reducers (increment and decrement) are defined in the reducers object.
 
-##### **3. Usage of Generated Action Creators:**
+#### **3. Usage of Generated Action Creators:**
 
 The action creators (increment and decrement) generated by createSlice can be directly used in components without the need to manually create action objects.
 
@@ -2270,7 +2270,7 @@ const CounterComponent = () => {
 
 There are various types of testing in software development, each serving a specific purpose in ensuring the quality and reliability of a software product.
 
- ##### 1. Unit Testing:
+ #### 1. Unit Testing:
 
 **Definition:** Unit testing involves testing individual units or components of a system in isolation. It focuses on validating that each unit of the software performs as designed.
 
@@ -2290,14 +2290,14 @@ test('adds 1 + 2 to equal 3', () => {
 });
 ```
 
- ##### 2. Integration Testing:
+ #### 2. Integration Testing:
 
 **Definition:** Integration testing verifies that different components or modules of a system work together as intended. It ensures that the integrated components can exchange data correctly and function as a unified system.
 
 **Example:**
 Testing the interaction between a front-end React component and a back-end API.
 
- ##### 3. End-to-End (E2E) Testing:
+ #### 3. End-to-End (E2E) Testing:
 
 **Definition:** End-to-End testing assesses the entire software application from start to finish. It involves testing the complete user flow, simulating real user scenarios and interactions.
 
@@ -2346,7 +2346,7 @@ In this example, shallow from Enzyme is used to render only the current componen
 
 Enzyme and React Testing Library are both popular testing utilities in the React ecosystem, but they differ in their testing philosophies and approaches.
 
-##### Enzyme:
+#### Enzyme:
 
 Enzyme is a testing utility specifically designed for React. It provides a range of testing utilities, including shallow rendering, full DOM rendering, and various methods for querying and interacting with components. Enzyme allows you to isolate and test components in different ways, making it powerful for complex component structures.
 
@@ -2364,7 +2364,7 @@ test('renders the message correctly', () => {
 });
 ```
 
-##### React Testing Library:
+#### React Testing Library:
 React Testing Library, on the other hand, promotes testing the application from the user's perspective. It encourages testing components in a way that resembles how users interact with the application. This means focusing on testing the rendered output and user interactions rather than the internal implementation details of components.
 
 **Example:**
@@ -2403,7 +2403,7 @@ In this example, render from React Testing Library is used to render the compone
 
  6. **Code Coverage:** Jest provides code coverage reports, which help developers understand how much of their codebase is covered by tests. This information is valuable for ensuring comprehensive test coverage.
 
-##### Example:
+#### Example:
 
 Assuming you have a simple function named `sum`:
 
