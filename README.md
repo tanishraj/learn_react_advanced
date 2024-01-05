@@ -90,16 +90,16 @@ npm start
 ## Episode 03 - Laying the foundation
 | # | Questions |
 | --- | --- |
-| 1 | JSX |
-| 2 | React.createElement vs JSX |
-| 3 | Benefits of JSX |
-| 4 | Behind the Scenes of JSX |
-| 5 | Babel & parcel role in JSX |
-| 6 | Components |
-| 7 | Functional Components |
-| 8 | Composing Components |
-| 8 | Superpowers of JSX |
-| 10 | Role of type attribute in script tag? What options can I use there? |
+| 1 | [JSX](#1-jsx) |
+| 2 | [React.createElement vs JSX](#2-reactcreateelement-vs-jsx) |
+| 3 | [Benefits of JSX](#3-benefits-of-jsx) |
+| 4 | [Behind the Scenes of JSX](#4-behind-the-scenes-of-jsx) |
+| 5 | [Babel & parcel role in JSX](#5-babel--parcel-role-in-jsx) |
+| 6 | [Components](#6-components) |
+| 7 | [Functional Components](#7-functional-components) |
+| 8 | [Composing Components](#8-composing-components) |
+| 8 | [Superpowers of JSX](#9-superpowers-of-jsx) |
+| 10 | [Role of type attribute in script tag? What options can I use there?](#10-role-of-type-attribute-in-script-tag-what-options-can-i-use-there) |
 
 
 ## Episode 04 - Talk is cheap, show me the code!
