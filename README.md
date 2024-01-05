@@ -132,17 +132,17 @@ npm start
 ## Episode 06 - Exploring the world
 | # | Questions |
 | --- | --- |
-| 1 | What is a Microservice? |
-| 2 | What is Monolith architecture? |
-| 3 | What is the difference between Monolith and Microservice? |
-| 4 | Why do we need a useEffect Hook? |
-| 5 | What is Optional Chaining? |
-| 6 | What is Shimmer UI? |
-| 7 | What is the difference between JS expression and JS statement |
-| 8 | What is Conditional Rendering, explain with a code example |
-| 9 | What is CORS? |
-| 10 | What is async and await? |
-| 11 | What is the use of `const json = await data.json();` in getRestaurants() |
+| 1 | [What is a Microservice?](#1-what-is-a-microservice) |
+| 2 | [What is Monolith architecture?](#2-what-is-monolith-architecture) |
+| 3 | [What is the difference between Monolith and Microservice?](#3-what-is-the-difference-between-monolith-and-microservice) |
+| 4 | [Why do we need a useEffect Hook?](#4-why-do-we-need-a-useeffect-hook) |
+| 5 | [What is Optional Chaining?](#5-what-is-optional-chaining) |
+| 6 | [What is Shimmer UI?](#6-what-is-shimmer-ui) |
+| 7 | [What is the difference between JS expression and JS statement](#7-what-is-the-difference-between-js-expression-and-js-statement) |
+| 8 | [What is Conditional Rendering, explain with a code example](#8-what-is-conditional-rendering-explain-with-a-code-example) |
+| 9 | [What is CORS?](#9-what-is-cors) |
+| 10 | [What is async and await?](#10-what-is-async-and-await) |
+| 11 | [What is the use of `const json = await data.json();` in getRestaurants()](#11-what-is-the-use-of-const-json--await-datajson-in-getrestaurants) |
 
 
 ## Episode 07 - Finding the Path
