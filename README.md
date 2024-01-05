@@ -216,6 +216,298 @@ npm start
 | 4 | [What is Jest and why do we use it?](#4-what-is-jest-and-why-do-we-use-it) |
 
 
+
+------------------------------------------------------------------------------------
+
+## Episode 07 - Finding the Path (ANSWERS)
+
+------------------------------------------------------------------------------------
+
+### 1. What are various ways to add images into our App? Explain with code examples.
+
+### Adding Images to Your React App
+
+##### **Description:**
+There are various ways to add images to a React app, and the choice depends on the specific use case and requirements of the application.
+
+##### **1. Importing Images in JavaScript/JSX:**
+   
+   **Description:** You can import images directly into your JavaScript or JSX files using the `import` statement. This is useful for small images or icons.
+
+   ```jsx
+   import React from 'react';
+   import myImage from './images/myImage.jpg';
+
+   const ImageComponent = () => {
+     return <img src={myImage} alt="My Image" />;
+   };
+
+   export default ImageComponent;
+   ```
+
+
+##### **2. Using Public Folder:**
+  
+   **Description:** You can place your images in the `public` folder of your React app and reference them directly. This is suitable for larger images or assets.
+
+```jsx
+import React from 'react';
+
+const ImageComponent = () => {
+  return <img src="/images/myImage.jpg" alt="My Image" />;
+};
+
+export default ImageComponent;
+```
+
+ **Note:** Ensure that your images are placed in the public folder, and the paths are relative to the public folder.
+
+
+##### **3. Image Components from External Libraries:**
+  
+   **Description:** You can use third-party libraries to handle images, especially in scenarios where you need advanced features like lazy loading or image optimization.
+   
+```jsx
+import React from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
+const ImageComponent = () => {
+  return <LazyLoadImage effect="blur" src="myImage.jpg" alt="My Image" />;
+};
+
+export default ImageComponent;
+```
+
+**Note:** Install the `react-lazy-load-image-component` library using `npm install react-lazy-load-image-component`.
+
+Choose the method that best fits your application's needs and structure.
+
+
+------------------------------------------------------------------------------------
+
+
+### 2. What would happen if we do console.log(useState())?
+
+
+### `console.log(useState())` in React
+
+##### **Description:**
+When you use `console.log(useState())` directly in a functional component, it can lead to unexpected behavior. The `useState()` function from React returns an array with two elements: the current state value and a function to update the state. Logging the result directly could expose the internal implementation details of React and potentially mislead developers.
+
+##### **Why Avoid `console.log(useState())`:**
+- **Logging Implementation Details:**
+  - **Description:** The logged value includes the current state and the updater function. However, relying on the exact structure of the logged value is discouraged, as React may change its internal implementation in future releases.
+
+##### **Example:**
+Using `console.log(useState())` directly:
+
+```jsx
+import React, { useState } from 'react';
+
+const MyComponent = () => {
+  console.log(useState()); // Avoid doing this directly in your components
+
+  const [count, setCount] = useState(0);
+
+  const handleClick = () => {
+    setCount(count + 1);
+  };
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={handleClick}>Increment</button>
+    </div>
+  );
+};
+
+export default MyComponent;
+```
+
+In this example, the `console.log(useState())` is used directly in the component. While it might log the initial state and updater function, relying on this for any logic is discouraged. Developers should use the returned array elements (`const [state, setState] = useState(initialState)`) to manage state in a reliable and supported manner.
+
+
+------------------------------------------------------------------------------------
+
+
+### 3. How will useEffect behave if we don’t add a dependency array?
+
+### `useEffect` without Dependency Array in React
+
+##### **Description:**
+When you use `useEffect` without a dependency array, the effect will run after every render of the component. This can lead to undesired behavior, such as unnecessary repetitive executions of the effect or potential performance issues.
+
+##### **Why Avoid an Empty Dependency Array:**
+- **Repeated Executions:**
+  - **Description:** Without a dependency array, the effect will run on every render, leading to repeated executions. This may not be efficient, especially for operations that don't need to be performed on every render.
+
+##### **Example:**
+Using `useEffect` without a dependency array:
+
+```jsx
+import React, { useEffect, useState } from 'react';
+
+const MyComponent = () => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    console.log('Effect executed on every render');
+    // Some effect logic that runs on every render
+  });
+
+  const handleClick = () => {
+    setCount(count + 1);
+  };
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={handleClick}>Increment</button>
+    </div>
+  );
+};
+
+export default MyComponent;
+```
+
+In this example, the `useEffect` is used without a dependency array. As a result, the effect will run after every render, even if the state or props haven't changed. It's generally recommended to include dependencies in the array to control when the effect should be executed.
+
+
+
+------------------------------------------------------------------------------------
+
+
+### 4. What is SPA?
+
+### Single Page Application (SPA)
+
+##### **Description:**
+A Single Page Application (SPA) is a web application or website that interacts with the user by dynamically rewriting the current page rather than loading entire new pages from the server. SPAs provide a smoother and more responsive user experience by loading only the necessary resources and updating the content dynamically, typically using JavaScript frameworks like React, Angular, or Vue.
+
+##### **Key Characteristics of SPAs:**
+- **Dynamic Content Loading:**
+  - **Description:** SPAs load content dynamically as users interact with the application. Instead of full page reloads, only the necessary data is fetched and rendered.
+
+- **Smooth User Experience:**
+  - **Description:** SPAs provide a more seamless user experience by eliminating page reloads. Transitions between views are smoother, and the application feels more like a desktop application.
+
+- **Client-Side Routing:**
+  - **Description:** SPAs often use client-side routing to manage navigation within the application. The URL changes without triggering a full page reload.
+
+##### **Example:**
+A simple React SPA using `react-router-dom` for client-side routing:
+
+```jsx
+// App.js
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Home from './components/Home';
+import About from './components/About';
+import Contact from './components/Contact';
+
+const App = () => {
+  return (
+    <Router>
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/about" component={About} />
+        <Route path="/contact" component={Contact} />
+      </Switch>
+    </Router>
+  );
+};
+
+export default App;
+```
+
+In this example, the React application uses client-side routing to navigate between different views (Home, About, Contact) without triggering full page reloads. This is a characteristic feature of SPAs.
+
+
+
+------------------------------------------------------------------------------------
+
+
+### 5. What is the difference between Client Side Routing and Server Side Routing?
+
+#### Client-Side Routing vs. Server-Side Routing
+
+##### **Description:**
+Client-side routing and server-side routing are two approaches to managing navigation and handling requests in web applications. The key difference lies in where the routing logic is executed.
+
+##### **Client-Side Routing:**
+- **Description:** In client-side routing, the routing logic is handled on the client (browser) using JavaScript. The entire application is loaded initially, and subsequent navigation is managed without full page reloads. This results in a more seamless and responsive user experience.
+
+##### **Server-Side Routing:**
+- **Description:** In server-side routing, the routing logic is handled on the server. Each navigation request triggers a server request, and the server responds by generating and sending a new HTML page. This approach can lead to full page reloads, and the server is responsible for rendering the entire page.
+
+##### **Key Differences:**
+- **Page Reloads:**
+  - **Client-Side Routing:** Does not trigger full page reloads after the initial load.
+  - **Server-Side Routing:** Often involves full page reloads with each navigation.
+
+- **Responsiveness:**
+  - **Client-Side Routing:** Provides a more responsive and seamless user experience.
+  - **Server-Side Routing:** May result in slower perceived responsiveness due to full page reloads.
+
+##### **Example:**
+
+A simple comparison between client-side and server-side routing using React and Express:
+
+###### Client-Side Routing (React):
+```jsx
+// App.js
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Home from './components/Home';
+import About from './components/About';
+import Contact from './components/Contact';
+
+const App = () => {
+  return (
+    <Router>
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/about" component={About} />
+        <Route path="/contact" component={Contact} />
+      </Switch>
+    </Router>
+  );
+};
+
+export default App;
+```
+
+###### Client-Side Routing (React):
+
+```jsx
+// server.js
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send('Home Page');
+});
+
+app.get('/about', (req, res) => {
+  res.send('About Page');
+});
+
+app.get('/contact', (req, res) => {
+  res.send('Contact Page');
+});
+
+const PORT = 3000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
+```
+
+In the client-side routing example, React handles navigation without triggering full page reloads. In the server-side routing example, Express responds to each route with a full HTML page reload.
+
+
+
+
 ------------------------------------------------------------------------------------
 
 ## Episode 08 - Let’s get Classy (ANSWERS)
