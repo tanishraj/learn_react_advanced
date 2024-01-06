@@ -1,36 +1,52 @@
+import { useLocation, useNavigate } from "react-router-dom";
 import { Input } from "./base/form-elements/Input";
-import { POPULAR_CUISINE_IMAGE_PATH } from "../utils/constants";
-import { MiniCard } from "./base/cards/MiniCard";
-import { Link } from "react-router-dom";
 import { usePopularCuisine } from "../hooks/usePopularCuisine";
+import { useEffect, useRef } from "react";
+import { PopularCuisine } from "./PopularCuisine";
+import { SearchSuggestion } from "./SearchSuggestion";
 
 export const GlobalSearch = () => {
   const { popularCuisine } = usePopularCuisine();
+  const searchInputRef = useRef(null);
+
+  const navigate = useNavigate();
+  const location = useLocation();
+  const urlSearchParam = new URLSearchParams(location.search);
+  const searchParam = urlSearchParam.get("query");
+
+  useEffect(() => {
+    searchInputRef.current.value = searchParam;
+  }, [searchParam, searchInputRef]);
+
+  const clearSearchSuggestion = () => {
+    searchInputRef.current.value = "";
+    navigate("/search");
+  };
+
+  const handletextInputEnter = () => {
+    urlSearchParam.set("query", searchInputRef.current.value);
+    const newSearch = `?${urlSearchParam.toString()}`;
+    navigate({ search: newSearch });
+  };
 
   return (
     <div className="mt-20">
-      <Input placeholder="search for restaurants or dishes..." />
-      <div className="mt-20">
-        <h4 className="font-bold capitalize text-250">Popular Cuisine</h4>
-        <div className="mt-4 flex gap-4 flex-wrap items-center justify-start">
-          {popularCuisine.map((cuisine) => (
-            <Link
-              key={cuisine?.action?.link
-                ?.split("swiggy://explore?query=")[1]
-                ?.replaceAll("%20", "+")}
-              to={`/search/?query=${cuisine?.action?.link
-                ?.split("swiggy://explore?query=")[1]
-                ?.replaceAll("%20", "+")}`}
-            >
-              <MiniCard
-                className="h-40 border border-grey200"
-                imagePath={`${POPULAR_CUISINE_IMAGE_PATH}${cuisine?.imageId}`}
-                imageAltText={cuisine?.id}
-              />
-            </Link>
-          ))}
+      <Input
+        ref={searchInputRef}
+        showClearButton={searchParam}
+        showBackButton={searchParam}
+        onClear={clearSearchSuggestion}
+        onEnter={handletextInputEnter}
+        placeholder="search for restaurants or dishes..."
+      />
+      {searchParam ? (
+        <SearchSuggestion />
+      ) : (
+        <div className="mt-20">
+          <h4 className="font-bold capitalize text-250">Popular Cuisine</h4>
+          <PopularCuisine popularCuisine={popularCuisine} />
         </div>
-      </div>
+      )}
     </div>
   );
 };
