@@ -25,8 +25,8 @@ export const Header = () => {
         </div>
 
         <ul className="flex justify-between items-center text-primary gap-10 list-none">
-          {NAVIGATION_ITEMS.map((navItem, index) => (
-            <li>
+          {NAVIGATION_ITEMS.map((navItem) => (
+            <li key={navItem.name}>
               <Link
                 className="flex items-center gap-1 text-white font-medium text-250 tracking-wider cursor-pointer transition-colors duration-300 transition-border hover:text-primary50 hover:border-blue-300 decoration-none"
                 to={navItem?.path}

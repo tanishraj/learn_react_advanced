@@ -5,6 +5,7 @@ import { Body } from "../components/Body";
 import { RestaurantDetails } from "../components/Restaurant";
 import { Cart } from "../components/Cart";
 import { PageNotFound } from "../components/PageNotFound";
+import { GlobalSearch } from "../components/GlobalSearch";
 
 const About = React.lazy(() => import("../components/About"));
 
@@ -24,6 +25,7 @@ export const AppRouter = createBrowserRouter([
       },
       { path: "/restaurant/:resId", element: <RestaurantDetails /> },
       { path: "/cart", element: <Cart /> },
+      { path: "/search", element: <GlobalSearch /> },
     ],
     errorElement: <PageNotFound />,
   },
