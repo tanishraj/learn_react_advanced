@@ -12,7 +12,11 @@ export const App = () => {
   return (
     <Provider store={AppStore}>
       <ThemeContext.Provider value={{ theme, setTheme }}>
-        <div className={`pt-20 ${theme === "dark" ? "bg-purple" : ""}`}>
+        <div
+          className={`pt-20 ${
+            theme === "dark" ? "bg-purple" : ""
+          } min-h-screen`}
+        >
           <Header />
           <div className="max-w-screen-xl m-auto py-5 px-4">
             <Outlet />
