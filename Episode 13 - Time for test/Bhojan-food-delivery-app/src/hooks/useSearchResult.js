@@ -11,8 +11,6 @@ export const useSearchResult = () => {
   const urlSearchParam = new URLSearchParams(location.search);
   const searchParam = urlSearchParam.get("query");
 
-  console.log(searchParam);
-
   const fetchSearchResult = async () => {
     data = await fetch(
       `${SUBMIT_ACTION_SUGGESTION_API}${searchParam}${SUBMIT_ACTION_SUGGESTION_API_FRACTION}`
