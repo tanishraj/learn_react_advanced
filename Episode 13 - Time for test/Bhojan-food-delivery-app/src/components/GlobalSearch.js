@@ -4,6 +4,7 @@ import { usePopularCuisine } from "../hooks/usePopularCuisine";
 import { useEffect, useRef } from "react";
 import { PopularCuisine } from "./PopularCuisine";
 import { SearchSuggestion } from "./SearchSuggestion";
+import { SearchResult } from "./SearchResult";
 
 export const GlobalSearch = () => {
   const { popularCuisine } = usePopularCuisine();
@@ -40,7 +41,8 @@ export const GlobalSearch = () => {
         placeholder="search for restaurants or dishes..."
       />
       {searchParam ? (
-        <SearchSuggestion />
+        // <SearchSuggestion />
+        <SearchResult />
       ) : (
         <div className="mt-20">
           <h4 className="font-bold capitalize text-250">Popular Cuisine</h4>

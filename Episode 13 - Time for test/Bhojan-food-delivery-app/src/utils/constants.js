@@ -24,7 +24,8 @@ export const POPULAR_CUISINE_API = `https://www.swiggy.com/dapi/landing/PRE_SEAR
 
 export const SEARCH_SUGGESTION_API = `https://www.swiggy.com/dapi/restaurants/search/suggest?lat=${LAT}&lng=${LNG}`;
 
-export const SUBMIT_ACTION_SUGGESTION_API = `https://www.swiggy.com/dapi/restaurants/search/v3?lat=${LAT}&lng=${LNG}&str=Biryani&trackingId=undefined&submitAction=SUGGESTION`;
+export const SUBMIT_ACTION_SUGGESTION_API = `https://www.swiggy.com/dapi/restaurants/search/v3?lat=${LAT}&lng=${LNG}&str=`;
+export const SUBMIT_ACTION_SUGGESTION_API_FRACTION = `&trackingId=undefined&submitAction=SUGGESTION`;
 
 // Navigation Links Item
 export const NAVIGATION_ITEMS = [

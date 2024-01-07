@@ -1,7 +1,7 @@
 export const DishIndicator = ({ dishType }) => {
   return (
     <div
-      className={`indicator w-5 h-5 flex items-center justify-center border border-primary mb-1.5 ${
+      className={`indicator w-5 h-5 flex items-center justify-center border border-primary ${
         dishType === "VEG" ? "border-primary" : "border-red"
       } `}
     >
