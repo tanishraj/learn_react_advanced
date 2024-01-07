@@ -2,9 +2,15 @@ import { forwardRef } from "react";
 import { MdClose } from "react-icons/md";
 import { TbChevronLeft } from "react-icons/tb";
 
-export const Input = forwardRef((props, ref) => {
-  const { showClearButton, onEnter, showBackButton, onClear, ...restProps } =
-    props;
+export const Input = (props) => {
+  const {
+    showClearButton,
+    onEnter,
+    showBackButton,
+    onClear,
+    value,
+    ...restProps
+  } = props;
   return (
     <div className="relative flex items-center">
       {showBackButton && (
@@ -13,13 +19,13 @@ export const Input = forwardRef((props, ref) => {
         </button>
       )}
       <input
-        ref={ref}
         className={`border text-black text-250 font-medium border-grey400 ${
           showBackButton ? "pl-11" : "pl-4"
         } pr-11 py-3 rounded-sm outline-none w-full`}
         onKeyUp={(keyEvent) =>
           keyEvent.code === "Enter" && onEnter && onEnter()
         }
+        value={value}
         {...restProps}
       />
       {showClearButton && (
@@ -29,4 +35,4 @@ export const Input = forwardRef((props, ref) => {
       )}
     </div>
   );
-});
+};

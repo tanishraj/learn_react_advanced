@@ -1,14 +1,14 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { Input } from "./base/form-elements/Input";
 import { usePopularCuisine } from "../hooks/usePopularCuisine";
-import { useEffect, useRef } from "react";
+import { useEffect, useState } from "react";
 import { PopularCuisine } from "./PopularCuisine";
 import { SearchSuggestion } from "./SearchSuggestion";
 import { SearchResult } from "./SearchResult";
 
 export const GlobalSearch = () => {
   const { popularCuisine } = usePopularCuisine();
-  const searchInputRef = useRef(null);
+  const [searchKeyword, setSearchKeyword] = useState("");
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -16,16 +16,30 @@ export const GlobalSearch = () => {
   const searchParam = urlSearchParam.get("query");
 
   useEffect(() => {
-    searchInputRef.current.value = searchParam;
-  }, [searchParam, searchInputRef]);
+    setSearchKeyword(searchParam || "");
+  }, [searchParam]);
 
   const clearSearchSuggestion = () => {
-    searchInputRef.current.value = "";
+    setSearchKeyword("");
     navigate("/search");
   };
 
   const handletextInputEnter = () => {
-    urlSearchParam.set("query", searchInputRef.current.value);
+    urlSearchParam.set("query", searchKeyword);
+    const newSearch = `?${urlSearchParam.toString()}`;
+    navigate({ search: newSearch });
+  };
+
+  const handleSearchSuggestions = (value) => {
+    if (typeof value === "string") {
+      setSearchKeyword(value);
+    } else {
+      setSearchKeyword(value?.target?.value);
+    }
+  };
+
+  const handleSuggestionCardClick = (value) => {
+    urlSearchParam.set("query", value);
     const newSearch = `?${urlSearchParam.toString()}`;
     navigate({ search: newSearch });
   };
@@ -33,20 +47,28 @@ export const GlobalSearch = () => {
   return (
     <div className="mt-20">
       <Input
-        ref={searchInputRef}
-        showClearButton={searchParam}
+        value={searchKeyword}
+        showClearButton={searchParam || searchKeyword}
         showBackButton={searchParam}
         onClear={clearSearchSuggestion}
         onEnter={handletextInputEnter}
+        onChange={handleSearchSuggestions}
         placeholder="search for restaurants or dishes..."
       />
-      {searchParam ? (
-        // <SearchSuggestion />
-        <SearchResult />
-      ) : (
+      {searchKeyword && !searchParam && (
+        <SearchSuggestion
+          searchKeyword={searchKeyword}
+          suggestionCardClickHandler={handleSuggestionCardClick}
+        />
+      )}
+      {searchParam && searchKeyword && <SearchResult />}
+      {!searchParam && !searchKeyword && (
         <div className="mt-20">
           <h4 className="font-bold capitalize text-250">Popular Cuisine</h4>
-          <PopularCuisine popularCuisine={popularCuisine} />
+          <PopularCuisine
+            popularCuisine={popularCuisine}
+            handleSearchSuggestions={handleSearchSuggestions}
+          />
         </div>
       )}
     </div>
