@@ -4,9 +4,10 @@ import { POPULAR_CUISINE_IMAGE_PATH } from "../utils/constants";
 
 export const PopularCuisine = ({ popularCuisine }) => {
   return (
-    <div className="mt-4 flex gap-4 flex-wrap items-center justify-start">
+    <div className="mt-4 pb-5 flex gap-4 items-center justify-start overflow-x-scroll overflow-y-hidden scroll-smooth">
       {popularCuisine.map((cuisine) => (
         <Link
+          className="p-0 flex-shrink-0"
           key={cuisine?.action?.link
             ?.split("swiggy://explore?query=")[1]
             ?.replaceAll("%20", "+")}
