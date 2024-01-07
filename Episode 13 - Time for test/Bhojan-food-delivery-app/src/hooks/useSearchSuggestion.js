@@ -1,17 +1,12 @@
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
 import { SEARCH_SUGGESTION_API } from "../utils/constants";
 
-export const useSearchSuggestion = () => {
-  const location = useLocation();
-  const urlSearchParam = new URLSearchParams(location.search);
-  const searchParam = urlSearchParam.get("query");
-
+export const useSearchSuggestion = (searchKeyword) => {
   const [suggestionList, setSuggestionList] = useState([]);
 
   const fetchSearchSuggestion = async () => {
     const data = await fetch(
-      `${SEARCH_SUGGESTION_API}&str=${searchParam}&trackingId=null`
+      `${SEARCH_SUGGESTION_API}&str=${searchKeyword}&trackingId=null`
     );
     const response = await data.json();
     const suggestions = response?.data?.suggestions ?? [];
@@ -20,7 +15,7 @@ export const useSearchSuggestion = () => {
 
   useEffect(() => {
     fetchSearchSuggestion();
-  }, [searchParam]);
+  }, [searchKeyword]);
 
   return { suggestionList };
 };
