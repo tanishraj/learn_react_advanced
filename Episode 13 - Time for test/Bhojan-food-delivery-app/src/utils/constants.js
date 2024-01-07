@@ -3,8 +3,7 @@ export const LAT = 12.9351929;
 export const LNG = 77.62448069999999;
 
 // Home Page Restaurant List API
-export const RESTAURANT_LIST_API_URL =
-  "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
+export const RESTAURANT_LIST_API_URL = `https://www.swiggy.com/dapi/restaurants/list/v5?lat=${LAT}&lng=${LNG}&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING`;
 
 // Restaurant Details - Menu List Page API
 export const RESTAURANT_DETAILS_API_URL = (resId) =>

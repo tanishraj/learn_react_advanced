@@ -3,27 +3,31 @@ import { Search } from "./Search";
 import { RestaurantList } from "./RestaurantList";
 import { useRestaurantList } from "../hooks/useRestaurantList";
 import { FilterRestaurant } from "./FilterRestaurant";
+import { BestOffers } from "./BestOffers";
 
 export const Body = () => {
-  const { restaurantList } = useRestaurantList() ?? {};
+  const {
+    restaurantList: { restaurants, bestoffers },
+  } = useRestaurantList() ?? {};
   const [finalRestaurantList, setFinalRestaurantList] = useState([]);
 
   useEffect(() => {
-    setFinalRestaurantList(restaurantList);
-  }, [restaurantList]);
+    setFinalRestaurantList(restaurants);
+  }, [restaurants]);
 
-  const getFilteredRestaurants = (filteredRestauratns = restaurantList) => {
+  const getFilteredRestaurants = (filteredRestauratns = restaurants) => {
     setFinalRestaurantList(filteredRestauratns);
   };
 
   return (
-    <div className="container">
+    <div className="container m-auto">
+      <BestOffers offersList={bestoffers} />
       <Search
-        restaurantList={restaurantList}
+        restaurantList={restaurants}
         getSearchResults={getFilteredRestaurants}
       />
       <FilterRestaurant
-        restaurantList={restaurantList}
+        restaurantList={restaurants}
         getTopRatedRestaurants={getFilteredRestaurants}
       />
       <RestaurantList restaurantList={finalRestaurantList} />

@@ -10,9 +10,12 @@ export const useRestaurantList = () => {
     const {
       data: { cards },
     } = swiggyData;
+
+    const bestoffers = cards[0]?.card?.card?.gridElements?.infoWithStyle?.info;
     const restaurants =
       cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
-    setRestaurantList(restaurants);
+
+    setRestaurantList({ restaurants, bestoffers });
   };
 
   useEffect(() => {
