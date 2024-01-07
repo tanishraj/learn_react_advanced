@@ -1,12 +1,7 @@
 import { IoIosStar } from "react-icons/io";
-
 import { IMAGE_BASE_URL } from "../../../utils/constants";
 
-export const SearchRestaurantCard = ({ restaurant }) => {
-  const restaurantInfo = restaurant?.card?.card?.info;
-
-  if (!restaurantInfo) return;
-
+export const SearchRestaurantCard = ({ restaurantInfo }) => {
   return (
     <div className="flex item-center justify-start gap-3 p-4 border border-grey300">
       <div className="block">
@@ -34,7 +29,7 @@ export const SearchRestaurantCard = ({ restaurant }) => {
           </span>
           -
           <span className="text-grey400">
-            {restaurantInfo?.cuisines.join(", ")}
+            {restaurantInfo?.cuisines?.join(", ")}
           </span>
         </div>
       </div>
