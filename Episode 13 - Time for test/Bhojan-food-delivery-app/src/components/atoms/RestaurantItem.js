@@ -1,7 +1,9 @@
 import { FaStar } from "react-icons/fa";
 import { IMAGE_BASE_URL } from "../../utils/constants";
 
-export const RestaurantItem = ({ restaurant }) => {
+export const RestaurantItem = ({ propsData }) => {
+  const restaurant = propsData;
+
   return (
     <div className="flex flex-col gap-4">
       <div className="relative">

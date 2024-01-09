@@ -22,7 +22,7 @@ export const Body = () => {
   return (
     <div className="container m-auto">
       <Home />
-      <Search
+      {/* <Search
         restaurantList={restaurants}
         getSearchResults={getFilteredRestaurants}
       />
@@ -30,7 +30,7 @@ export const Body = () => {
         restaurantList={restaurants}
         getTopRatedRestaurants={getFilteredRestaurants}
       />
-      <RestaurantList restaurantList={finalRestaurantList} />
+      <RestaurantList restaurantList={finalRestaurantList} /> */}
     </div>
   );
 };

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { IMAGE_BASE_URL } from "../../utils/constants";
 
 export const ImageInfoLayoutCard = ({ propsData }) => {
@@ -8,12 +9,17 @@ export const ImageInfoLayoutCard = ({ propsData }) => {
   return (
     <div className="pb-5 flex gap-4 items-center justify-between overflow-x-scroll overflow-y-hidden scroll-smooth">
       {cards?.map((card) => (
-        <img
+        <Link
+          className="w-auto"
           key={card?.id}
-          className={`max-w-full ${isBanner ? "h-64" : "h-40"}`}
-          src={`${IMAGE_BASE_URL}${card?.imageId}`}
-          alt={card?.accessibility?.altText}
-        />
+          to={`${card?.action?.link.replaceAll("https://www.swiggy.com/", "")}`}
+        >
+          <img
+            className={`${isBanner ? "h-64" : "h-40"} max-w-none`}
+            src={`${IMAGE_BASE_URL}${card?.imageId}`}
+            alt={card?.accessibility?.altText}
+          />
+        </Link>
       ))}
     </div>
   );

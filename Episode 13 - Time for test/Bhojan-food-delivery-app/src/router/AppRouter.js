@@ -6,6 +6,7 @@ import { RestaurantDetails } from "../components/Restaurant";
 import { Cart } from "../components/Cart";
 import { PageNotFound } from "../components/PageNotFound";
 import { GlobalSearch } from "../components/GlobalSearch";
+import { Collections } from "../components/pages/Collections";
 
 const About = React.lazy(() => import("../components/About"));
 
@@ -15,6 +16,10 @@ export const AppRouter = createBrowserRouter([
     element: <App />,
     children: [
       { path: "/", element: <Body /> },
+      {
+        path: "/collections/:collectionId",
+        element: <Collections />,
+      },
       {
         path: "/about",
         element: (

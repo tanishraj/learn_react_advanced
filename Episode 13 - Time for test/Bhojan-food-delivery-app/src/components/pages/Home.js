@@ -1,14 +1,12 @@
-import { useRestaurantList } from "../../hooks/useRestaurantList";
+import { useHomeApi } from "../../hooks/useHomeApi";
 import { ComponentMapper } from "../templates/ComponentMapper";
 
 export const Home = () => {
-  const {
-    restaurantList: { cards },
-  } = useRestaurantList();
+  const { homePageData } = useHomeApi();
 
   return (
     <div>
-      {cards?.map((section, index) => (
+      {homePageData?.map((section, index) => (
         <div key={index}>
           <ComponentMapper propsData={section?.card?.card} />
         </div>
