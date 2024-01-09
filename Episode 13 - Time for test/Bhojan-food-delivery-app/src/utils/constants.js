@@ -1,13 +1,17 @@
 // DEFAULT LOCATION
-export const LAT = 12.9351929;
-export const LNG = 77.62448069999999;
+export const LAT = 12.9689968;
+export const LNG = 77.72088529999999;
+
+// NEW STRUCTURED API
+export const COLLECTION_PAGE_API = `https://www.swiggy.com/dapi/restaurants/list/v5?lat=${LAT}&lng=${LNG}&collection=`;
+export const COLLECTION_PAGE_API_FRACTION = `&tags=layout_ux4&sortBy=&filters=&type=rcv2&offset=0&page_type=null`;
 
 // Home Page Restaurant List API
 export const RESTAURANT_LIST_API_URL = `https://www.swiggy.com/dapi/restaurants/list/v5?lat=${LAT}&lng=${LNG}&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING`;
 
 // Restaurant Details - Menu List Page API
 export const RESTAURANT_DETAILS_API_URL = (resId) =>
-  `https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9165757&lng=77.6101163&restaurantId=${resId}&catalog_qa=undefined&submitAction=ENTER`;
+  `https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=${LAT}&lng=${LNG}&restaurantId=${resId}&catalog_qa=undefined&submitAction=ENTER`;
 
 // Swiggy Media URL
 export const IMAGE_BASE_URL =

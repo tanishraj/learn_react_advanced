@@ -5,11 +5,11 @@ export const RestaurantList = ({ layoutData, restaurantList }) => {
     <div
       className={`pb-5 h-full grid ${layoutData?.rows && "grid-flow-col"} ${
         layoutData?.columns && `grid-cols-${layoutData?.columns}`
-      } gap-4 overflow-x-scroll overflow-y-hidden scroll-smooth`}
+      } gap-x-4 gap-y-8 overflow-x-scroll overflow-y-hidden scroll-smooth`}
     >
       {restaurantList?.map((restaurant, index) => (
         <div key={index} className="min-w-64">
-          <RestaurantItem restaurant={restaurant} />
+          <RestaurantItem propsData={restaurant} />
         </div>
       ))}
     </div>

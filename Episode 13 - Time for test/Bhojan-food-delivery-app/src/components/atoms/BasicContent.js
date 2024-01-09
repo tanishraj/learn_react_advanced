@@ -1,11 +1,9 @@
-export const BasicContent = ({ propsData }) => {
-  console.log(propsData);
+export const BasicContent = ({ propsData, isDivider = true }) => {
+  const { title } = propsData;
   return (
     <div className="block">
-      <hr className="text-grey300 my-4" />
-      <h2 className="m-0 mt-6 -mb-4 text-400 font-bold text-grey800">
-        {propsData?.title}
-      </h2>
+      {isDivider && <hr className="text-grey300 my-4" />}
+      <h2 className="my-4 text-400 font-bold text-grey800">{title}</h2>
     </div>
   );
 };
