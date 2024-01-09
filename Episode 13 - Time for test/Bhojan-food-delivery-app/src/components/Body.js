@@ -3,7 +3,7 @@ import { Search } from "./Search";
 import { RestaurantList } from "./RestaurantList";
 import { useRestaurantList } from "../hooks/useRestaurantList";
 import { FilterRestaurant } from "./FilterRestaurant";
-import { BestOffers } from "./BestOffers";
+import { Home } from "./pages/Home";
 
 export const Body = () => {
   const {
@@ -21,7 +21,7 @@ export const Body = () => {
 
   return (
     <div className="container m-auto">
-      <BestOffers offersList={bestoffers} />
+      <Home />
       <Search
         restaurantList={restaurants}
         getSearchResults={getFilteredRestaurants}

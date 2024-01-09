@@ -1,4 +1,3 @@
-import { IoIosStar } from "react-icons/io";
 import { SearchRestaurantCard } from "./base/cards/SearchRestaurantCard";
 
 export const SearchRestaurantList = ({ restaurant }) => {

@@ -7,6 +7,7 @@ export const useRestaurantList = () => {
   const getRestaurantList = async () => {
     const apiResponse = await fetch(RESTAURANT_LIST_API_URL);
     const swiggyData = await apiResponse.json();
+
     const {
       data: { cards },
     } = swiggyData;
@@ -15,7 +16,7 @@ export const useRestaurantList = () => {
     const restaurants =
       cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
 
-    setRestaurantList({ restaurants, bestoffers });
+    setRestaurantList({ restaurants, bestoffers, cards });
   };
 
   useEffect(() => {
