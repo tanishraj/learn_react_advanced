@@ -1,0 +1,190 @@
+{
+  "card": {
+    "card": {
+      "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+      "info": {
+        "id": "588705",
+        "name": "La Pino'z Pizza",
+        "city": "Bangalore",
+        "slugs": {
+          "restaurant": "la-pino'z-pizza-jp-nagar-jp-nagar",
+          "city": "bangalore"
+        },
+        "uniqueId": "e51e6528-4859-48c8-8fed-e84c17dc2d76",
+        "cloudinaryImageId": "w6roonblq3fa5wrtlgys",
+        "locality": "5TH Phase",
+        "areaName": "JP Nagar",
+        "costForTwo": "30000",
+        "costForTwoMessage": "₹300 for two",
+        "cuisines": ["Pizzas", "Pastas"],
+        "avgRating": 3.9,
+        "feeDetails": {
+          "restaurantId": "588705",
+          "fees": [
+            {
+              "name": "distance"
+            },
+            {
+              "name": "time"
+            },
+            {
+              "name": "special"
+            }
+          ],
+          "title": "Delivery Charge",
+          "amount": "0"
+        },
+        "parentId": "4961",
+        "avgRatingString": "3.9",
+        "totalRatingsString": "1K+ ratings",
+        "sla": {
+          "restaurantId": "588705",
+          "deliveryTime": 24,
+          "minDeliveryTime": 24,
+          "maxDeliveryTime": 24,
+          "lastMileTravel": 3,
+          "serviceability": "SERVICEABLE",
+          "stressFactor": 1,
+          "rainMode": "RAIN_MODE_NONE",
+          "longDistance": "LONG_DISTANCE_NOT_LONG_DISTANCE",
+          "zoneId": 11,
+          "slaString": "24 MINS",
+          "lastMileTravelString": "3.0 km",
+          "iconType": "ICON_TYPE_EMPTY"
+        },
+        "availability": {
+          "nextCloseMessage": "Closes soon",
+          "nextCloseTime": "2024-01-01 05:00:00",
+          "visibility": true,
+          "opened": true,
+          "restaurantClosedMeta": {}
+        },
+        "aggregatedDiscountInfo": {
+          "header": "50% off",
+          "shortDescriptionList": [
+            {
+              "meta": "50% off | Use TRYNEW",
+              "discountType": "Percentage",
+              "operationType": "RESTAURANT"
+            },
+            {
+              "meta": "10% off | Use PARTY",
+              "discountType": "Percentage",
+              "operationType": "RESTAURANT"
+            }
+          ],
+          "descriptionList": [
+            {
+              "meta": "50% off up to ₹100 | Use code TRYNEW",
+              "discountType": "Percentage",
+              "operationType": "RESTAURANT"
+            },
+            {
+              "meta": "10% off | Use code PARTY",
+              "discountType": "Percentage",
+              "operationType": "RESTAURANT"
+            }
+          ],
+          "visible": true
+        },
+        "badges": {},
+        "slugString": "la-pino'z-pizza-jp-nagar-jp-nagar",
+        "isOpen": true,
+        "labels": [
+          {
+            "title": "Timings",
+            "message": "null"
+          },
+          {
+            "title": "Address",
+            "message": "#309,1ST FLOOR,100 FEET RING ROAD,NEAR DELMIACIRCLE,J P NAGAR,5TH PHASE,BANGALORE, BTM Layout , B.B.M.P South, Karnataka-560078"
+          },
+          {
+            "title": "Cuisines",
+            "message": "Pizzas,Pastas"
+          }
+        ],
+        "totalRatings": 1000,
+        "aggregatedDiscountInfoV2": {
+          "header": "50% off",
+          "shortDescriptionList": [
+            {
+              "meta": "50% off | Use TRYNEW",
+              "discountType": "Percentage",
+              "operationType": "RESTAURANT"
+            },
+            {
+              "meta": "10% off | Use PARTY",
+              "discountType": "Percentage",
+              "operationType": "RESTAURANT"
+            }
+          ],
+          "descriptionList": [
+            {
+              "meta": "50% off up to ₹100 | Use code TRYNEW",
+              "discountType": "Percentage",
+              "operationType": "RESTAURANT"
+            },
+            {
+              "meta": "10% off | Use code PARTY",
+              "discountType": "Percentage",
+              "operationType": "RESTAURANT"
+            }
+          ],
+          "couponDetailsCta": "View coupon details"
+        },
+        "type": "F",
+        "nudgeBanners": [
+          {
+            "minValue": 350,
+            "maxValue": 500,
+            "priority": 2,
+            "couponCode": "PARTY",
+            "discountInfo": {
+              "discountType": "Percentage",
+              "value": 10
+            },
+            "lockedMessage": "Add items worth ₹<amount> to unlock flat 10% off | Code PARTY",
+            "unlockedMessage": "PARTY Coupon Unlocked! Use it to save flat 10% off",
+            "logoCtx": {}
+          },
+          {
+            "minValue": 629,
+            "maxValue": 899,
+            "priority": 3,
+            "couponCode": "CELEBRATIONS",
+            "discountInfo": {
+              "discountType": "Flat",
+              "value": 175
+            },
+            "lockedMessage": "Add items worth ₹<amount> to save ₹175 | Code CELEBRATIONS",
+            "unlockedMessage": "CELEBRATIONS Coupon Unlocked! Use it to save ₹175",
+            "logoCtx": {}
+          }
+        ],
+        "headerBanner": {
+          "url": "swiggy://webview?is_external=false&webview_url=https://www.swiggy.com/restaurant-info/588705"
+        },
+        "ratingSlab": "RATING_SLAB_4",
+        "orderabilityCommunication": {
+          "title": {},
+          "subTitle": {},
+          "message": {},
+          "customIcon": {}
+        },
+        "hasBestsellerItems": true,
+        "cartOrderabilityNudgeBanner": {
+          "parameters": {},
+          "presentation": {}
+        },
+        "latLong": "12.9061097,77.5929306",
+        "hasKidscategoryItems": true
+      },
+      "analytics": {}
+    },
+    "relevance": {
+      "type": "RELEVANCE_TYPE_CHECK_ORDERABILITY_ON_ITEM_ADD",
+      "sectionId": "POP_UP_CROUTON_MENU"
+    }
+  }
+}
