@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa6";
 import { IoIosStar } from "react-icons/io";
 import { DishIndicator } from "./DishIndicator";
@@ -11,21 +12,23 @@ export const SearchDishCard = ({ dish }) => {
 
   return (
     <div className="border border-solid border-grey300 p-4 rounded-sm">
-      <div className="flex items-center justify-between mb-4">
-        <div className="flex flex-col gap-2">
-          <div className="font-bold text-100 text-grey700">
-            By {restaurantInfo?.name}
+      <Link to={`/restaurant/${restaurantInfo?.id}`}>
+        <div className="flex items-center justify-between mb-4">
+          <div className="flex flex-col gap-2">
+            <div className="font-bold text-100 text-grey700">
+              By {restaurantInfo?.name}
+            </div>
+            <div className="flex items-center justify-start gap-2">
+              <span className="flex items-center justify-start gap-1">
+                <IoIosStar />
+                {restaurantInfo?.avgRatingString}
+              </span>
+              - <span>{restaurantInfo?.sla?.slaString}</span>
+            </div>
           </div>
-          <div className="flex items-center justify-start gap-2">
-            <span className="flex items-center justify-start gap-1">
-              <IoIosStar />
-              {restaurantInfo?.avgRatingString}
-            </span>
-            - <span>{restaurantInfo?.sla?.slaString}</span>
-          </div>
+          <FaArrowRight className="text-grey400 text-300 font-medium" />
         </div>
-        <FaArrowRight className="text-grey400 text-300 font-medium" />
-      </div>
+      </Link>
       <div className="border-dotted border-b-2 border-grey300 gap-2"></div>
       <div className="mt-4 flex items-center justify-between">
         <div className="flex flex-col gap-1">
