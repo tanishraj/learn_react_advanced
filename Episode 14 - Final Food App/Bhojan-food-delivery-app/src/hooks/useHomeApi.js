@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import { RESTAURANT_LIST_API_URL } from "../utils/constants";
+import { HOME_PAGE_API, RESTAURANT_LIST_API_URL } from "../utils/constants";
 
 export const useHomeApi = () => {
   const [homePageData, setHomePageData] = useState([]);
 
   const getHomePageData = async () => {
-    const apiResponse = await fetch(RESTAURANT_LIST_API_URL);
+    const apiResponse = await fetch(HOME_PAGE_API);
     const swiggyData = await apiResponse.json();
 
     const {
