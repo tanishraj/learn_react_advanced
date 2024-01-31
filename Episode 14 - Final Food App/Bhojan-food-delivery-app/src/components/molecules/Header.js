@@ -7,6 +7,7 @@ import { MdOutlineLightMode } from "react-icons/md";
 import { IoIosMoon } from "react-icons/io";
 import { NAVIGATION_ITEMS } from "../../utils/constants";
 import { ICON_MAPPER } from "../../utils/iconMapper";
+import { MapButton } from "../atoms/MapButton";
 
 export const Header = () => {
   const { theme, setTheme } = useContext(ThemeContext);
@@ -15,13 +16,21 @@ export const Header = () => {
   return (
     <div className=" fixed top-0 bg-grey950   shadow-sm min-h-20 min-w-full z-50 flex items-center justify-between">
       <nav className="flex items-center justify-between max-w-screen-xl w-full m-auto px-4">
-        <div className="flex items-center relative mt-2.5">
-          <Link to="/">
-            <h1 data-testid="logo" className="text-primary text-450 font-bold">
-              BHOJAN
-            </h1>
-          </Link>
-          <OnlineStatus />
+        <div className="flex items-center gap-4">
+          <div className="flex items-center relative mt-2.5">
+            <Link to="/">
+              <h1
+                data-testid="logo"
+                className="text-primary text-450 font-bold"
+              >
+                BHOJAN
+              </h1>
+            </Link>
+            <OnlineStatus />
+          </div>
+          <div className="flex items-center gap-2">
+            <MapButton />
+          </div>
         </div>
 
         <ul className="flex justify-between items-center text-primary gap-10 list-none">
