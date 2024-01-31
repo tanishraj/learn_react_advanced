@@ -5,8 +5,8 @@ export const usePopularCuisine = () => {
   const [popularCuisine, setPopularCuisine] = useState([]);
 
   const fetchPopularCuisine = async () => {
-    data = await fetch(POPULAR_CUISINE_API);
-    response = await data.json();
+    const data = await fetch(POPULAR_CUISINE_API);
+    const response = await data.json();
     const cuisines =
       response?.data?.cards?.[1]?.card?.card?.gridElements?.infoWithStyle?.info;
     setPopularCuisine(cuisines);
