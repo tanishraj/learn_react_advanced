@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
-import { HOME_PAGE_API, RESTAURANT_LIST_API_URL } from "../utils/constants";
+import { useSelector } from "react-redux";
+import { HOME_PAGE_API } from "../utils/constants";
 
 export const useHomeApi = () => {
   const [homePageData, setHomePageData] = useState([]);
+  const { location } = useSelector((state) => state.location);
+  const { lat, lng } = location?.geometry?.location ?? {};
 
   const getHomePageData = async () => {
-    const apiResponse = await fetch(HOME_PAGE_API);
+    const apiResponse = await fetch(HOME_PAGE_API(lat, lng));
     const swiggyData = await apiResponse.json();
 
     const {
@@ -16,7 +19,7 @@ export const useHomeApi = () => {
 
   useEffect(() => {
     getHomePageData();
-  }, []);
+  }, [location]);
 
   return { homePageData };
 };

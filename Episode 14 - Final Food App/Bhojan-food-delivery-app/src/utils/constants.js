@@ -14,9 +14,10 @@ export const COLLECTION_PAGE_API_FRACTION = `${encodeURIComponent(
 export const RESTAURANT_LIST_API_URL = `https://corsproxy.org/?${encodeURIComponent(
   `https://www.swiggy.com/dapi/restaurants/list/v5?lat=${LAT}&lng=${LNG}&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING`
 )}`;
-export const HOME_PAGE_API = `https://corsproxy.org/?${encodeURIComponent(
-  `https://www.swiggy.com/dapi/restaurants/list/v5?lat=${LAT}&lng=${LNG}&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING`
-)}`;
+export const HOME_PAGE_API = (lat = LAT, lng = LNG) =>
+  `https://corsproxy.org/?${encodeURIComponent(
+    `https://www.swiggy.com/dapi/restaurants/list/v5?lat=${lat}&lng=${lng}&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING`
+  )}`;
 
 // Restaurant Details - Menu List Page API
 export const RESTAURANT_DETAILS_API_URL = (resId) =>
@@ -49,6 +50,16 @@ export const SUBMIT_ACTION_SUGGESTION_API = `https://corsproxy.org/?${encodeURIC
 export const SUBMIT_ACTION_SUGGESTION_API_FRACTION = `${encodeURIComponent(
   `&trackingId=undefined&submitAction=SUGGESTION`
 )}`;
+
+export const LOCATION_API = `https://corsproxy.org/?${encodeURIComponent(
+  `https://www.swiggy.com/dapi/misc/place-autocomplete?input=`
+)}`;
+export const LOCATION_API_FRACTION = `&types=`;
+
+export const LANG_LAT_API = `https://corsproxy.org/?${encodeURIComponent(
+  `https://www.swiggy.com/dapi/misc/address-recommend?place_id=`
+)}`;
+
 // Navigation Links Item
 export const NAVIGATION_ITEMS = [
   {
