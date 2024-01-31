@@ -1,13 +1,15 @@
+import { useEffect, useState } from "react";
 import { MdMyLocation } from "react-icons/md";
+import { useNavigator } from "../../hooks/useNavigator";
 
-export const LocationList = ({ locationList, handleLocation }) => {
+export const LocationList = ({ locationList, handleLocation, getLocation }) => {
   return (
     <div className="flex flex-col gap-2">
       <div className="p-2 border border-indigo-600 flex items-center gap-3">
         <div className="text-primary">
           <MdMyLocation size={25} />
         </div>
-        <div>
+        <div className="cursor-pointer" onClick={getLocation}>
           <div className="font-bold text-black">Get Current Location</div>
           <div className="text-grey500">using GPS</div>
         </div>
