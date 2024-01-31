@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { IoCloseOutline } from "react-icons/io5";
 import { Input } from "../atoms/Input";
@@ -13,7 +13,35 @@ import { updateLocation } from "../../redux/slices/locationSlice";
 export const SidebarContainer = ({ togglePanel }) => {
   const [location, setLocation] = useState("");
   const [locationList, setLocationList] = useState([]);
+  const [currentLocation, setCurrentLocation] = useState("");
+  const [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
+
+  const tempFucntion = async () => {
+    const data = await fetch(
+      `https://corsproxy.org/?${encodeURIComponent(
+        `https://www.swiggy.com/dapi/misc/address-recommend?latlng=${currentLocation?.latitude}%2C${currentLocation?.longitude}`
+      )}`
+    );
+    const response = await data.json();
+    console.log("FINAL OUTCOME", response);
+  };
+
+  useEffect(() => {
+    tempFucntion();
+  }, [currentLocation]);
+
+  const getLocation = async () => {
+    await setLoading(true);
+    navigator.geolocation.getCurrentPosition((position) => {
+      console.log("Position", position);
+      const { latitude, longitude } = position.coords;
+      setCurrentLocation(() => {
+        setLoading(false);
+        return { lat: latitude, lng: longitude };
+      });
+    });
+  };
 
   const searchLocation = async () => {
     const locationData = await fetch(
@@ -43,7 +71,7 @@ export const SidebarContainer = ({ togglePanel }) => {
         className="flex self-end cursor-pointer text-grey600"
       />
       <Input
-        value={location}
+        value={loading ? "Fetching your location..." : location}
         onChange={(e) => setLocation(e.target.value)}
         showBackButton={false}
         showClearButton={location}
@@ -55,6 +83,7 @@ export const SidebarContainer = ({ togglePanel }) => {
       <LocationList
         locationList={locationList}
         handleLocation={handleLocation}
+        getLocation={getLocation}
       />
     </div>
   );
