@@ -12,16 +12,18 @@ export const useSearchResult = () => {
   const searchParam = urlSearchParam.get("query");
 
   const fetchSearchResult = async () => {
-    data = await fetch(
+    const searchResultsData = await fetch(
       `${SUBMIT_ACTION_SUGGESTION_API}${searchParam}${SUBMIT_ACTION_SUGGESTION_API_FRACTION}`
     );
-    response = await data.json();
+    searchResultsResponse = await searchResultsData.json();
     const _searchResultTypeTabsData =
-      response?.data?.cards?.[0]?.card?.card?.tab;
+      searchResultsResponse?.data?.cards?.[0]?.card?.card?.tab;
     const searchResultsForDishes =
-      response?.data?.cards?.[1]?.groupedCard?.cardGroupMap?.DISH?.cards;
+      searchResultsResponse?.data?.cards?.[1]?.groupedCard?.cardGroupMap?.DISH
+        ?.cards;
     const searchResultsForRestaurants =
-      response?.data?.cards?.[1]?.groupedCard?.cardGroupMap?.RESTAURANT?.cards;
+      searchResultsResponse?.data?.cards?.[1]?.groupedCard?.cardGroupMap
+        ?.RESTAURANT?.cards;
     setSearchResult({ searchResultsForDishes, searchResultsForRestaurants });
   };
 
