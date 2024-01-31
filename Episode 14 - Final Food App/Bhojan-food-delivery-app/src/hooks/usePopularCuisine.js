@@ -6,8 +6,7 @@ export const usePopularCuisine = () => {
 
   const fetchPopularCuisine = async () => {
     const popularCuisineData = await fetch(POPULAR_CUISINE_API);
-    console.log("DATA", popularCuisineData);
-    const cuisineResponse = await data.json();
+    const cuisineResponse = await popularCuisineData.json();
     const cuisines =
       cuisineResponse?.data?.cards?.[1]?.card?.card?.gridElements?.infoWithStyle
         ?.info;
