@@ -9,7 +9,7 @@ export const useSearchSuggestion = (searchKeyword) => {
       `${SEARCH_SUGGESTION_API}&str=${searchKeyword}&trackingId=null`,
       {
         headers: {
-          "x-cors-api-key": "temp_907965272042a5006e2ff57757f88d22",
+          "x-cors-api-key": process.env.X_CORS_API_KEY,
         },
       }
     );

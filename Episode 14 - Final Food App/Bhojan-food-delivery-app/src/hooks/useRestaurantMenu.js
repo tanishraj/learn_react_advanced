@@ -8,7 +8,7 @@ export const useRestaurantMenu = (resId) => {
   const getRestaurantDetails = async () => {
     const restaurantDetails = await fetch(RESTAURANT_DETAILS_API_URL(resId), {
       headers: {
-        "x-cors-api-key": "temp_907965272042a5006e2ff57757f88d22",
+        "x-cors-api-key": process.env.X_CORS_API_KEY,
       },
     });
     const {

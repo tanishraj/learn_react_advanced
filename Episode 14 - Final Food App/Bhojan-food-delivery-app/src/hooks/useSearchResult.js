@@ -16,7 +16,7 @@ export const useSearchResult = () => {
       `${SUBMIT_ACTION_SUGGESTION_API}${searchParam}${SUBMIT_ACTION_SUGGESTION_API_FRACTION}`,
       {
         headers: {
-          "x-cors-api-key": "temp_907965272042a5006e2ff57757f88d22",
+          "x-cors-api-key": process.env.X_CORS_API_KEY,
         },
       }
     );

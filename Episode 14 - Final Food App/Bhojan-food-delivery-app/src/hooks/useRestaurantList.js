@@ -7,7 +7,7 @@ export const useRestaurantList = () => {
   const getRestaurantList = async () => {
     const apiResponse = await fetch(RESTAURANT_LIST_API_URL, {
       headers: {
-        "x-cors-api-key": "temp_907965272042a5006e2ff57757f88d22",
+        "x-cors-api-key": process.env.X_CORS_API_KEY,
       },
     });
     const swiggyData = await apiResponse.json();

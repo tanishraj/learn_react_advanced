@@ -14,7 +14,7 @@ export const useCollectionsApi = () => {
       `${COLLECTION_PAGE_API}${collectionId}${COLLECTION_PAGE_API_FRACTION}`,
       {
         headers: {
-          "x-cors-api-key": "temp_907965272042a5006e2ff57757f88d22",
+          "x-cors-api-key": process.env.X_CORS_API_KEY,
         },
       }
     );
