@@ -11,7 +11,12 @@ export const useCollectionsApi = () => {
 
   const getCollectionPageData = async () => {
     const data = await fetch(
-      `${COLLECTION_PAGE_API}${collectionId}${COLLECTION_PAGE_API_FRACTION}`
+      `${COLLECTION_PAGE_API}${collectionId}${COLLECTION_PAGE_API_FRACTION}`,
+      {
+        headers: {
+          "x-cors-api-key": "temp_907965272042a5006e2ff57757f88d22",
+        },
+      }
     );
     const response = await data.json();
     setCollectionPageData(response?.data?.cards);

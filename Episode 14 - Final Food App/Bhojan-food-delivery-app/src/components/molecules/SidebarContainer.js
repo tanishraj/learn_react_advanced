@@ -19,9 +19,7 @@ export const SidebarContainer = ({ togglePanel }) => {
 
   const tempFucntion = async () => {
     const data = await fetch(
-      `https://corsproxy.org/?${encodeURIComponent(
-        `https://www.swiggy.com/dapi/misc/address-recommend?latlng=${currentLocation?.latitude}%2C${currentLocation?.longitude}`
-      )}`
+      `https://proxy.cors.sh/https://www.swiggy.com/dapi/misc/address-recommend?latlng=${currentLocation?.latitude}%2C${currentLocation?.longitude}`
     );
     const response = await data.json();
     console.log("FINAL OUTCOME", response);

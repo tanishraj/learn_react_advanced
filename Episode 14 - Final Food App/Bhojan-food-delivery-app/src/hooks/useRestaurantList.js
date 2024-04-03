@@ -5,7 +5,11 @@ export const useRestaurantList = () => {
   const [restaurantList, setRestaurantList] = useState([]);
 
   const getRestaurantList = async () => {
-    const apiResponse = await fetch(RESTAURANT_LIST_API_URL);
+    const apiResponse = await fetch(RESTAURANT_LIST_API_URL, {
+      headers: {
+        "x-cors-api-key": "temp_907965272042a5006e2ff57757f88d22",
+      },
+    });
     const swiggyData = await apiResponse.json();
 
     const {

@@ -8,8 +8,14 @@ export const useHomeApi = () => {
   const { lat, lng } = location?.geometry?.location ?? {};
 
   const getHomePageData = async () => {
-    const apiResponse = await fetch(HOME_PAGE_API(lat, lng));
+    const apiResponse = await fetch(HOME_PAGE_API(lat, lng), {
+      headers: {
+        "x-cors-api-key": "temp_907965272042a5006e2ff57757f88d22",
+      },
+    });
     const swiggyData = await apiResponse.json();
+
+    if (!swiggyData) return null;
 
     const {
       data: { cards },
